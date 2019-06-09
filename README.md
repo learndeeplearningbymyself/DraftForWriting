@@ -4,7 +4,7 @@
 
 2. Commit theo mẫu: **[Loại_bài_viết] Tên bài viết**
 
-3. Tách nhánh riêng của mình khi push bài viết - Sau đó tạo pull để merge vào nhánh **master** (Tránh tình trạng nhiều bài viết chung 1 nhánh - Dễ conflict lung tung). Tên của nhánh: **Loại_bài_viết_Tên_bài_viết**. Tên của pull: **[Loại_bài_viết]_Tên_bài_viết**
+3. Tách nhánh riêng của mình khi push bài viết - Sau đó tạo pull để merge vào nhánh **master** (Tránh tình trạng nhiều bài viết chung 1 nhánh - Dễ conflict lung tung). Tên của nhánh: **Loại_bài_viết_Tên_bài_viết**. Tên của pull: **[Loại_bài_viết] Tên bài viết**
 
 ```
 Có 3 loại bài viết:
