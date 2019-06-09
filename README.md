@@ -1,10 +1,8 @@
 ## Lưu ý khi viết
 
-1. Một commit là một bài viết (Mỗi bài viết không được có từ 2 commits trở lên)
+1. Commit theo mẫu: **[Loại_bài_viết] Tên bài viết**
 
-2. Commit theo mẫu: **[Loại_bài_viết] Tên bài viết**
-
-3. Tách nhánh riêng của mình khi push bài viết - Sau đó tạo pull để merge vào nhánh **master** (Tránh tình trạng nhiều bài viết chung 1 nhánh - Dễ conflict lung tung). Tên của nhánh: **Loại_bài_viết_Tên_bài_viết**. Tên của pull: **[Loại_bài_viết] Tên bài viết**
+2. Tách nhánh riêng của mình khi push bài viết - Sau đó tạo pull để merge vào nhánh **master** (Tránh tình trạng nhiều bài viết chung 1 nhánh - Dễ conflict lung tung). Tên của nhánh: **Loại_bài_viết_Tên_bài_viết**. Tên của pull: **[Loại_bài_viết] Tên bài viết** (1 bài viết sẽ chỉ có 1 pull mà thôi)
 
 ```
 Có 3 loại bài viết:
@@ -15,7 +13,7 @@ Có 3 loại bài viết:
 Tên của bài viết có thể viết Tiếng Anh hoặc Tiếng Việt tuỳ người viết.
 ```
 
-4. Khi tạo pull, cần thêm người review và đánh nhãn như 2 hình dưới
+3. Khi tạo pull, cần thêm người review và đánh nhãn như 2 hình dưới
 
 ```
 reviewer wanted: Viết xong thì cần người review, nếu người review mà OK thì sẽ merge vào master
