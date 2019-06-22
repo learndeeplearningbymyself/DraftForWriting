@@ -76,3 +76,5 @@ Do tiếng anh cũng như tiếng nhật chuyên ngành IT không quá nặng v�
 | Representation | 表現 |
 | Embedding | 埋め込み |
 | Dimension | 次元 |
+| Influence | 影響 |
+| Notion | 要因 |
