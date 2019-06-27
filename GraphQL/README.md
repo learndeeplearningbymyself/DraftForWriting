@@ -115,17 +115,11 @@ subscription {
 - GraphQL Schema - chỉ ra cách mà client có thể fetch cũng như update dữ liệu, là tập hợp của các **Types** với **root type** tương ứng
   - Mỗi một schema sẽ có các root types định nghĩa entry point của API
 ```
-type Query {
+type Query {}
 
-}
+type Mutation {}
 
-type Mutation {
-    
-}
-
-type Subscription {
-
-}
+type Subscription {}
 ```
   - Các root types sẽ lần lượt là **Query**, **Mutation**, **Subscription**
 
