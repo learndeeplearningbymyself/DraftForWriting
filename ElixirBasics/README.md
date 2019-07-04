@@ -34,5 +34,50 @@ end
 - Below is the syntax is used to define module
 
 ```elixir
-
+defmodule module_name
+end
 ```
+
+- Attention on **functional programming**
+- **NOT OBJECT ORIENTED PROGRAMMING**
+- **Immutable** - we not ever modify existed data in Elixir
+
+### Some useful functions
+
+```elixir
+Enum.split(input, hand_size)
+# input is a list or an array
+# return value: { my_hand, the_rest } -> tuple
+# my_hand 's index is alway 0, the_rest 's index is 1
+
+list ++ another_list
+# join lists together
+
+# Pattern Matching
+[first, second | _tail] # we know the exist of the rest elements but we don’t care about its
+
+{ele1, ele2} = tuple
+```
+
+### Testing
+
+- Elixir test module will read not only docs of functions but also **Example** path of it to check the code of the function
+
+- Test type:
+  - Doctest: Test function by its doc
+  - Casetest: **assert / refute** (opposite with **assert -> NOT EQUAL**)
+
+### Some useful commands
+
+```shell
+$ mix phoenix.new
+$ mix ecto.create
+$ mix phoenix.server
+$ mix ecto.migrate
+$ mix ecto.gen.migration add_model_name
+$ iex -S mix
+
+# From phoenix1.3 "phoenix" pattern in commands will be changed to "phx" pattern
+```
+
+### Websocket
