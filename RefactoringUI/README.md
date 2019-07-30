@@ -1,50 +1,98 @@
-## Work in cycles
+### Deciding what you actually want
 
-Khi thiết kế một feature mới, ta nên bắt đầu từ bản thiết kế đơn giản nhất. Dù vẫn biết rằng sau này cần sửa lại rất nhiều nhưng việc chỉnh sửa một mẫu thiết kế mà ta thấy trước mắt vẫn dễ dàng hơn công việc chỉnh sửa 1 thiết kế **chỉ có trong tưởng tượng**
+Đôi khi việc tham khảo từ những sites tương tự sẽ có ích khá nhiều. Nếu những trang tương tự như ý tưởng của bạn hướng đến **business** hay **sự thân thiện** thì bạn cũng nên làm tương tự.
 
+Tuy nhiên việc vay mượn ý tưởng thiết kế quá nhiều sẽ khiến cho thiết kế của bạn trở thành **sản phẩm hạng hai**.
 
-## Be a pessimist
+## Limit your choices
 
-Chỉ bắt đầu xây dựng 1 tính năng (feature) khi bạn thực sự sẵn sàng. Ta lấy ví dụ:
+Khi có quá nhiều lựa chọn cho fonts chữ cũng như màu sắc sẽ khiến việc quyết định thiết kế trở nên khó khăn. Ví dụ như:
 
-Feature comment của 1 project. Khi đang phát triển tính năng comment, bạn thấy rằng sẽ **tốt** hơn nếu người dùng có thể gắn file vào comment của mình. Sau đó bạn tập trung vào việc phát triển tính năng attach file này. Nhưng bạn nhận ra rằng phát triển tính năng này mất nhiều thời gian hơn dự kiến. Bạn dừng việc phát triển tính năng comment.
+- Nên để opacity là 10% hay 15% ?
+- margin-bottom của button nên là 18px hay 20px ?
+- Chiều cao của avatar nên là 24px hay 25px
+- ...
 
-Việc này thực sự vô nghĩa. Rõ ràng comment mà không có file gắn kèm vẫn tốt hơn là không có chức năng comment.
+Vậy chúng ta có thể đưa ra quyết định như thế nào về thiết kế cuối cùng khi không có gì trong số chúng là quá tồi ?
 
-Từ đó ta có thể rút ra bài học như sau
+### Define systems in advance
 
-> Nếu tính năng thuộc dạng có chỉ để cho đẹp thì không nên làm vội, xây dựng một version đơn giản để ta luôn có thể quay lại version đó bất cứ lúc nào
+Thay vì chọn các giá trị như kích cỡ font, màu sắc từ một thư viện vô tận các yếu tố đó, chúng ta nên *xây dựng một hệ thống cơ bản cho thiết kế của mình* và bắt đầu thiết kế từ đó
 
-## Choose a personality
+- Đừng tìm kiếm những màu mới khi thiết kế UI mới, thay vào đó hãy lựa chọn một hệ thống màu cơ bản cho thiết kế của mình ngay từ đầu (8 - 10 màu)
 
-Mỗi site nên có những đặc điểm nhận dạng riêng - tính cách của site. Ví dụ nhưng những site liên quan đến ngân hàng đều hướng tới sự **bảo mật**, **tin cậy**, **chuyên nghiệp**, trong khi các start up có thể đem tới hình ảnh **vui nhộn**, **tươi mới**
+<img src="https://user-images.githubusercontent.com/43769314/62095587-d8f3de00-b2bb-11e9-9cd6-f45626cac2fb.png" width="720">
 
-Việc đem đến cho site một **cá tính** cụ thể nghe chừng có vẻ khá trừu tượng và khó khăn. Thế nhưng điều đó hoàn toàn có thể thực hiện thông qua một vài **nguyên tắc** như sau.
+- Đừng chỉnh từng pixel một cho đến khi font chữ trở nên hoàn hảo mà hãy tự thiết kế cho mình một hệ thống font size cụ thể ngay từ đầu
 
-### Font choice
+<img src="https://user-images.githubusercontent.com/43769314/62095614-e9a45400-b2bb-11e9-8780-a4cdd54215b0.png" width="720">
 
-Việc lựa chọn phông chữ có quyết định khá lớn đến design
+Làm những việc như thế này có thể khiến bạn khá vất vả ngay từ đầu nhưng mỗi khi thêm một UI mới thì việc lựa chọn màu sắc, font chữ, ... lại không quá khó khăn và sẽ giúp bạn tiết kiệm rất nhiều thời gian cho việc thiết kế.
 
-- Với những thiết kế mang tính sang trọng, cổ điển thì nên sử dụng phông có chân (serif)
-- Với những thiết kế mang tính vui nhộn, tươi trẻ thì nên sử dụng phông tròn (rounded sans serif)
-- Còn nếu muốn tạo nên sự đơn giản thì sử dụng phông không chân trung tính (neutral sans serif)
+### Designing by process of elimination
 
-### Color
+Khi tiến hành thiết kế dựa theo một tập các giá trị ràng buộc giới hạn sẽ dễ dàng hơn việc thiết kế với nhiều *sự lựa chọn đúng đắn*
 
-Trên thực tế có khá nhiều học thuyết về màu sắc nhưng những gì ta cần quan tâm ở đây chỉ là ảnh hưởng của màu sắc lên cảm xúc của chúng ta
+Lấy ví dụ khi thiết kế icon cho app. Ta lựa chọn tập giá trị kích cỡ icon là: 12px, 16px, 24px, 32px. Chọn một kích cỡ cho ta *cảm giác* là tốt nhất (ví dụ 16px), so sánh kích cỡ này với 2 kích cỡ khác là 24px, 12px.
 
-- Màu xanh nước biển (blue): gợi nên sự **an toàn**, **thân thiện**
-- Màu vàng (kim loại - gold): gợi nên sự **đắt đỏ**, **tinh vi**
-- Màu hồng (pink): gợi nên sự **vui nhộn,** **không quá căng thẳng**
+Nếu giá trị 16px này ổn thì mọi việc đã OK. Nếu ngược lại ta sẽ lấy giá trị mới này làm "trung tâm" rồi đem đi so sánh với các giá trị khác đến khi nào *thấy ổn* thì thôi.
 
-### Border radius
+Cách tiếp cận này có thể áp dụng cho bất kì yếu tố nào trong thiết kế miễn sao bạn định nghĩa sẵn một hệ thống các giá tri cho chúng.
 
-Là một phần rất nhỏ trong thiết kế nhưng nó lại có ảnh hưởng khá lớn lên cảm giác mà thiết kế mang lại
+### Systematize everything
 
-Nếu border radius có gía trị nhỏ (3, 4px) thì ảnh hưởng của nó lên thiết kế là không nhiều
+Càng định nghĩa trước nhiều hệ thống thì việc thiết kế sẽ trở nên dễ dàng hơn rất nhiều. Dưới đây là danh sách một vài hệ thống mà chúng ta nên thiết kế trước
 
-<img src="https://user-images.githubusercontent.com/43769314/62029311-36851d80-b21d-11e9-885f-3c75d34f4c0d.png" width="720">
+- Font size
+- Font weight
+- Color
+- Border radius
+- Margin
+- Padding
 
-Border radius lớn sẽ tạo nên cảm giác năng động
+Chúng ta không nhất thiết phải thiết lập toàn bộ các hệ thống ngay từ đầu nhưng việc giữ mindset theo cách tiếp cận này là vô cùng quan trọng. Luôn tìm kiếm cơ hội đưa ra các hệ thống mới mỗi khi đưa ra các quyết định thiết kế mới
 
-<img src="https://user-images.githubusercontent.com/43769314/62029366-5c122700-b21d-11e9-9939-cb35f110d841.png" width="720">
+# Hierarchy is Everything
+
+## Not all elements are equal
+
+Nếu bạn vẫn nghĩ thiết kế là tạo ra một thứ gì đó *nhìn được* thì bạn đã lầm. Việc thiết kế không chỉ đơn thuần là làm **style một cách hời hợt** như vậy
+
+Ta có một khái niệm đó là *Visual Hierarchy* để chỉ việc các thành phần trong UI cũng cần có liên hệ với nhau.
+
+Nếu các thành phần trong thiết kế không có liên hệ gì với nhau, có thể chúng sẽ *cạnh tranh* nhau khiến cho thiết kế trông khá *hài hước* và đặc biệt là **không tạo ra được sự thống nhất** trong thiết kế, nó giống như một bức tường lớn với các nội dung đối lập và cuối cùng chẳng truyền đạt được bất cứ một thông điệp gì cả
+
+Ảnh phía dưới là một hệ thống không có sự phân cấp, kế thừa, nhấn mạnh tính chính phụ của thông tin
+
+<img src="https://user-images.githubusercontent.com/43769314/62106177-862c1d80-b2df-11e9-9ee3-62b3d5fc0875.png" width="720">
+
+Ảnh phía dưới là hệ thống đã có sự phân cấp thông tin chính, phụ, qua đó khiến việc nắm bắt thông tin dễ dàng hơn rất nhiều (dù font chữ, tông màu không thay đổi gì cả)
+
+<img src="https://user-images.githubusercontent.com/43769314/62106272-cf7c6d00-b2df-11e9-9794-da144d8edb41.png" width="720">
+
+## Size isn’t everything
+
+Không nên chỉ dựa hoàn toàn vào font size. Trong khi có nhiều yếu tố khác như:
+- Màu sắc
+- Font weight
+
+Cũng ảnh hưởng không kém đến hệ thống phân cấp kế thừa trong thiết kế, thay vì giữ nguyên quan điểm
+
+> primary content sẽ có font size lớn, secondary content sẽ có font size nhỏ
+
+Ví dụ: Nếu có 4, 5 cấp trong hệ thống phân cấp thông tin thì ta sẽ phải sử dụng 4, 5 font size -> điều này là khá bất hợp lí vì trong 1 site chỉ nên sử dụng **tối đa 3 font sizes** mà thôi
+
+Với các text hỗ trợ, cấp thấp ta có thể sử dụng những **màu nhạt hơn** hoặc với những nội dung quan trọng như tiêu đề bài viết thì ta sẽ **làm đậm** nó lên. Ngoài ra việc sử dụng quá nhiều cỡ chữ có thể ảnh hưởng đến tính dễ đọc (readability) của thiết kế
+
+Trong 1 site chỉ nên:
+
+- Sử dụng 2 hoặc 3 màu
+  - Dark color cho primary content (tiêu đề article)
+  - Grey color cho secondary content (như ngày mà article được đăng)
+  - Lighter grey cho nội dung cấp 3 (copyright notice trong footer)
+
+- Tương tự chỉ cần 2 font weights là đủ
+  - 400, 500 (normal font weight) cho các text thông thường
+  - 600, 700 (heavier font weight) cho các nội dung muốn nhấn mạnh
+
+<img src="https://user-images.githubusercontent.com/43769314/62119405-7110b800-b2fa-11e9-8314-baa62ee86753.png" width="720">
