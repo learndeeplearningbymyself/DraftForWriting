@@ -106,3 +106,24 @@ Trong các pages thì hầu như chỉ có:
 Nếu thiết kế theo semantics thì sẽ trông như sau
 
 <img src="https://user-images.githubusercontent.com/43769314/62200702-ee9efb80-b3c0-11e9-982a-5c92cc9bb22f.png" width="720">
+
+Các actions trong page thường có độ quan trọng theo hình kim tự tháp
+
+Một số tips thường dùng khi thiết kế các buttons dựa theo mức độ kế thừa như sau:
+- **Primary actions nên được chú trọng**  - thông qua việc sử dụng background tương phản, solid
+- **Secondary actions nên rõ ràng chứ không nên quá nổi bật** - outline style hoặc màu sắc tương phản thấp là một sự lựa chọn hợp lí
+- **Tertiary actions nên tìm được chứ không nên quá nổi bật** - style cho các actions kiểu này như một **link** là một giải pháp tốt
+
+<img src="https://user-images.githubusercontent.com/43769314/62268151-d33bfb00-b469-11e9-98b8-c50a072b17d6.png" width="720">
+
+### Destructive actions
+
+Các actions liên quan đến xoá không có nghĩa sẽ mặc nhiên là **primary action** của page, nên không phải lúc nào các **actions xoá** sẽ có background đỏ và solid
+
+Nếu không phải **primary action** thì các actions loại này nên là **secondary** hoặc **tertiary**
+
+<img src="https://user-images.githubusercontent.com/43769314/62268618-590c7600-b46b-11e9-8353-1c69337a666b.png" width="720">
+
+Nếu các actions loại này đi kèm với bước xác nhận thì nó nên là **primary action**
+
+# Layout and Spacing
