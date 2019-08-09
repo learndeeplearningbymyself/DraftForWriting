@@ -52,4 +52,78 @@ Tuy nhiên nếu thay đổi các kích cỡ này một cách không quá cứng
 
 <img src="https://user-images.githubusercontent.com/43769314/62686530-e1f15780-b9ff-11e9-8966-44f4fe6915a7.png" width="720">
 
-Rõ ràng ảnh phía dưới cho ta cảm giác
+Rõ ràng ảnh phía dưới cho ta cảm giác nút nhỏ thật sự *nhỏ*, nút lớn thực sự *lớn*
+
+Vậy nên hãy từ bỏ thói quen scale mọi thứ thật *cân xứng*, hãy làm mọi thứ độc lập với nhau, điều đó sẽ khiến bạn cảm thấy tự do hơn khi thay đổi kích thước các elements
+
+## Avoid ambiguous spacing
+
+Khi thiết kế **background color**, **spacing** cũng như các **seperators** là công cụ để phân biệt giữa các *elements groups* với nhau
+
+Thiếu đi chúng các elements trong cùng 1 group sẽ thiếu đi sự liên kết
+Như ví dụ dưới đây, margin giữa label với input là như nhau nên không có sự liên kết giữa label và input trong cùng 1 group
+
+<img src="https://user-images.githubusercontent.com/43769314/62750787-5083f300-ba9c-11e9-9663-90f46b2bf698.png" width="720">
+
+Nếu thay đổi khoảng cách giữa input với label phía dưới nó, thì sẽ trông như thế này
+
+<img src="https://user-images.githubusercontent.com/43769314/62750798-5bd71e80-ba9c-11e9-993c-1660df3e01ea.png"" width="720">
+
+Rõ ràng ở hình thứ 2, mọi thứ đã có sự liên kết rõ ràng hơn
+
+Cũng tương tự như khi thiết kế article (**khoảng cách phía trên section heading** là không đủ lớn) hoặc trong **bulleted list**, khi mà khoảng cách giữa các **bulleted** bằng với **line-height** của 1 bullet.
+
+<img src="https://user-images.githubusercontent.com/43769314/62750960-df910b00-ba9c-11e9-9b57-30464b3cc6ae.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/62750974-eddf2700-ba9c-11e9-8ea7-9975bcd4366d.png" width="720">
+
+Điều tương tự cũng có thể xảy ra với các phần tử nằm ngang
+
+<img src="https://user-images.githubusercontent.com/43769314/62751024-2bdc4b00-ba9d-11e9-96c7-06e67e202770.png" width="720">
+
+Bất cứ khi nào bạn muốn dựa theo khoảng cách để kết nối các phần tử thì hãy ghi nhớ rằng
+
+> Khoảng cách xung quanh group elements luôn phải lớn hơn khoảng cách bên trong group
+
+> Một UI tồi là khi nó quá khó để hiểu
+
+# Designing Text
+
+## Establish a type scale
+
+Trong thực tế, không quá khó để tìm thấy một thiết kế có quá nhiều font-size
+
+<img src="https://user-images.githubusercontent.com/43769314/62755913-c7c38200-bab0-11e9-85c3-ae72c85dd55d.png" width="720">
+
+Chọn lựa font-size mà thiếu đi tính hệ thống có thể là 1 ý tưởng tồi với 2 lí do như sau
+1. Khiến cho giao diện trở nên thiếu đi tính thống nhất
+2. Làm giảm tiến độ công việc
+
+### Choosing a scale
+
+#### Modular scales
+
+Một cách tiếp cận đó là tính toán dựa theo **tỉ lệ**
+- 4:5 - *major third*
+- 2:3 - *perfect fifth*
+- 1:1.618 - *golden ratio*
+
+Cách tiếp cận này thường gọi là **modular scale**. Có thể chọn **base font size** là 16px vì *đây là kích cỡ font mặc định của mọi trình duyệt*
+
+Cách tiếp cận này trong thực tế lại không hợp lí vì 2 lí do
+1. **Chúng ta thường có kết quả dưới dạng phân số**
+2. **Thực tế, chúng ta cần nhiều font size hơn**
+  - Việc sử dụng cách tính toán trên chỉ thích hợp với **article design** với **interface design** đôi khi chúng ta muốn các cỡ font nằm giữa khoảng **12px- 16px** hoặc **16px - 21px**
+  - Để giải quyết vấn đề, có thể nghĩ tới giải pháp với tỉ lệ 8:9. Tuy nhiên đây thực ra lại là **chọn cỡ font mà ta mong muốn một cách tuỳ ý**
+
+#### Hand-crafted scales
+
+Một cách tiếp cận thường dùng trong thực tế đó là **dùng tay**. Thật vậy, việc tự tạo **bằng tay** một hệ thống sẽ giúp bạn chủ động hơn trong việc kiểm soát các kích cỡ hiện có thay vì phó mặc mọi thứ cho một hệ thống tính toán
+
+Dưới đây là một ví dụ về một hệ thống scale được sử dụng rất nhiều trong thực tế
+
+<img src="https://user-images.githubusercontent.com/43769314/62756782-01e25300-bab4-11e9-87e2-74bc70b0e80b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/62756835-25a59900-bab4-11e9-9897-3edfd7dd70dc.png" width="720">
+
+#### Avoid em units
