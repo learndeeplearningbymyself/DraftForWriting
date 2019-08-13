@@ -34,6 +34,8 @@ future.then((value) => handleValue(value))
       .catchError((error) => handleError(error));
 ```
 
+**Future.then(() {});** the function that we passed to **then()** will be stored in memory until Future value is available
+
 - Have **async**, **await** to write **asynchronous code** just like **synchronous code**
 
 ## Anonymous functions
