@@ -1,36 +1,80 @@
-**FittedBox** forces its childs to available space
+**setState()** is called when theme or **MediaQuery** has changed, **MediaQuery** also holds the information about **viewInset**
 
-In **Flexible Widget** we have **fit** property and **FlexFit** enum
-**FlexFit** enum has two values:
-- **loose** - take as much space as fit it childs
-- **tight** - it only takes as much space as fits in there without squeezing any items off the screen, so we will not see black/ yellow warning marker. If we use **flex** property (default value is 1), the value of flex notices us that this Widget will take ~ part amongs **tight** elements
+We use **builder** when we want to build Widget dynamically
 
-We also have **Expanded** Widget, it sames with **Flexible** that has **fit: FlexFit.tight**
+## const constructor & const widget
 
-**ListTile** widget often is used in conjunction with lists but you don't have to use it in conjuction
-- ListTile - leading: first widget
+**const constructor** - if a class have this type of constructor, the instance that is created from class will be unchangeable, use to notice that all properties of this instance is **final** (means can not change it)
 
-In state class of **StatefulWidget** we have **global context object**
+We do not use Widget objects like normal objects, we use them to pass onto the **Widget Tree**
 
-In **Theme** we have default **errorColor is red**
+When the **build()** method runs, all the widgets of Widget tree are placed, not be changed
 
-## Responsive & Adaptive UIs
+If we know data pass to Widget will never be changed, we can use **const** before that Widget in **WidgetTree Code**, we use that to tell Flutter **doesn't need to rebuild this Widget anymore**
 
-Adaptive means you adapting your UI with different OS(s)
+By this way, we can improve the performance of our apps with tiny changes
 
-<img src="https://user-images.githubusercontent.com/43769314/62917624-ef2f8d00-bdd7-11e9-8f1f-45a44a8121e4.png" width="720">
+## Good Code
 
-By One Codebase, One Widget Tree, depending on platform, we create different Sub-Trees / Widget (for iOS and Android)
+Has two types
+- **Readability / Understandability**
+- **Performace** 
 
-## Constraints
+If MediaQuery content usually changes, you should put it into separate Widget to **prevent recall build()** method as much as possible
 
-Define how a widget is rendered on the screen, set by height, width
-If you don't set it, default values will be used by Flutter
+Attention that **MediaQuery** 's **type** is **MediaQueryData**
 
-<img src="https://user-images.githubusercontent.com/43769314/62920860-e8a61300-bde1-11e9-9d29-f0f92ed2453e.png" width="720">
+## Widget Lifecycle
 
-Don't use **{}** in *if inside of a list* syntax
+With **Stateful Widget** **initState** is implemented by **State Class**
 
-```dart
-if (condition) handle
-```
+**didUpdateWidget** method have **oldWidget** argument - it's a previous Widget, this method is called when Widget changes
+
+**dispose()** is called when Widget is destroyed, so we use it to clean up data, listener, life connection
+
+Image for **Widget lifecycle**
+
+<img src="https://user-images.githubusercontent.com/43769314/62992786-d4205400-be8f-11e9-8b60-c9e2ab434e25.png" width="720">
+
+**initState()** is often used for fetching some initial data you need in your app, is called before **build()** so do not use **setState** in **initState**
+
+**didUpdateWidget()** is not usually used, we use it if we know something changed in parent widget and we need to refetch data in our state
+
+## App lifecycle
+
+<img src="https://user-images.githubusercontent.com/43769314/62996237-ea81dc00-be9e-11e9-88ff-846fb44d7b10.png" width="720">
+
+**Mix-in** not the same as extends, you can use some methods or properties from another class (not all) - the other way for **multiple inherrit** (same with **ruby**)
+
+**didChangeAppLifecycleState** is called when lifecycle state changes
+
+## Understanding context
+
+**MediaQuery** and **Theme** use **InheritedWidget** behind the scenes
+context knows about the general structure of widget tree, so it can directly access any other widget without passing data through arguments
+
+Flutter uses **InheritedWidget** to get data of **MediaQuery** and **Theme** it useful for Flutter establish behind the scenes channel to exchange data between widgets in **Widget Tree**
+
+## About key in Flutter
+
+Every Widget in Flutter has a key
+
+We need key when this is **topmost** - **stateful** item of list
+
+We use **super()** to instantiating the parent class if we want to pass extra data to parent class
+Key makes Flutter identify widget easier
+
+With **StatefulWidget** state object is attached to Element **not Widget**
+
+## GridView
+
+Sliver in Flutter are really just scrollable areas on the screen
+**gridDelagate** takes care about structuring, layouting the grid
+
+## Navigation in Flutter Apps
+
+Pages are managed as a Stack, Top-most Page is visible. So we can **pushing** or **poping** page
+- Push: when navigate to new page
+- Pop: when get out of page
+
+<img src="https://user-images.githubusercontent.com/43769314/63011230-dfd93e00-bec2-11e9-9b81-0a3e5f453228.png" width="720">
