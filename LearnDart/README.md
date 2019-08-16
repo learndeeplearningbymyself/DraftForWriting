@@ -63,3 +63,9 @@ Function makeAdder(num addBy) {
 
 - Functions in dart are objects too, so it can be returned or passed as arguments to the another functions.
 - type: **Function*
+
+Do not confuse between **Map** and **Object** in Dart. In Dart **Object** is the instance of the class
+
+## Mixin and Class
+
+With **mixin** you can share properties or methods but less of a strong connection, just like utility functions provider
