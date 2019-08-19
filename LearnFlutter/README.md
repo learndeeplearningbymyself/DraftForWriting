@@ -48,3 +48,17 @@ Provider.of(context)
 ```
 
 to set up a direct communication channel behind the scenes
+
+If we use
+
+```dart
+Product.of<Generic>(context)
+```
+
+**build()** method will be re-runned whenever data changes. But we could alyways want to have a case where we only want to run a subpart of our widgets treen when some thing changes, then we can only wrap the subpart of the widget tree that depends on your product data with that listener
+
+In that case we can use **Consumer**, **Consumer** always listens to changes
+
+If we want to rebuild only a part of the widget tree not the whole tree, have to set up a part of tree as a listener not the majority tree
+
+Do not use the **Provider** if you want to change only inside widget 's state
