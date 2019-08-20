@@ -62,3 +62,9 @@ In that case we can use **Consumer**, **Consumer** always listens to changes
 If we want to rebuild only a part of the widget tree not the whole tree, have to set up a part of tree as a listener not the majority tree
 
 Do not use the **Provider** if you want to change only inside widget 's state
+
+**TextEditingController** saves user input automatically
+
+If you work with your own **FocusNode** you must **dispose()** all of those in **class dispose() method**
+
+We can not use both **TextEditingController** with **initialValue** for **TextFormField**
