@@ -92,3 +92,7 @@ We have **transform** property of **Container**, its data type is **Matrix4**, b
 **AnimatedBuilder** or **FutureBuilder**, Flutter executes something for you and then rebuilds a part of the UI, when something is done or changes instead of entire widget tree
 
 In Flutter we have **Type<T>** - T is the same with **place holder**
+
+On iOS, Android, you can't write files to any place on the hard drive. There are a lot of restriction regarding where you can write data to
+
+Such a part is defined by both operating systems, that means whenever you delete your app, these operation systems can erase all the data from that path
