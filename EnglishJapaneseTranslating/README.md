@@ -78,3 +78,13 @@ Do tiếng anh cũng như tiếng nhật chuyên ngành IT không quá nặng v�
 | Dimension | 次元 |
 | Influence | 影響 |
 | Notion | 要因 |
+| Unique | 一意 |
+| For example |  仮に |
+| Increase | 増大 |
+| Sequential | 逐次 |
+| Parallel | 並列 |
+| And | であり |
+| Inherent | 固有 |
+| Candidate | 候補 |
+| Or | または、あるいは |
+| Communication | 疎通 |
