@@ -209,3 +209,38 @@ Thực tế là nếu thiết lập số lượng shards nhiều (**overallocati
 
 **3. Query Language**
 
+**4. Analyzer, Aggregation**
+**4.1. Analyzer and Full text search**
+
+- **Analyzer** là tính năng xử lí tách các đoạn văn thành các từ đơn để phục vụ cho mục đích **full text search**
+
+Xét ví dụ, trong văn bản có câu
+
+> 「マラソンが東京で開催される」
+
+nhưng người dùng sẽ tìm kiếm theo câu
+
+> 「東京でマラソン」
+
+Hai câu này không hề giống và đồng nhất với nhau vậy để cho ra kết quả chính xác, cần phân tách câu thành các từ đơn (câu văn lẫn câu truy vấn)
+
+<img src="https://user-images.githubusercontent.com/43769314/63837406-665b4880-c9b6-11e9-9311-1d5d612632b5.png" width="720">
+
+Tiếng nhật lẫn tiếng Anh đều biến đổi các từ đề phù hợp với các thì trong ngôn ngữ, như ví dụ dưới đây
+
+<img src="https://user-images.githubusercontent.com/43769314/63840517-28612300-c9bc-11e9-8815-5fa1effb0dba.png" width="720">
+
+Vậy nên cần phải có quá trình xử lí các từ khi tiến hành **tokenizer - phân tách từ**. Quá trình này gồm 3 quy tắc như sau
+
+- **Stemming**: Biến các từ về *thể chuẩn*. VD: "making", "makes" -> "make" ; "食べる", "食べた" -> "食べ"
+- **Chuẩn hoá**: chữ hoa -> chữ thường, katakana -> hiragana, ...
+
+- **stop-word**: từ không mang ý nghĩa (trong tiếng Anh là: is, at, a, ...)
+
+<img src="https://user-images.githubusercontent.com/43769314/63842550-c4405e00-c9bf-11e9-826b-91aa0833ffce.png" width="720">
+
+**Định nghĩa Analyzer**
+
+Mapping bao gồm: field và kiểu dữ liệu nhưng ta có thể chỉ ra **Analyzer** cho từng field thông qua thuộc tính **analyzer** của thuộc tính nằm dưới trường **properties**
+
+<img src="https://user-images.githubusercontent.com/43769314/63844157-a58f9680-c9c2-11e9-9986-9ea11fc007a1.png" width="720">
