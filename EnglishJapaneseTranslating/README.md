@@ -88,3 +88,9 @@ Do tiếng anh cũng như tiếng nhật chuyên ngành IT không quá nặng v�
 | Candidate | 候補 |
 | Or | または、あるいは |
 | Communication | 疎通 |
+| Odd number | 奇数台 |
+| Even number | 偶数台 |
+| Integer | 整数 |
+| Round up | 切り上げる |
+| Recommendation | 推奨 |
+| Detection | 検知 |
