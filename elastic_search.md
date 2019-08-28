@@ -125,4 +125,83 @@ Dùng để phân tải cho quá trình xử lí request cũng như xử lí th�
 
 **Việc chọn master node**
 
-Để đảm bảo tính khả dụng của hệ thống nên chọn từ **3 master-eligible nodes trở lên**
+Để đảm bảo tính khả dụng của hệ thống nên chọn từ **3 master-eligible nodes trở lên (số lẻ)**
+
+Nếu chọn số lượng chẵn (2, 4, 2k, ...) thì sẽ dẫn đến tình trạng **split-brain**. Được minh hoạ như hình dưới đây
+
+<img src="https://user-images.githubusercontent.com/43769314/63819090-e5cd2580-c97e-11e9-929f-0b1763683499.png" width="720">
+
+Nếu 2 nodes bị mất kết nối thì từ 1 cluster sẽ bị chia cắt thành 2 clusters, do tại mỗi cluster đều không biết được đâu là master node nên mỗi node sẽ tự động trở thành master node, khi đó nếu có request thay đổi từ phía client thì sẽ chỉ có 1 bên được thay đổi từ đó dẫn đến tình trạng bất đồng bộ trong cluster
+
+Có 2 cách giải quyết đó là
+- Chọn số lượng **master-eligible node** từ 3 nodes trở lên (số lẻ)
+- Thay đổi thiết lập trong file **elasticsearch.yml**, bằng việc thay đổi giá trị của tham số **discovery.zen.minimum_master_nodes** bằng với số lượng đa số (hơn nửa) **master-eligible node**
+
+Khi đó nhóm nào có số lượng nodes chiếm hơn nửa số lượng node của cả cluster thì sẽ chứa **master node** và ngược lại.
+
+VD: Nếu có 3 **master-eligible node** thì giá trị tham số **discovery.zen.minimum_master_nodes** sẽ là 2 khi đó nodes group nào có 2 nodes trở lên sẽ có **master node** trong đó
+
+> discovery.zen.minimum_master_nodes = number_nodes / 2 + 1
+
+Tham số này có gía trị mặc định là **1** vậy nên khi sử dụng số lượng nodes là 3 thì phải thiết lập lại nếu không sẽ dẫn đến tình trạng **split-brain**
+
+<img src="https://user-images.githubusercontent.com/43769314/63820106-013a2f80-c983-11e9-9532-3bc233023749.png" width="720">
+  
+**Cách các nodes tham gia vào cluster**
+
+ES có cơ chế giúp cho các nodes tự động tham gia vào cluster khi được khởi tạo. Cụ thể như sau:
+
+Khi các nodes được khởi động, chúng sẽ thử kết nối đến node được định nghĩa qua tham số **discovery.zen.ping.unicast.hosts**, nếu thành công, node sẽ trở thành 1 thành viên của cluster
+
+Sau khi join vào cluster, master node định kì sẽ gửi các package đến các nodes còn lại để kiểm tra chúng có tồn tại hay không, ngược lại các nodes đó cũng sẽ gửi cho master node các packages về tình trạng hoạt động của chúng, nếu trong khoảng thời gian **timeout** mà master node không nhận được hồi đáp thì sẽ coi như node không phản hồi đã không còn tham gia vào cluster
+
+**Cơ chế**
+
+ES sử dụng cơ chế **discovery** cụ thể là **Zen discovery** cho việc quản lí cũng như detect các nodes tham gia vào cluster (được tiến hành nội bộ trong ES)
+
+```javascript
+cluster.name: my-cluster
+discovery.zen.ping.unicast.hosts: ["master1", "master2", "master3"]
+discovery.zen.minimum_master_nodes: 2
+```
+
+Đầu tiên là thiết lập tên cluster, sau đó sẽ kết nối tới các **master-eligible nodes** (dựa theo **host name** hoặc **IP addr**). Tuỳ vào việc cluster đã có master node hay chưa mà quá trình xử lí sẽ khác nhau
+
+- Nếu cluster đã có master node: node này sau khi được **master node** chấp nhận, nó sẽ tham gia vào cluster
+
+- Nếu cluster chưa có master node:
+  - Nếu node mới này là **master-eligible node** nó sẽ tham gia vào quá trình tìm ra **master node** (đương nhiên là sẽ dựa theo **minimum_master_nodes parameter**) để tạo nên cluster
+  - Nếu node mới này không phải **master-eligible node** thì nó sẽ chờ quá trình trên kết thúc hoặc cũng có thể tham gia vào 1 cluster mới
+
+Giá trị mặc định của **discovery.zen.ping.unicast.hosts** là ["127.0.0.1", "[::1]", "], điều này để tránh node không tham gia vào các clusters khác cũng như liên lạc được với các nodes khác vậy nên khi xây dựng **cluster** có nhiều nodes thì việc thiết lập giá trị cho tham số này là cần thiết
+
+**Phân chia shard và replica**
+
+Số lượng shards mặc định của 1 node là 5
+
+Việc thiết lập **số lượng shards** cũng như **số lượng replicas** đều hướng tới 2 mục đích:
+- Tăng tính khả dụng
+- Tăng khả năng tìm kiếm
+
+**Quan điểm thiết lập số lượng shards**
+
+- Cần dự đoán trước số shards sẽ sử dụng sau này dựa theo số lượng nodes có thể scale up
+- Tuy nhiên nếu kích cỡ dữ liệu sau khi đánh index thuộc khoảng (20GB - 30GB) thì chỉ cần 1 shard là đủ (nghĩa là số lượng shards không nhất thiết phải phụ thuộc vào số lượng nodes)
+
+> overallocation: thiết lập quá nhiều shard
+
+> underallocation: thiết lập quá ít shard so với số lượng node
+
+
+**Quan điểm thiết lập số lượng replica**
+- Tăng số lượng replica để tăng khả năng tìm kiếm: ưu điểm của việc sử dụng replica đó là tăng tính khả dụng, chịu tải cho quá trình tìm kiếm (phân tán đều tải), nhưng nếu số lượng shards nhiều thì **kích cỡ Lucence index file sẽ tăng**
+- Đưa số lượng replica về 0 khi tiến hành Batch handle, bulk index
+  - Mục đích chính là giảm thời gian xử lí, tránh phải sao lưu ra quá nhiều bản sao khi đánh index dữ liệu, giảm đi rủi ro phát sinh lỗi, sau khi quá trình đánh index kết thúc ta sẽ thiết lập lại giá trị cho replica
+
+> Số lượng shard không thể thay đổi sau khi đánh index, số lượng replica thì có thể thay đối
+
+Thực tế là nếu thiết lập số lượng shards nhiều (**overallocation**) thì có thể dẫn đến **overhead** vì khi đó sẽ có 1 số lượng các nodes tồn tại trên nhiều shards dẫn đến khi truy vấn sẽ phải tiến hành trên nhiều shards (có thể overhead nhưng không quá nghiêm trọng) so với việc thiết lập ít shards dẫn đến **underallocation** nghĩa là sẽ không thể phân tán tải khi lượng dữ liệu tăng lên
+
+**2.3.REST API**
+
+<img src="https://user-images.githubusercontent.com/43769314/63828422-58e79380-c9a1-11e9-9199-398b741b15fa.png" width="720">
