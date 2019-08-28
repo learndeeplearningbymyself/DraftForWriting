@@ -1,4 +1,4 @@
-Elastic Search Practice guide
+# Elastic Search Practice guide
 
 Tham khảo từ [sách](https://www.amazon.co.jp/Elasticsearch%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89-impress-top-gear-%E6%83%A3%E9%81%93/dp/4295003913/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2CG94FTBJVCZN&keywords=elasticsearch+%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89&qid=1566870901&s=gateway&sprefix=elasticsea%2Caps%2C237&sr=8-1)
 
@@ -205,3 +205,7 @@ Thực tế là nếu thiết lập số lượng shards nhiều (**overallocati
 **2.3.REST API**
 
 <img src="https://user-images.githubusercontent.com/43769314/63828422-58e79380-c9a1-11e9-9199-398b741b15fa.png" width="720">
+
+
+**3. Query Language**
+
