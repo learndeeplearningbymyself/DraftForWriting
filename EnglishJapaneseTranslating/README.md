@@ -94,3 +94,4 @@ Do tiếng anh cũng như tiếng nhật chuyên ngành IT không quá nặng v�
 | Round up | 切り上げる |
 | Recommendation | 推奨 |
 | Detection | 検知 |
+| Verb, Adj, Noun | 品詞 |
