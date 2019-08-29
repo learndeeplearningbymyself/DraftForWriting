@@ -2,7 +2,9 @@
 
 Tham khảo từ [sách](https://www.amazon.co.jp/Elasticsearch%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89-impress-top-gear-%E6%83%A3%E9%81%93/dp/4295003913/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2CG94FTBJVCZN&keywords=elasticsearch+%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89&qid=1566870901&s=gateway&sprefix=elasticsea%2Caps%2C237&sr=8-1)
 
-**2.1. Concepts cơ bản**
+Tham khảo từ [nguồn 1](http://ktmt.github.io/blog/2013/10/27/full-text-search-engine/), [nguồn 2](https://ktmt.github.io/blog/2013/11/03/full-text-search/) cho **inverted index** và **n-gram**
+
+## 2.1. Concepts cơ bản
 
 - Đơn vị lưu trữ cơ bản là **document** ~= **record** trong **table**, nhưng lưu dưới dạng JSON
 Khi đưa vào ElasticSearch các document đều được thêm 1 trường để quản lí đó là **ID**
@@ -51,7 +53,7 @@ Mô hình của 1 cluster:
 
 <img src="https://user-images.githubusercontent.com/43769314/63745567-80752800-c8dd-11e9-8f76-9f5758cd8e52.png" width="720">
 
-**2.2. Cấu trúc hệ thống**
+## 2.2. Cấu trúc hệ thống
 
 ES có cấu trúc phân tán, các clusters chứa các nodes (các nodes sẽ liên kết, liên lạc, gửi tin cho nhau cũng như có vai trò kế thừa nhau)
 
@@ -202,17 +204,18 @@ Việc thiết lập **số lượng shards** cũng như **số lượng replica
 
 Thực tế là nếu thiết lập số lượng shards nhiều (**overallocation**) thì có thể dẫn đến **overhead** vì khi đó sẽ có 1 số lượng các nodes tồn tại trên nhiều shards dẫn đến khi truy vấn sẽ phải tiến hành trên nhiều shards (có thể overhead nhưng không quá nghiêm trọng) so với việc thiết lập ít shards dẫn đến **underallocation** nghĩa là sẽ không thể phân tán tải khi lượng dữ liệu tăng lên
 
-**2.3.REST API**
+## 2.3.REST API
 
 <img src="https://user-images.githubusercontent.com/43769314/63828422-58e79380-c9a1-11e9-9199-398b741b15fa.png" width="720">
 
 
-**3. Query Language**
+## 3. Query Language
 
-**4. Analyzer, Aggregation**
-**4.1. Analyzer and Full text search**
+## 4. Analyzer, Aggregation
+## 4.1. Analyzer and Full text search
 
-- **Analyzer** là tính năng xử lí tách các đoạn văn thành các từ đơn để phục vụ cho mục đích **full text search**
+### Analyze
+Là tính năng xử lí tách các đoạn văn thành các từ đơn để phục vụ cho mục đích **full text search**
 
 Xét ví dụ, trong văn bản có câu
 
@@ -244,3 +247,128 @@ Vậy nên cần phải có quá trình xử lí các từ khi tiến hành **to
 Mapping bao gồm: field và kiểu dữ liệu nhưng ta có thể chỉ ra **Analyzer** cho từng field thông qua thuộc tính **analyzer** của thuộc tính nằm dưới trường **properties**
 
 <img src="https://user-images.githubusercontent.com/43769314/63844157-a58f9680-c9c2-11e9-9986-9ea11fc007a1.png" width="720">
+
+### Inverted-index
+
+Khác với index thông thường (đánh chỉ số theo từng dòng của record trong DB table (no.1, 2, 3, ...)), inverted index sẽ **map giữa term với các documents chứa term** (giống như 1 **data structure**)
+
+Ví dụ:
+
+```ruby
+D1 = "This is first document"
+D2 = "This is second one"
+D3 = "one two"
+```
+
+Inverted index sẽ có dạng như sau:
+
+```ruby
+"this" => {D1, D2}
+"is" => {D1, D2}
+"first" => {D1}
+"document" => {D1}
+"second" => {D2}
+"one" => {D2, D3}
+"two" => {D3}
+```
+
+Sử dụng **inverted-index** có lợi lớn khi tiến hành full text search. Ví dụ ta cần tìm document chứa cụm "This is first", thay vì scan từng document, ta chỉ cần dùng phép **union** của inverted-index là đủ
+
+```ruby
+{D1, D2} union {D1, D2} union {D1} = {D1}
+```
+
+Ngoài ra inverted-index cũng giúp tăng tính flex của việc tìm kiếm, nghĩa là ta có thể tìm kiếm "This is first", "Is first this", "this first is" với độ phức tạp của phép toán **union** không đổi
+
+### N-gram
+
+Là việc chia đều 1 chuỗi thành các chuỗi con có độ dài N (N = 0, 1, 2 - unigram, bigram, trigram)
+
+Ví dụ với chuỗi "good morning" ta sẽ chia đều thành bigram
+
+```ruby
+"good morning" => {"go", "oo", "od", "d ", " m", "mo", "or", "rn", "ni", "in", "ng"}
+```
+
+Việc tách từ bằng N-gram sẽ không xảy ra việc mất mát các yếu tố quan trọng trong kết quả tìm kiếm khi muốn tìm kiếm chính xác nhưng ngược lại, vì nó có thể hit các **query vô nghĩa** nên sẽ ảnh hưởng đến độ chính xác của kết quả tìm kiếm, ta xét ví dụ sau
+
+「東京都の紅葉情報」-(2-gram)-> 「東京」「京都」「都の」「の紅」「紅葉」「葉情」「情報」
+
+Nếu tiến hành query câu vô nghĩa 「京都　紅葉」thì vấn đề ở đây là nó vẫn có kết quả nhưng kết quả lại không liên quan đến câu query về mặt ý nghĩa
+
+Không những thế việc phải lưu quá nhiều các chuỗi con sau khi tách ra cũng là vấn đề về mặt bộ nhớ của N-gram, ngoài ra có thể lưu những chuỗi con không cần thiết như 「葉情」như ở ví dụ trên
+
+### Morphological analysis
+
+Tách 1 chuỗi thành các từ có nghĩa, thường sẽ dựa theo 1 từ điển các terms/ cụm có nghĩa trước đó.
+
+Ví dụ
+
+```ruby
+"good morning" => {"good", "morning"}
+```
+
+Tuy nhiên cần cập nhật từ điển này đối với các từ mới. Ngoài ra khi tiến hành tìm kiếm các từ không giống với term trong từ điển thì tuỳ theo các từ bóc tách được ta có thể sẽ mất đi các kết quả có ý nghĩa.
+
+Với plug-in **kuromoji** của ES cho tiếng nhật, plug-in này sử dụng **Morphological analysis**
+
+### Yếu tố cấu thành nên Analyzer
+
+Gồm 3 block xử lí
+- Char filter
+- Tokenizer
+- Token filter
+
+Khi lưu trữ document hay truyền query vào ES, trong bộ Analyzer đều diễn ra những xử lí như hình dưới đây
+
+<img src="https://user-images.githubusercontent.com/43769314/63905795-4f693480-ca50-11e9-8d58-24ef49f6dff3.png" width="720">
+
+Có khá nhiều bộ Analyzers, ta xét bộ **Standard Analyzer** với cấu trúc như sau:
+
+- Char filter: không có
+- Tokenizer: Standard Tokenizer
+- Token filter: Standard token filter, Lower case token filter, Stop token filter
+
+**Char filter**: tiền xử lí trước khi tokenizer
+
+- HTML Strip Character filter: loại bỏ đi các thẻ HTML
+- Mapping Character Filter: định nghĩa mapping rule (":)" -> "happy")
+- Pattern Replace Character Filter: biến đổi dựa theo Regex
+
+**Token filter**: có khá nhiều loại filter như filter **stopword**, **lower case**, **synonym token**
+
+### Custom Analyzer
+
+<img src="https://user-images.githubusercontent.com/43769314/63907174-678f8280-ca55-11e9-8a99-b900f7212b2b.png" width="720">
+
+### Custom Char filter, Tokenizer, Token filter
+
+<img src="https://user-images.githubusercontent.com/43769314/63907350-087e3d80-ca56-11e9-8c47-a7bf76489c4c.png" width="720">
+
+Kết hợp 2 loại trên
+
+<img src="https://user-images.githubusercontent.com/43769314/63907439-6c086b00-ca56-11e9-9b61-d20bde65ce80.png" width="720">
+
+Có thể thử analyzer thông qua endpoint **_analyze**
+
+### Áp dụng Analyzer cho tiếng nhật
+
+Có plugins có thể dùng hiện tại đó là:
+- **ICU Analysis Plugin**: có thể sử dụng cho khá nhiều ngôn ngữ châu Á như (Tiếng Trung, Hàn, Thái, ...)
+- **kuromoji Analysis**
+
+Nếu muốn sử dụng plugin cần phải tiến hành cài đặt trên mọi nodes và cần phải khởi động lại sau khi cài đặt xong
+
+## 4.2. Aggregation
+
+Là tính năng phân loại, thống kê đối với kết quả tìm kiếm
+
+<img src="https://user-images.githubusercontent.com/43769314/63920685-5e65dc00-ca7c-11e9-98c5-0cd4804d2bec.png" width="720">
+
+Có 4 loại Aggregation chính
+- **Metrics** - thống kê giá trị max, min, trung bình
+- **Buckets** - dựa theo giá trị của field để phân nhóm cho các documents (phân nhóm dựa theo: thể loại, mức giá (<= 100$, 100-200$, ...))
+- **Pipeline** - sử dụng kết quả Aggregation của Buckets, ... để phân tích thêm. VD: thống kê giá cổ phiếu bình quân hàng tháng, cũng như sai lệch so với tháng trước
+- **Matrix** - phân tích tương quan giữa các giá trị thống kê
+
+> Use case điển hình đó là: sử dụng Buckets để phân nhóm và sử dụng Metrics để lấy về các giá trị thống kê của nhóm
