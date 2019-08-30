@@ -98,3 +98,5 @@ Do tiếng anh cũng như tiếng nhật chuyên ngành IT không quá nặng v�
 | Maximization | 最大化 |
 | Mixture | 混合 |
 | Analysis | 分析 |
+| Phrase | 語句 |
+| Field | 句 |
