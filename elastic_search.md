@@ -372,3 +372,129 @@ Có 4 loại Aggregation chính
 - **Matrix** - phân tích tương quan giữa các giá trị thống kê
 
 > Use case điển hình đó là: sử dụng Buckets để phân nhóm và sử dụng Metrics để lấy về các giá trị thống kê của nhóm
+
+<img src="https://user-images.githubusercontent.com/43769314/63985452-d549b600-cb0a-11e9-828c-4025fd88c6df.png" width="720">
+
+### Kí pháp Aggregation
+
+<img src="https://user-images.githubusercontent.com/43769314/63999362-3fc81980-cb3e-11e9-8720-59ef32da3bbe.png" width="720">
+
+- **aggregations** là thành phần bắt buộc phải có (có thể ghi tắt thành **aggs**)
+- **name** có thể không cần
+- **type** là Metrics, Buckets, ....
+
+Có thể định nghĩa các **aggregations** lồng nhau (nested)
+
+### Định nghĩa metrics
+
+Dùng khi cần thống kê giá trị max, min, avg của **data set**
+
+Nếu không sử dụng **query**, **Buckets** thì kết quả thống kê sẽ là của toàn bộ tập dữ liệu
+
+- **avg**, **max**, **min**
+
+```javascript
+GET /bank/_search
+{
+  "size": 0, 
+  "query": {
+    "match": {
+      "state": "OK"
+    }
+  },
+  "aggs": {
+    "avg_balance": {
+      "avg": {
+        "field": "balance"
+      }
+    }
+  }
+}
+```
+
+> size = 0: ẩn đi các kết quả truy vấn
+
+```javascript
+GET /bank/_search
+{
+  "size": 0, 
+  "query": {
+    "match": {
+      "state": "OK"
+    }
+  },
+  "aggs": {
+    "min_balance": {
+      "min": {
+        "field": "balance"
+      }
+    },
+    "max_balance": {
+      "max": {
+        "field": "balance"
+      }
+    }
+  }
+}
+```
+
+### Định nghĩa Buckets
+
+Dùng để nhóm dữ liệu
+
+- **terms**: phân nhóm dựa theo giá trị của field được gán cho
+
+```javascript
+GET /bank/_search
+{
+  "size": 0,
+  "aggs": {
+    "my_city_buckets": {
+      "terms": {
+        "field": "city.keyword",
+        "size": 3
+      }
+    }
+  }
+}
+```
+
+- **range** - phân nhóm dữ liệu theo khoảng
+
+```javascript
+GET /bank/_search
+{
+  "size": 0,
+  "aggs": {
+    "my_balance_buckets": {
+      "range": {
+        "field": "balance",
+        "ranges": [
+          {
+            "to": 1000
+          },
+          {
+            "from": 1000,
+            "to": 2000
+          },
+          {
+            "from": 2000,
+            "to": 3000
+          },
+          {
+            "from": 3000
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+- Có 2 kiểu dữ liệu văn bản đó là **text** và **keyword**. Tuy nhiên chỉ có **keyword** là sử dụng cho **Aggregation**, nguyên nhân là vì **text** sử dụng cho quá trình **Analyzer**, khi đó có thể các **phrase** gốc sẽ không được giữ lại nguyên trạng ("New York" => ["new", "york"]), nếu **keyword** cũng bị như vậy thì khi tạo **Buckets** sẽ dẫn đến các kết quả không chính xác
+
+##5. Sử dụng Logstash
+
+Sử dụng để import, đánh index dữ liệu từ 1 nguồn khác vào ES (1 dạng pipeline tool)
+
+Nguồn tham khảo với MySQL (java, sử dụng JDBC để kết nối với database) - [Logstash MySQL](https://medium.com/veltra-engineering/logstash-mysql-elasticsearch-f2c1165801d)
