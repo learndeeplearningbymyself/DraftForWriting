@@ -493,8 +493,71 @@ GET /bank/_search
 
 - Có 2 kiểu dữ liệu văn bản đó là **text** và **keyword**. Tuy nhiên chỉ có **keyword** là sử dụng cho **Aggregation**, nguyên nhân là vì **text** sử dụng cho quá trình **Analyzer**, khi đó có thể các **phrase** gốc sẽ không được giữ lại nguyên trạng ("New York" => ["new", "york"]), nếu **keyword** cũng bị như vậy thì khi tạo **Buckets** sẽ dẫn đến các kết quả không chính xác
 
-##5. Sử dụng Logstash
+### Kết hợp Metrics và Buckets
 
-Sử dụng để import, đánh index dữ liệu từ 1 nguồn khác vào ES (1 dạng pipeline tool)
+Ví dụ:
 
-Nguồn tham khảo với MySQL (java, sử dụng JDBC để kết nối với database) - [Logstash MySQL](https://medium.com/veltra-engineering/logstash-mysql-elasticsearch-f2c1165801d)
+```javascript
+GET /bank/_search
+{
+  "size": 0,
+  "aggs": {
+    "my_state_buckets": {
+      "terms": {"field": "state.keyword"},
+      "aggs": {
+        "my_balance_avg": {
+          "avg": {"field": "balance"}
+        }
+      }
+    }
+  }
+}
+```
+
+### Kết hợp nhiều buckets
+
+Tổ chức các buckets theo cấu trúc lồng (nested)
+
+<img src="https://user-images.githubusercontent.com/43769314/64085530-4b9a2280-cd6e-11e9-8c6d-601f79f3adfa.png" width="720">
+
+```javascript
+GET /bank/_search
+{
+  "size": 0,
+  "aggs": {
+    "my_state_buckets": {
+      "terms": {"field": "state.keyword"},
+      "aggs": {
+        "my_balance_buckets": {
+          "range": {
+            "field": "balance",
+            "ranges": [
+              {
+                "to": 1000
+              },
+              {
+                "from": 1000,
+                "to": 2000
+              },
+              {
+                "from": 2000,
+                "to": 3000
+              },
+              {
+                "from": 3000
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+## 5. Vận hành, quản lí cluster
+
+Index có 3 trạng thái
+- **green**: Mọi primary và replica shards đều ở trạng thái sẵn sàng
+- **yellow**: Mọi primary shards đều đã sẵn sàng, nhưng vẫn còn replica shards chưa sẵn sàng
+- **red**: Có những primary shards chưa sẵn sàng (những có 1 phần cluster vẫn hoạt động được)
