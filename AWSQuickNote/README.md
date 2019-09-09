@@ -15,3 +15,9 @@ Cơ chế hoạt động
 1. Đăng nhập thông qua **user pool**, **user pool** sẽ cung cấp **user pool token** (bản chất là JSON web tokens - JWT) cho phía user nếu đăng nhập thành công
 2. Tiếp theo, hoán đổi giữa **token** và **AWS credentials** thông qua **identity pool**
 3. Sử dụng **AWS credential** này để truy cập vào các **AWS Services**
+
+### 2. DynamoDB
+
+Một dạng database (key-value) - NoSQL, ưu tiên tính mở rộng cao
+
+
