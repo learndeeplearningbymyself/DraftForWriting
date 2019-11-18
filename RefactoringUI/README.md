@@ -127,3 +127,31 @@ Dưới đây là một ví dụ về một hệ thống scale được sử d�
 <img src="https://user-images.githubusercontent.com/43769314/62756835-25a59900-bab4-11e9-9897-3edfd7dd70dc.png" width="720">
 
 #### Avoid em units
+
+Không nên sử dụng đơn vị em, vì nó là giá trị mang tính chất tương đối. Giá trị em của **nested elements** phụ thuộc vào giá trị của element cha (relative value), từ đó dẫn đến tình trạng tạo ra các giá trị mà ta không hề mong muốn cho font chữ
+
+<img src="https://user-images.githubusercontent.com/43769314/66882296-d5433e00-f004-11e9-877e-ebfa5f6b8ca4.png" width="720">
+
+Như ví dụ trên, nếu một phần tử có font size là 1.25em (mặc định là 20px) thì phần tử con của nó (nếu có giá trị font size là 1em) thì lúc này giá trị thực (theo đơn vị px) sẽ là 20px thay vì 16px như mong muốn
+
+> Hãy sử dụng px hoặc rem nếu bạn muốn bảo toàn những gì đang xây dựng cho giao diện của mình
+
+### Use good fonts
+
+Dưới đây là một vài tricks để có thể chọn ra fonts (typefaces) phù hợp cho UI của bạn
+
+#### Play it safe
+
+Nếu đang phân vân thì **san-serif** luôn là một lựa chọn an toàn - VD như **Helvetica**
+
+Còn nếu bạn không tin tưởng vào sự cảm nhận của bản thân thì hãy sử dụng **system font stack** như sau:
+
+1. -apple-system
+2. Segoe UI
+3. Roboto
+4. Noto Sans
+5. Ubuntu
+6. Cantarell
+7. Helvetica Neue
+
+Có thể đó không phải là những sự lựa chọn tốt nhất nhưng ít nhất, người dùng cũng có thể đọc nó một cách dễ dàng
