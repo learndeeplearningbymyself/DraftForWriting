@@ -155,3 +155,32 @@ Còn nếu bạn không tin tưởng vào sự cảm nhận của bản thân th
 7. Helvetica Neue
 
 Có thể đó không phải là những sự lựa chọn tốt nhất nhưng ít nhất, người dùng cũng có thể đọc nó một cách dễ dàng
+
+#### Ignore typefaces with less than five weights
+
+Điều này có thể không hoàn không đúng nhưng các fonts có số lượng weights nhiều thường được tạo ra với một sự cẩn thận và chi tiết nhiều hơn so với các fonts có ít weights.
+
+Trên Google fonts, filter "number of styles" là sự kết hợp của các weights hiện có cũng như các mẫu italic khác của các weights tương ứng
+
+#### Optimize for legibility
+
+Các Font sử dụng cho headline thương có khoảng cách giữa các chữ hẹp và kí tự lowercase với chiều cao thấp hơn so với fonts cho các sizes chữ nhỏ hơn.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69127093-f3f99080-0aec-11ea-85b9-4ca4af92eeb6.png">
+
+Hãy luôn ghi nhớ điều này để tránh việc sử dụng fonts với x-height bé cho main UI text
+
+#### Trust the wisdom of the crowd
+
+Nếu một font là phổ biến thì chứng tỏ font đó là khá tốt, có nhiều font directories cho phép chúng ta có thể chọn fonts dựa theo mức độ phổ biến (popularity), đây là một điều tuyệt vời khi chúng ta cần chọn các fonts có cá tính (khác hẳn với các font trung tính)
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69127501-b0535680-0aed-11ea-9ca8-05bc75aa8f88.png">
+
+#### Steal from people who care
+
+Lựa chọn 1 site mà bạn yêu thích, inspect để biết được site đó sử dụng font nào. Họ thường sẽ chọn được các fonts khá tuyệt mà bằng cách tiếp cận "an toàn" thông thường, bạn có thể sẽ không tìm được.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69127881-7df62900-0aee-11ea-865f-c823f7f2b649.png">
+
+#### Developing your intuition
+
