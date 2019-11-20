@@ -182,5 +182,10 @@ Lựa chọn 1 site mà bạn yêu thích, inspect để biết được site đ
 
 <img width="720" src="https://user-images.githubusercontent.com/43769314/69127881-7df62900-0aee-11ea-865f-c823f7f2b649.png">
 
-#### Developing your intuition
+### Keep your line length in check
 
+Khi tiến hành styling cho paragraph, chúng ta thường dễ mắc lỗi thiết kế (fitting the text to the layout) khiến cho đoạn text dài và khó đọc (ảnh hưởng xấu đến trải nghiệm đọc của người dùng)
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69203042-b2b5bf00-0b86-11ea-8298-284919f39ec9.png">
+
+Để tạo ra trải nghiệm đọc tốt nhất, hãy đảm bảo các paragraphs của bạn có chiều rộng nằm trong khoảng **45-75 kí tự mỗi dòng**. Cách thiết lập dễ dàng nhất ở đây là sử dụng đơn vị *em* - có tính tương đối với font size hiện tại. Chiều rộng trong khoảng **20-35em** là thích hợp nhất.
