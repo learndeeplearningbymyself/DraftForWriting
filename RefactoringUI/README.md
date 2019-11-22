@@ -189,3 +189,15 @@ Khi tiến hành styling cho paragraph, chúng ta thường dễ mắc lỗi thi
 <img width="720" src="https://user-images.githubusercontent.com/43769314/69203042-b2b5bf00-0b86-11ea-8298-284919f39ec9.png">
 
 Để tạo ra trải nghiệm đọc tốt nhất, hãy đảm bảo các paragraphs của bạn có chiều rộng nằm trong khoảng **45-75 kí tự mỗi dòng**. Cách thiết lập dễ dàng nhất ở đây là sử dụng đơn vị *em* - có tính tương đối với font size hiện tại. Chiều rộng trong khoảng **20-35em** là thích hợp nhất.
+
+#### Dealing with wider content
+
+Nếu bạn đang tiến hành kết hợp giữa paragraph với ảnh hoặc các components lớn khác, bạn vẫn nên chú ý giới hạn chiều rộng của paragraph kể cả khi khu vực nội dung chính cần phải rộng hơn để chứa thêm các elements khác.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69395990-38bb3c80-0d24-11ea-9c91-44a8a5c55003.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69396015-47095880-0d24-11ea-932a-980fdb40380a.png">
+
+Thoạt qua ta thấy có vẻ như cách làm thứ hai sẽ phản trực giác khi sử dụng nhiều kích cỡ chiều rộng khác nhau trong cùng một vùng nội dung nhưng kết quả là giao diện của chúng ta sẽ trở nên thoáng hơn rất nhiều.
+
+### Baseline, not center
