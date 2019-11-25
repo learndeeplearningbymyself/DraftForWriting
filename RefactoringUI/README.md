@@ -201,3 +201,62 @@ Nếu bạn đang tiến hành kết hợp giữa paragraph với ảnh hoặc c
 Thoạt qua ta thấy có vẻ như cách làm thứ hai sẽ phản trực giác khi sử dụng nhiều kích cỡ chiều rộng khác nhau trong cùng một vùng nội dung nhưng kết quả là giao diện của chúng ta sẽ trở nên thoáng hơn rất nhiều.
 
 ### Baseline, not center
+
+Sẽ có những trường hợp, bạn phải kết hợp sử dụng nhiều loại font sizes khác nhau trong cùng một dòng (VD: như đối với dòng tiêu đề của 1 card: tên card, các action names - theo thứ tự từ trái sang phải)
+
+Thông thường ở trường hợp này bạn sẽ nghĩ ngay đến giải pháp căn lề dọc các nội dung với font sizes khác nhau. Đó không hẳn là một ý tưởng tồi, tuy nhiên điều đó chỉ thích hợp khi bạn có thể tạo được một khoảng không gian trống giữa các cỡ chữ khác nhau như hình dưới đây:
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69507719-cee6a100-0f76-11ea-9b6e-474afdeab8b4.png">
+
+Tuy nhiên khi không có đủ khoảng cách, mọi thứ trông thật là vụng về:
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69507770-ff2e3f80-0f76-11ea-8e7d-fa17fa0817ee.png">
+
+Một cách tiếp cận tốt hơn cho việc sử dụng nhiều font sizes trong một dòng đó chính là *baseline* của chúng - đây là đường kẻ ngang tưởng tượng, có vai trò như chân đế của các chữ cái
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69508020-e5d9c300-0f77-11ea-812c-ce6d61ecbc7b.png">
+
+Khi sử dụng *baseline* cho nhiều font sizes khác nhau, bạn đang tận dụng khá tốt yếu tố căn gióng mà bản thân đôi mắt của bạn có thể cảm nhận được
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69508196-6d273680-0f78-11ea-8372-90be8a761c6a.png">
+
+Trông dễ nhìn và "thoáng hơn" rất nhiều.
+
+### Line-height is proportional
+
+Line-height 1.5 là một điểm khởi đầu tốt cho tính dễ đọc của văn bản, việc chọn line-height phù hợp cho nội dung văn bản thường khá phức tạp hơn so với sử dụng cùng một giá trị cho mọi trường hợp
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69509138-3272cd80-0f7b-11ea-9f60-c4ad746aa97f.png">
+
+#### Accounting for line length
+
+Việc thêm khoảng cách giữa các dòng khiến cho người đọc không bị rối mắt, qua đó tránh được trường hợp một dòng vị đọc 2 lần, ... Nguyên nhân là do line-height quá ngắn. Khi line-height ngắn thì người đọc sẽ dễ dàng quay trở lại lề trái của dòng vừa đọc xong do người đọc không chắc chắn được về dòng tiếp theo họ cần phải đọc.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69511391-3dc9f700-0f83-11ea-93db-a7fbf784c206.png">
+
+Vấn đề sẽ trở nên nghiêm trọng hơn khi các dòng text qúa dài, khi mắt người đọc phải đánh ra càng xa (theo chiều ngang) thì họ càng dễ mất định hướng về điểm neo của dòng tiếp theo. Điều đó có nghĩa rằng line-height và chiều rộng của paragraph cần phải tỉ lệ thuận, với nội dung có chiều rộng hẹp nên sử dụng **line-height: 1,5**, với nội dung có chiều rộng lớn nên sử dụng **line-height: 2**
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69515372-be8fef80-0f91-11ea-99ef-e9644450c262.png">
+
+#### Accounting for font size
+
+Ngoài chiều rộng của dòng thì font size cũng là yếu tố ảnh hưởng đến việc lựa chọn line-height. Với các font sizes nhỏ ta cần khoảng cách giữa các dòng để người đọc có thể dễ dàng tìm được dòng tiếp theo khi kết thúc dòng đang đọc
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69518580-49291c80-0f9b-11ea-907a-769c4725db4b.png">
+
+Tuy nhiên với text cỡ lớn không cần quá nhiều line-spacing, lúc này chỉ cần **line-height = 1** là đủ
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69520419-03bb1e00-0fa0-11ea-8717-c90c986fdd42.png">
+
+> Line-height và font size tỉ lệ nghịch với nhau - sử dụng line-height cao hơn cho chữ nhỏ và line-height thấp hơn cho chữ to
+
+### Not every link needs a color
+
+Thông thường với các links có trong 1 đoạn văn, chúng thường được làm nổi để thể hiện rằng "đây là một link".
+Tuy nhiên khi xử lí các giao diện chỉ có links thì việc làm nổi này đôi khi lại tạo ra một sự gượng ép không cần thiết, khiến giao diện sẽ trở nên khó nhìn hơn.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69525059-a4aed680-0faa-11ea-8f34-c51ac5153171.png">
+
+Thay vào đó có thể sử dụng cách nhấn mạnh "nhẹ nhàng hơn" thông qua việc, sử dụng font weight đậm hơn cũng như màu chữ tối hơn
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69525189-e9d30880-0faa-11ea-9b78-17add451e9f0.png">
