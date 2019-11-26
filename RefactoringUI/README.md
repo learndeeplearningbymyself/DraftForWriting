@@ -274,3 +274,31 @@ Căn lề text dựa theo thứ tự viết của ngôn ngữ (thường là t�
 <img width="720" src="https://user-images.githubusercontent.com/43769314/69607199-1567f880-1068-11ea-9bdf-ba6c26312f80.png">
 
 #### Don’t center long form text
+
+Căn lề giữa trông khá tuyệt với headlines hoặc các đoạn text ngắn, cũng như các text blocks độc lập
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69639107-529bad00-109f-11ea-9f44-c3b9b4b43948.png">
+
+Tuy nhiên nếu phần nào đó dài hơn 2 hoặc 3 dòng thì ta nên căn trái
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69639202-7828b680-109f-11ea-92f6-04272e53ea19.png">
+
+Nếu bạn có 1 text block có độ dài lớn hơn các text blocks còn lại, cách sửa tốt nhất là làm "ngắn nó" để qua đó tạo ra sự thống nhất cho giao diện.
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69639410-cf2e8b80-109f-11ea-9a90-8106505d1697.png">
+
+#### Right-align numbers
+
+Với các bảng có chứa số liệu, ta nên căn phải để có thể so sánh nhanh nhất có thể
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69639864-b2468800-10a0-11ea-801f-e785110cd605.png">
+
+#### Hyphenate justified text
+
+Jusitified text trông khá ổn với các trang web tuy nhiên trong một số trường hợp đặc biệt, nó có thể tạo ra những khoảng trông bất thường giữa các từ với nhau
+
+Những trường hợp đó, ta nên sử dụng "-" - dấu gạch nối như một giải pháp
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69640216-56303380-10a1-11ea-9f02-022d9b666041.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69640246-634d2280-10a1-11ea-853d-91fa680f8e13.png">
