@@ -260,3 +260,17 @@ Tuy nhiên khi xử lí các giao diện chỉ có links thì việc làm nổi 
 Thay vào đó có thể sử dụng cách nhấn mạnh "nhẹ nhàng hơn" thông qua việc, sử dụng font weight đậm hơn cũng như màu chữ tối hơn
 
 <img width="720" src="https://user-images.githubusercontent.com/43769314/69525189-e9d30880-0faa-11ea-9b78-17add451e9f0.png">
+
+Tuy nhiên có những links không cần thiết phải nhấn mạnh vì chúng không phải là phần chính trong giao diện, cũng như được người dùng click vào nhiều, khi đó ta có thể thêm **underline** hoặc **thay đổi màu** *chỉ khi người dùng hover* lên links.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69595410-cb205080-1042-11ea-8520-b045bb435aa5.png">
+
+Nó vẫn đủ để người dùng có thể nhận ra rằng đây là link nhưng lại không tạo ra sự cạnh tranh về tính chú ý đối với các phần quan trọng khác trên trang.
+
+### Align with readability in mind
+
+Căn lề text dựa theo thứ tự viết của ngôn ngữ (thường là từ trái sang)
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69607199-1567f880-1068-11ea-9bdf-ba6c26312f80.png">
+
+#### Don’t center long form text
