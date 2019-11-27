@@ -302,3 +302,15 @@ Những trường hợp đó, ta nên sử dụng "-" - dấu gạch nối như 
 <img width="720" src="https://user-images.githubusercontent.com/15076665/69640216-56303380-10a1-11ea-9f02-022d9b666041.png">
 
 <img width="720" src="https://user-images.githubusercontent.com/15076665/69640246-634d2280-10a1-11ea-853d-91fa680f8e13.png">
+
+### Use letter-spacing effectively
+
+Thông thường chúng ta sẽ follow theo thiết kế của font chữ chứ không cần phải để ý đến **letter-spacing**
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69697126-0c892c80-1125-11ea-97a0-27b354927783.png">
+
+#### Tightening headlines
+
+> Phân biệt nhanh giữa Typeface và Font. Typeface: Arial, Font (Arial: cỡ chữ 14, Arial: cỡ chữ 15, Arial: loại in nghiêng (italic)
+
+Một font family được thiết kế với các letter-spacing phù hợp 
