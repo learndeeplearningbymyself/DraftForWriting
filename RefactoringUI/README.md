@@ -356,6 +356,64 @@ Hue được đo bằng đơn vị độ (0 độ - red, 120 độ - green)
 
 <img width="480" src="https://user-images.githubusercontent.com/43769314/69787973-dc16c080-1200-11ea-9086-0e3efbbb4bbc.png">
 
-**Saturation** chỉ mức độ sống động của màu. 0% là grey (không màu), 100% là sống động.
+**Saturation**: chỉ mức độ sống động của màu. 0% là grey (không màu), 100% là sống động.
 
 <img width="600" src="https://user-images.githubusercontent.com/43769314/69788208-5a736280-1201-11ea-9db2-5d58924815dc.png">
+
+Nếu không có saturation, hue sẽ không có ý nghĩa, nếu saturation = 0% thì việc thay đổi giá trị của hue sẽ không thực sự làm thay đổi màu.
+
+<img width="380" alt="Screen Shot 0031-11-28 at 21 39 18" src="https://user-images.githubusercontent.com/15076665/69807026-98837d00-1227-11ea-9ff7-8e2454c0cb29.png">
+
+**Lightness**: chỉ mức độ gần với **màu đen** hoặc **màu trắng** của màu HSL (chỉ mức độ sáng tối)
+- 0%: pure black
+- 50%: pure hue color
+- 100%: pure white
+
+#### HSL vs HSB
+
+B trong HSB là **brightness**
+
+Khi **B = 0%** thì HSB sẽ là **pure black** khi **B = 100%** thì HSB sẽ là **pure white** khi **saturation = 0%** với **saturation = 100%** thì **B = 100%** chỉ tương đương với **L = 50%**
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69807308-53ac1600-1228-11ea-8075-fce65c5a1dd8.png">
+
+Về cơ bản HSB phổ biến hơn HSL trong thiết kế phần mềm nhưng **trình duyệt hiểu rõ HSL hơn** nên khi thiết kế web HSL sẽ là một sự lựa chọn tuyệt vời cho bạn.
+
+### You need more colors than you think
+
+Cách làm phổ biến hiện nay là chọn ra 1 màu chủ đạo, sau đó dựa vào pallete generator để tìm ra 4 màu khác để tạo ra một tông màu. Điều này khiến cho tông của bạn khá quyết rũ, nhưng thực tế lại không hữu dụng ví dụ như sau:
+
+Ta có tông màu:
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69807529-da60f300-1228-11ea-9d99-00307702c603.png">
+
+Nếu chỉ sử dụng tông màu này cho trang web thì nó sẽ trông như thế này
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69809342-e949a480-122c-11ea-85f0-a322c26afa79.png">
+
+#### What you actually need
+
+Thực tế là chúng ta cần một tập hợp màu toàn diện hơn thế này cho giao diện của trang web
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69809518-40e81000-122d-11ea-848b-b510d99e575e.png">
+
+Chúng ta có thể chia bảng màu trên thành 3 loại chính sau:
+
+**Grey**
+Text, backgrounds, panels, form controls thường sẽ có màu **Grey**
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/69809672-8c9ab980-122d-11ea-8d14-8a54dfdd42bb.png">
+
+Thực tế chúng ta sẽ cần **8-10 shades** cho màu grey như thế này, vì đôi khi chúng ta muốn màu đậm hơn **light grey** một chút, ...
+
+<img width="720" alt="Screen Shot 0031-11-28 at 22 24 27" src="https://user-images.githubusercontent.com/15076665/69809816-e00d0780-122d-11ea-9a9d-d6a8efa4816c.png">
+
+Bắt đầu với **true black** sẽ tạo cảm giác mất tự nhiên, vậy bạn nên bắt đầu từ **dark grey** và tăng độ sáng lên dần.
+
+**Primary color(s)**
+Đây là màu chủ đạo của sản phẩm, có thể coi như một *nhận diện thương hiệu*, thương sẽ có 1, 2 màu chính. Tương tự như grey ta cũng cần 5-10 shades (lighter-darker) cho màu chính này.
+
+<img width="720 src="https://user-images.githubusercontent.com/15076665/69810564-8e657c80-122f-11ea-862f-7f9404ad26a1.png">
+
+**Ultra-light shades** sẽ dùng cho **background** của **alert**, còn **darker shade** sẽ dùng cho **text**
+
