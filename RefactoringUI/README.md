@@ -314,3 +314,48 @@ Thông thường chúng ta sẽ follow theo thiết kế của font chữ chứ 
 > Phân biệt nhanh giữa Typeface và Font. Typeface: Arial, Font (Arial: cỡ chữ 14, Arial: cỡ chữ 15, Arial: loại in nghiêng (italic)
 
 Một font family được thiết kế với các letter-spacing phù hợp 
+
+Family như **Open Sans** được thiết kế để tập trung vào tính dễ đọc kể cả khi cỡ chữ nhỏ, nên các letter-spacing của nó thường lớn hơn so với family như **Oswald** vốn được thiết kế cho headlines
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69770428-5842e100-11cc-11ea-85f0-7e24f17087ad.png">
+
+Nếu bạn muốn sử dụng family có letter-spacing rộng để làm headlines hoặc titles thì nên thu hẹp letter-spacing của chúng lại
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69770515-a657e480-11cc-11ea-950f-c938330bed40.png">
+
+Tuy nhiên cũng có một cách làm khác là tăng letter-spacing cho các headline font
+
+#### Improving all-caps legibility
+
+Letter-spacing trong hầu hết các font families đều được tối ưu hoá cho các *câu thường* - chữ cái đầu là chữ hoa, các chữ sau là chữ thường. Bản thân các chữ thường cũng khá đa dạng về mặt trực quan, ví dụ như
+- Chữ n, v, e vừa khít với typeface-x-height
+- Chữ y, g, p có đuôi hậu tố khiến nó tràn xuống dưới baseline
+- Chữ b, f, t có tiền tố mở rộng lên trên
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69774326-ffc61080-11d8-11ea-848d-851b838bdb7d.png">
+
+Với các texts chỉ toàn chữ hoa, do chúng có cùng chiều cao nên việc sử dụng letter-spacing mặc định thường khiến việc đọc khó khăn hơn do khó có sự phân biệt giữa các chữ. Vì lí do đó, ta nên **tăng letter-spacing** với các đoạn texts chỉ toàn chữ hoa, điều đó sẽ khiến việc đọc trở nên dễ dàng hơn.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/69774508-72cf8700-11d9-11ea-96ff-13841f130901.png">
+
+## Working with Color
+
+### Ditch hex for HSL
+
+Khi biểu diễn màu ở định dạng Hex và RGB sẽ không đem lại sự trực quan khi xem chúng ở dạng code
+
+<img width="460" src="https://user-images.githubusercontent.com/43769314/69786683-424e1400-11fe-11ea-8d6e-b184deeaebd8.png">
+
+HSL sẽ sửa được lỗi này bằng cách hiển thị mã màu thông qua các thuộc tính phù hợp với thị giác mắt người: hue, saturation, lightness.
+
+**Hue**: là vị trí của màu trên bánh xe màu - nó là thuộc tính của màu cho biết đây là "màu xanh"
+
+<img width="460" src="https://user-images.githubusercontent.com/43769314/69787882-aa9df500-1200-11ea-84d9-1dc3d9609001.png">
+
+Hue được đo bằng đơn vị độ (0 độ - red, 120 độ - green)
+
+<img width="480" src="https://user-images.githubusercontent.com/43769314/69787973-dc16c080-1200-11ea-9086-0e3efbbb4bbc.png">
+
+**Saturation** chỉ mức độ sống động của màu. 0% là grey (không màu), 100% là sống động.
+
+<img width="600" src="https://user-images.githubusercontent.com/43769314/69788208-5a736280-1201-11ea-9db2-5d58924815dc.png">
