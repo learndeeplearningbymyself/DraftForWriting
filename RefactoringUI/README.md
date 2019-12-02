@@ -106,5 +106,22 @@ Trong thực tế không có một công thức hay con số cụ thể nào cho
 
 ### Don’t let lightness kill your saturation
 
+Trong không gian màu HSL, khi lightness gần đến 0% hoặc 100% thì mức độ ảnh hưởng của **saturation** ngày càng giảm - cùng một giá trị **saturation** ở 50% sẽ sống động hơn ở 90%
+
+<img width="350" src="https://user-images.githubusercontent.com/15076665/69961874-232dea00-1550-11ea-97da-764dcc68a735.png">
+
+Điều đó có nghĩa rằng nếu bạn muốn các sắc độ lighter hoặc darker của bạn được rõ nét, hãy tăng giá trị **saturation** của chúng khi lightness ra xa giá trị 50%
+
+<img width="350" src="https://user-images.githubusercontent.com/15076665/69962246-ef06f900-1550-11ea-99cd-e8f730741df3.png">
+
+#### Use perceived brightness to your advantage
+
+<img width="360" src="https://user-images.githubusercontent.com/15076665/69962684-d9de9a00-1551-11ea-928b-3cd2906135e6.png">
+
+Hai màu nàu có cùng brightness nhưng ta vẫn cảm giác màu vàng có vẻ *sáng* hơn, nguyên nhân là do bản thân các màu hue cũng kế thừa những đặc tính sáng/ tối theo cảm nhận của mắt người
+
+Dưới đây là công thức mà bạn có thể sử dụng để tính được độ sáng của một màu RGB
+
+<img width="480" src="https://user-images.githubusercontent.com/15076665/69962888-55d8e200-1552-11ea-95f2-da793f958efb.png">
 
 
