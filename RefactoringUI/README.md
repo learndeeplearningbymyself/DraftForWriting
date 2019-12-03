@@ -124,4 +124,94 @@ Dưới đây là công thức mà bạn có thể sử dụng để tính đư�
 
 <img width="480" src="https://user-images.githubusercontent.com/15076665/69962888-55d8e200-1552-11ea-95f2-da793f958efb.png">
 
+Với các màu 50% lightness và 100% saturation với hue khác nhau, chúng ta có thể thu về các màu với mức độ sáng khác nhau dọc theo bánh xe màu
+
+<img width="720" alt="Screen Shot 2019-12-03 at 12 30 56" src="https://user-images.githubusercontent.com/43769314/70018265-eeaa4480-15c8-11ea-85b2-47d504132e1b.png">
+
+Đúng như mong đợi, màu vàng là màu sáng nhất, tuy nhiên độ sáng không thay đổi một cách tuyến tình từ màu hue tối nhất -> sáng nhất, thay vào đó ta có 3 màu với mức độ sáng *local minimum* (red, green, blue) cũng như 3 màu với mức độ sáng *local maximum* (yellow, cyan, magenta)
+
+#### Changing brightness by rotating hue
+
+Thông thường khi thay đổi độ sáng của màu, chúng ta thường thay đổi **lightness** 
+
+<img width="620" src="https://user-images.githubusercontent.com/43769314/70024986-0d1b3a80-15df-11ea-984d-b4f4146f81d5.png">
+
+Tuy nhiên việc làm này sẽ làm mất đi "cường độ - intensity" của màu khiến cho màu trở nên trắng hơn hoặc đen hơn thay vì sáng hoặc tối hơn.
+
+<img width="330" src="https://user-images.githubusercontent.com/43769314/70025087-553a5d00-15df-11ea-82a2-62936def7ce5.png">
+
+Do bản thân hues cũng có các sắc độ khác nhau về độ sáng nên bạn có thể thay đổi độ sáng cho màu bằng cách *xoay vòng hue*
+
+Để làm cho màu sáng hơn, hãy **xoay hue về phía hue sáng gần nhất - 60, 180, 300 độ**
+
+<img width="360" src="https://user-images.githubusercontent.com/43769314/70025344-1a84f480-15e0-11ea-8e8f-ecc638ec2640.png">
+
+Để làm cho màu tối hơn, hãy **xoay hue về phía hue tối gần nhất - 0, 120, 240 độ**
+
+<img width="330" src="https://user-images.githubusercontent.com/43769314/70025395-47d1a280-15e0-11ea-9476-0d62b97f0dac.png">
+
+Cách làm này khá hữu hiệu khi muốn tạo một pallete color cho màu sáng như màu vàng, khi đó các màu tối hơn sẽ có tông cam và tạo cảm giác ấm áp thay vì tạo ra cảm giác "tối tăm"
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70025993-e9a5bf00-15e1-11ea-89b8-cf52f5c0f048.png">
+
+Dĩ nhiên, bạn cũng có thể kết hợp hai phương pháp trên, thay đổi hue và brightness
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70026345-e3fca900-15e2-11ea-8cc4-b6b1b1c68ef2.png">
+
+Tuy nhiên đừng xoay hue quá 20-30 độ nếu không bạn sẽ có một màu khác hẳn so với màu ban đầu, thay vì một màu sáng hoặc tối hơn.
+
+### Greys don’t have to be grey
+
+Theo như định nghĩa, true grey có saturation là 0% - nó không có bất kì màu thực sự nào cả
+
+<img width="580" src="https://user-images.githubusercontent.com/43769314/70027321-3939ba00-15e5-11ea-912a-0f1db92e3ed8.png">
+
+Tuy nhiên trong thực tế, có rất nhiều màu tưởng chừng như grey nhưng thực ra có saturate khá mạnh
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70027687-0ba14080-15e6-11ea-92e1-3a06819cc18f.png">
+
+Saturation làm cho grey có cảm giác nhẹ nhàng hoặc ấm áp riêng.
+
+#### Color temperature
+
+Tương tự như bóng đèn, những bóng đèn với ánh sáng vàng thường tạo cảm giác "ấm áp" hơn là bóng đèn với ánh sáng xanh
+
+Tương tự như vậy, nếu bạn muốn làm cho grey nhẹ nhàng và "mát" hơn hãy saturate nó với một chút màu xanh
+
+<img width="600" src="https://user-images.githubusercontent.com/43769314/70028156-39d35000-15e7-11ea-837f-a8ec1e842da8.png">
+
+Nếu bạn muốn grey của bạn trông "ấm áp" hơn hãy saturate nó với một chút vàng, hoặc cam
+
+<img width="600" src="https://user-images.githubusercontent.com/43769314/70031905-afdbb500-15ef-11ea-91ae-0e0aafcf7768.png">
+
+### Accessible doesn’t have to mean ugly
+
+Để đảm bảo cho thiết kế của bạn có thể được theo dõi một cách dễ dàng, normal text (dưới 18px) có độ tương phản: 4.5:1, text lớn hơn có độ tương phản ít nhất là 3:1
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70033085-18c42c80-15f2-11ea-925b-ba23fb4dd68b.png">
+
+#### Flipping the contrast
+
+Khi sử dụng chữ trắng cho background màu, bạn sẽ nhận ra mức độ cần thiết của độ tối của màu để đảm bảo tỉ lệ tương phản 4.5:1 
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70033261-70629800-15f2-11ea-8bb0-a3f943a3a234.png">
+
+Tuy nhiên nếu sử dụng background tối màu, điều này sẽ khiến người dùng tập trung nhiều vào background thay vì nội dung text
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70033490-e5ce6880-15f2-11ea-8538-027c69301bde.png">
+
+Bạn có thể giải quyết vấn đề này bằng cách đảo ngược sự tương phản, sử dụng chữ với màu đậm trên phông nền màu nhạt hơn.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70033904-ba984900-15f3-11ea-87fc-ddffa8f2a3f4.png">
+
+#### Rotating the hue
+
+Trường hợp khó hơn text màu trắng trên background màu đó là cả text và background đều có màu, nếu chúng ta bắt đầu từ background color, sau đó chỉnh sửa saturation và lightness thứ chúng ta sẽ thu được là một màu text gần với màu trắng thuần khiết cũng như khó có thể đảm bảo tỉ lệ tương phản như đã nói ở trên
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70035731-cc2f2000-15f6-11ea-92b9-183ce5134b5a.png">
+
+Bạn không muốn primary text và secondary text không có cùng màu, như đã biết có một số màu có độ sáng lớn hơn các màu còn lại, thay vì làm cho màu của bạn "trắng hơn", hãy xoay hue về hướng các màu sáng như yellow, cyan, magenta.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70035898-157f6f80-15f7-11ea-9120-b19fc96d770b.png">
+
 
