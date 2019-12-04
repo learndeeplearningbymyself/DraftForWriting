@@ -214,4 +214,62 @@ Bạn không muốn primary text và secondary text không có cùng màu, như 
 
 <img width="720" src="https://user-images.githubusercontent.com/43769314/70035898-157f6f80-15f7-11ea-9120-b19fc96d770b.png">
 
+Điều này cũng giúp cho text dễ dàng quan sát hơn dù chúng có màu sắc đi chăng nữa.
+
+### Don’t rely on color alone
+
+Với những người dùng có thị giác màu kém, việc "dựa dẫm" vào màu quá nhiều không phải là một ý tưởng tốt. Như ví dụ dưới đây: những người dùng có thị giác màu kém, họ sẽ không biết card nào cho thấy trend tốt lên hay xấu đi.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70105511-4e195a80-1684-11ea-9f48-c1798388f68f.png">
+
+Cách giải quyết đơn giản ở đây đó là thêm các mũi tên lên xuống để thể hiện xu hướng của trend.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70105579-920c5f80-1684-11ea-96df-efee655227a0.png">
+
+Trong trường hợp của graph:
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70107040-bc601c00-1688-11ea-86e0-5193db70c58c.png">
+
+Sử dụng những màu tương phản nhau, khi đó với người nhận thức màu kém việc phân biệt giữa light và dark color sẽ dễ dàng hơn phân biệt giữa các màu khác nhau
+
+<img width="670" src="https://user-images.githubusercontent.com/43769314/70110947-14505000-1694-11ea-8fa1-429412b3c6ad.png">
+
+## Creating Depth
+
+### Emulate a light source
+
+Thực tế, khi nhìn vào một số giao diện, bạn sẽ thấy có những phần nổi lên và ngược lại sẽ có những phần chìm xuống dưới background
+
+<img width="700" src="https://user-images.githubusercontent.com/43769314/70111036-609b9000-1694-11ea-86e3-bbb60df95a1d.png">
+
+Việc tạo ra hiệu ứng này có thể khá phức tạp nếu chỉ nhìn sơ qua, nhưng thực ra mọi chuyện hoàn toàn dễ dàng nếu bạn tuân thủ một quy luật cơ bản sau
+
+#### Light comes from above
+
+Hãy cùng nhìn vào cánh cửa phía dưới, mặc dù chỉ là flat image, nhưng chuáng ta vẫn cảm nhận được các phần panels của cánh cửa đang nổi lên, tại sao lại như vậy?
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/70115840-4b2e6200-16a4-11ea-9135-256c5ae60153.png">
+
+Cạnh phía trên của cánh cửa hướng về phía nguồn sáng và nhận nhiều ánh sáng hơn so với cạnh phía dưới
+
+<img width="450" src="https://user-images.githubusercontent.com/43769314/70116974-939b4f00-16a7-11ea-898d-f1b895bd91e0.png">
+
+Bây giờ hãy xem xét đến trường hợp của cabinet phía dưới:
+
+<img width="670" src="https://user-images.githubusercontent.com/43769314/70117029-b463a480-16a7-11ea-854b-b7d4406aea9f.png">
+
+Trong trường hợp này, panel sẽ có cảm giác "chìm xuống" do cạnh phía trên nhận ít ánh sáng hơn cạnh phía dưới.
+
+<img width="430" src="https://user-images.githubusercontent.com/43769314/70117087-dfe68f00-16a7-11ea-929b-33c036b64ffa.png">
+
+> Để tạo ra cảm giác tương tự cho thiết kế của bạn, hãy tiến hành mô phỏng lại hiệu ứng ánh sáng trong thực tế.
+
+#### Simulating light in a user interface
+
+Bản thân chúng ta cần hiểu rõ bản chất của component hay nói cách khác là *profile* của nó để từ đó đưa ra sự lựa chọn *chìm / nổi* phù hợp.
+
+#### Raised elements
+
+
+
 
