@@ -270,6 +270,40 @@ Bản thân chúng ta cần hiểu rõ bản chất của component hay nói cá
 
 #### Raised elements
 
+Người dùng thường có xu hướng nhìn theo hướng từ trên xuống dưới nên với 1 button thì cạnh trên sẽ sáng hơn cạnh dưới cũng như cần có bóng ở dưới do bị button "che khuất" từ phía trên (bóng này chỉ cần một độ dài ngắn là đủ)
+
+<img width="690" src="https://user-images.githubusercontent.com/43769314/70967089-a3b82300-20d8-11ea-8314-b1796a6a60b3.png">
+
+<img width="690" src="https://user-images.githubusercontent.com/43769314/70967114-b6325c80-20d8-11ea-8011-523d3859361d.png">
+
+#### Inset elements
+
+Là khi ta muốn các elements trông có vẻ lõm xuống, cạnh phía trên sẽ chắn sáng (sử dụng inset box shadow - với độ dài ngắn) và cạnh phía dưới sẽ nhận sáng (sử dụng bottom-border)
+
+<img width="700" src="https://user-images.githubusercontent.com/43769314/70967784-b2073e80-20da-11ea-85a5-900442b18f5b.png">
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/70967799-c0555a80-20da-11ea-8444-d5eeac540f81.png">
+
+Cách xử lí hoàn toàn tương tự với các elements như input, checkbox
+
+<img width="690" src="https://user-images.githubusercontent.com/43769314/70967831-dc58fc00-20da-11ea-8cc5-17f70537e935.png">
+
+### Don’t get carried away
+
+Trong thực tế, bạn hoàn toàn có thể vay mượn các thiết kế có sẵn về độ sâu do việc chỉnh sửa yếu tố này thường mất nhiều thời gian để có thể mô phỏng 1 cách chính xác giống như thực tế
+
+## Use shadows to convey elevation
+
+Sử dụng shadow cũng có thể tạo ra hiệu ứng xa gần cho elements tương ứng với trục ảo z
+
+Với (small shadow, blur nhẹ) sẽ cho cảm giác element chỉ cao hơn "một chút" so với bề mặt giao diện, ngược lại với (large shadow, blur mạnh) sẽ cho cảm giác element gần với người dùng hơn
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/70968836-af5a1880-20dd-11ea-8cd1-a2049694b9e9.png">
+
+
+
+
+
 
 
 
