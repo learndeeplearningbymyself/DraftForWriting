@@ -300,6 +300,45 @@ Với (small shadow, blur nhẹ) sẽ cho cảm giác element chỉ cao hơn "m�
 
 <img width="680" src="https://user-images.githubusercontent.com/43769314/70968836-af5a1880-20dd-11ea-8cd1-a2049694b9e9.png">
 
+Những components gần với người dùng sẽ thu hút được sự chú ý của người dùng. Bạn cũng có thể sử dụng shadow với kích cỡ nhỏ (Small shadow) để tạo sự chú ý với người dùng nhưng vẫn đảm bảo không làm ảnh hưởng đến toàn bộ page.
+
+<img width="690" src="https://user-images.githubusercontent.com/43769314/71052398-8ba2db00-218e-11ea-8709-ac86a0240249.png">
+
+Medium shadow khá hữu dụng với dropdown, cũng như các phần tử cần có một vị trí gần người dùng hơn các phần tử khác.
+
+<img width="690" src="https://user-images.githubusercontent.com/43769314/71052461-bb51e300-218e-11ea-8658-a048f42aa3bf.png">
+
+Large shadow là một sự lựa chọn hoàn hảo đối với dialogs khi bạn muốn tập trung sự chú ý của người dùng vào element này
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/71067454-e43a9e00-21b7-11ea-97da-89fe27eca48b.png">
+
+#### Establishing an elevation system
+
+Tương tự như với font, màu, space, ... việc thiết lập một hệ thống độ cao sẽ giúp đẩy nhanh tốc độ thiết kế cũng như đảm bảo tính thống nhất cho thiết kế của chúng ta.
+
+Chỉ cần **5** shadow là vừa đủ.
+
+Bắt đầu với shadow nhỏ nhất và lớn nhất, sau đó sẽ tiến hành hoàn thiện các shadow ở giữa theo thứ tự tăng dần tuyến tính về kích cỡ
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/71067774-7e9ae180-21b8-11ea-95d4-b6974a40fc04.png">
+
+#### Combining shadows with interaction
+
+Shadow ngoài việc tạo cảm giác gần về thị giác cho người dùng, nó còn được sử dụng để cho thấy việc người dùng đang tương tác với item. Ví dụ như ở danh sách các items, item nào được chọn item đó sẽ có shadow, điều đó cho thấy người dùng *đang tương tác* với item đó, cũng như có thể *kéo* và *thả* nó, ...
+
+<img width="660" src="https://user-images.githubusercontent.com/43769314/71068212-99ba2100-21b9-11ea-85a8-8f1fb92184a5.png">
+
+Tương tự với hiệu ứng **press button**, shadow của button sẽ giảm khi được nhấn hoặc có thể bị loại bỏ
+
+<img width="665" src="https://user-images.githubusercontent.com/43769314/71068624-73e14c00-21ba-11ea-90ae-29212f8ed38a.png">
+
+> Đừng chỉ nghĩ về shadow, hãy nghĩ về vị trí của phần tử trên trục z và gán cho chúng một shadow thích hợp nhất
+
+### Shadows can have two parts
+
+Trong thực tế các shadows thường sẽ có 2 phần.
+- Phần thứ nhất: lớn hơn, có chiều cao lớn hơn, blur lớn hơn, nó sẽ mô phỏng lại shadow đằng sau một o
+
 
 
 
