@@ -337,12 +337,70 @@ Tương tự với hiệu ứng **press button**, shadow của button sẽ giả
 ### Shadows can have two parts
 
 Trong thực tế các shadows thường sẽ có 2 phần.
-- Phần thứ nhất: lớn hơn, có chiều cao lớn hơn, blur lớn hơn, nó sẽ mô phỏng lại shadow đằng sau một o
+- Phần thứ nhất: lớn hơn, có chiều cao lớn hơn, blur lớn hơn, nó sẽ mô phỏng lại shadow đằng sau một object theo luồng sáng trực tiếp.
 
+<img width="680" src="https://user-images.githubusercontent.com/43769314/71137588-17c70800-224c-11ea-9054-900060d2a737.png">
 
+- Phần thứ hai: nhỏ hơn nhưng tối hơn, chiều cao ngắn hơn và blur nhỏ hơn, nó sẽ mô phỏng lại shadow ở phía dưới object, nơi mà các luồng sáng không hoặc khó có thể chạm tới.
 
+<img width="670" src="https://user-images.githubusercontent.com/43769314/71137627-33caa980-224c-11ea-8459-83dc365ac4d9.png">
 
+Trong thực tế nên kết hợp cả 2 loại shadows trên.
 
+<img width="690" src="https://user-images.githubusercontent.com/43769314/71139593-f0733980-2251-11ea-9c5d-321b2c5340c3.png">
 
+Khi các components tiến ra xa trang của chúng ta, loại shadow thứ 2 sẽ dần biến mất
 
+<img width="700" src="https://user-images.githubusercontent.com/43769314/71139776-7abb9d80-2252-11ea-9091-b18be5e9079c.png">
 
+### Even flat designs can have depth
+
+Flat-design cũng được áp dụng các nguyên lí về độ sâu của thiết kế nhằm mô phỏng hiệu ứng ánh sáng trong thực tế.
+
+#### Creating depth with color
+
+> Các elements có màu sáng hơn sẽ cho cảm giác gần với người dùng hơn và ngược lại
+
+<img width="690" src="https://user-images.githubusercontent.com/43769314/71139991-38df2700-2253-11ea-890f-0063a545debe.png">
+
+#### Using solid shadows
+
+Sử dụng shadow với độ cao ngắn và **không có blur** sẽ khiến cho component có cảm giác *nổi* hơn so với background nhưng cũng không làm mất đi *tính phẳng* của thiết kế
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/71140250-0681f980-2254-11ea-987e-06b2d96efe6a.png">
+
+### Overlap elements to create layers
+
+Việc xếp chồng các elements cũng giúp cho thiết kế có cảm giác *đa tầng*
+
+Ví dụ thay vì để card *lọt thỏm* giữa một background, hãy di chuyển card để nó nằm ở vùng chuyển giao giữa 2 background khác nhau, sẽ làm nổi trội tính *đa tầng* cho thiết kế
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/71140399-7db78d80-2254-11ea-8b09-7b9668922a3d.png">
+
+Bạn cũng có thể làm cho component có chiều cao lớn hơn parent của nó, qua đó khiến cho component trải (overlap) trên cả 2 backgrounds
+
+<img width="670" src="https://user-images.githubusercontent.com/43769314/71143387-bf990180-225d-11ea-84ea-9d9ba141fe54.png">
+
+Overlapping elements có thể áp dụng lên những components nhỏ hơn ví dụ như các controls trong carousel
+
+<img width="675" src="https://user-images.githubusercontent.com/43769314/71143512-2a4a3d00-225e-11ea-97cd-3a436890b621.png">
+
+#### Overlapping images
+
+Kĩ thuật này có thể áp dụng cho images nhưng cũng có thể gây ra các xung đột về mặt màu sắc giữa các images
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/71143786-1e12af80-225f-11ea-938b-29962e9c3172.png">
+
+Để tránh điều này ta có thể thêm một "invisible border" xung quanh image - border này phải có màu giống với màu của background để qua đó tạo ra một khoảng không gian nhất định giữa các bức ảnh
+
+<img width="685" src="https://user-images.githubusercontent.com/43769314/71143806-2c60cb80-225f-11ea-8e1c-3be022d75f85.png">
+
+## Working with Images
+
+### Use good photos
+
+Hình ảnh cũng sẽ ảnh hưởng đến chất lượng của thiết kế kể cả khi những yếu tố khác có tốt như thế nào đi chăng nữa
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/71152297-57581900-2279-11ea-8dd5-07b9f1f8211a.png">
+
+### Text needs consistent contrast
