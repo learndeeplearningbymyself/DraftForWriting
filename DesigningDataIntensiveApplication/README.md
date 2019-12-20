@@ -32,8 +32,13 @@ It only make sense to talk about tolerating *certain types* of faults
 
 Fault vs Failure
 - **Fault** is defined as one component of the system deviating from its spec
+-- **Hardware Faults**: quickly come to mind when we think of causes of system failure. Our first response is usually to add redundancy to individual hardware components in order to reduce the failure rate of the system.
+-- **Software Errors**
 - **Failure** is when the system as a whole stops providing the required service to the user
 
 **2. Scalability**
+
+
+
 **3. Maintainability**
 
