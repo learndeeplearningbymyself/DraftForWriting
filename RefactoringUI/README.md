@@ -126,7 +126,7 @@ Dưới đây là công thức mà bạn có thể sử dụng để tính đư�
 
 Với các màu 50% lightness và 100% saturation với hue khác nhau, chúng ta có thể thu về các màu với mức độ sáng khác nhau dọc theo bánh xe màu
 
-<img width="720" alt="Screen Shot 2019-12-03 at 12 30 56" src="https://user-images.githubusercontent.com/43769314/70018265-eeaa4480-15c8-11ea-85b2-47d504132e1b.png">
+<img width="720" src="https://user-images.githubusercontent.com/43769314/70018265-eeaa4480-15c8-11ea-85b2-47d504132e1b.png">
 
 Đúng như mong đợi, màu vàng là màu sáng nhất, tuy nhiên độ sáng không thay đổi một cách tuyến tình từ màu hue tối nhất -> sáng nhất, thay vào đó ta có 3 màu với mức độ sáng *local minimum* (red, green, blue) cũng như 3 màu với mức độ sáng *local maximum* (yellow, cyan, magenta)
 
