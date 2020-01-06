@@ -404,3 +404,29 @@ Hình ảnh cũng sẽ ảnh hưởng đến chất lượng của thiết kế 
 <img width="680" src="https://user-images.githubusercontent.com/43769314/71152297-57581900-2279-11ea-8dd5-07b9f1f8211a.png">
 
 ### Text needs consistent contrast
+
+Có những tình huống bạn cố thử nhiều màu sắc cho text trên một phông nền là một bức hình lớn nhưng đều thất bại. Như ví dụ dưới đây
+
+<img width="685" src="https://user-images.githubusercontent.com/43769314/71790166-4fb6b380-3072-11ea-8e8a-9a7d60b9319c.png">
+
+Thực ra nguyên nhân không nằm ở text mà nằm ở bức ảnh phông nền của bạn
+
+#### The problem with background images
+
+Một bức ảnh sẽ có cả những mảng sáng và mảng tối. Text màu trắng sẽ là một sự kết hợp tốt với mảng tối của ảnh và ngược lại. Tuy nhiên với các mảng sáng thì text màu trắng sẽ bị "chìm" thậm chí **không thể nhìn thấy được**.
+
+<img width="675" src="https://user-images.githubusercontent.com/43769314/71790813-bb4e5000-3075-11ea-8551-754ddefbd7ab.png">
+
+Để giải quyết vấn đề này, ta cần giảm đi tính "dynamic" của ảnh bằng cách giữ cho **độ tương phản** giữa text và ảnh ở mức thích hợp nhất có thể.
+
+#### Add an overlay
+
+Có một cách làm khá phổ biến, đó là "tráng" một lớp **semi-transparent overlay** lên trên image
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/71792497-42062b80-307c-11ea-982b-d79b397a8c43.png">
+
+
+
+
+
+
