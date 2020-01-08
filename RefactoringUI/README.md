@@ -425,7 +425,77 @@ Có một cách làm khá phổ biến, đó là "tráng" một lớp **semi-tra
 
 <img width="680" src="https://user-images.githubusercontent.com/43769314/71792497-42062b80-307c-11ea-982b-d79b397a8c43.png">
 
+Việc này sẽ làm giảm đi sức ảnh hưởng của độ tương phản mà background-image gây ra cho text
 
+#### Lower the image contrast
+
+Một cách làm khác ở đây là **làm giảm độ tương phản** và **tăng độ sáng** của background image qua đó sẽ làm giảm đi tính sáng tối vốn có của bức ảnh
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/71954679-63584a80-3229-11ea-9885-2000367552a9.png">
+
+#### Colorize the image
+
+Một cách xử lí khác nữa là colorize cho bức ảnh của bạn. Bạn có thể sử dụng các phần mềm chỉnh sửa ảnh để có được một bức ảnh với màu tráng phù hợp, tuy nhiên nếu không sử dụng phần mềm nào cả, bạn có thể thực hiện như 3 bước dưới đây
+
+1. **Giảm độ tương phản của bức ảnh**, để tạo ra sự cân bằng cho bức ảnh
+2. **Bão hoà bức ảnh**, để loại bỏ các màu đang tồn tại
+3. **Thêm solid fill**, sử dụng **multiply blend mode**
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/71955793-a10aa280-322c-11ea-9cd9-5cd03e55e7ce.png">
+
+Đây cũng là một cách để khiến cho background image của bạn hài hoà hơn với màu nhận diện của trang web
+
+#### Add a text shadow
+
+Nếu trong trường hợp bạn muốn bảo toàn những đặc trưng vốn có của background image, nhưng vẫn muốn đảm bảo độ tương phản cho text, text shadow sẽ là một sự lựa chọn tốt hơn cả. Tuy nhiên đừng biến nó trở thành box-shadow, do đó hãy sử dụng blur radius lớn hơn và **không thêm bất kì offset** nào khác
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/71956491-aec12780-322e-11ea-87c0-58271ac4b0bc.png">
+
+### Everything has an intended size
+
+> Chúng ta đều biết, phóng to các bitmap images sẽ khiến cho chúng bị vỡ, và không giữ được độ sắc nét như ban đầu
+
+<img width="650" src="https://user-images.githubusercontent.com/43769314/71956627-fcd62b00-322e-11ea-9daf-30fcafaf1d9c.png">
+
+#### Don’t scale up icons
+
+Ví dụ với một trang Landing Page, khi sử dụng icon cho phần "feature", bạn sẽ sử dụng SVG icon yêu thích của mình và đồng thời scale up nó cho đến khi nào vừa ý thì thôi. Vì là ảnh vector nên chất lượng không hề giảm khi ta scale up.
+
+<img width="500" src="https://user-images.githubusercontent.com/43769314/71958885-bc79ab80-3234-11ea-8cea-5d4516d95ff3.png">
+
+Đúng là về mặt chất lượng thì các SVG icons luôn đảm bảo nhưng việc scale up nó 3x, 4x so với kích cỡ ban đầu sẽ làm mất đi tính cân xứng vốn có của icon với intended size
+
+<img width="500" src="https://user-images.githubusercontent.com/43769314/71959017-0f536300-3235-11ea-9da8-16212e8c0fbe.png">
+
+Có một cách khác để "scale up" icon đó là bao lấy nó bởi 1 shape với background-color phù hợp
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/71959216-82f57000-3235-11ea-9b46-25a66339e630.png">
+
+Điều này khiến cho icon của bạn vừa đáp ứng yêu cầu về kích thước nhưng vấn giữ lại những đặc tính vốn có ở intended size
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/71959281-b0421e00-3235-11ea-9393-eb1912ce926d.png">
+
+#### Don’t scale down screenshots
+
+Giả sử bạn muốn chèn một screenshoot về 1 feature nào đó vào landing page, tuy nhiên không gian lại quá hẹp khiến bạn phải thu nhỏ kích cỡ của screenshot xuống còn 70%. Điều này sẽ tạo ra cảm giác bạn đang **cố nhồi nhét nhiều thông tin, cũng như hình ảnh** vào một không gian hẹp, khiến cho người xem khá khó theo dõi.
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/71961866-a4595a80-323b-11ea-921f-ee283d416d8e.png">
+
+Font size thực tế là 16px, khi thu nhỏ sẽ có kích thước 4px, điều đó sẽ làm người dùng phải nheo mắt lại ở khoảng cách 2-inches để có thể xem được nội dung của screenshot
+
+Giải pháp ở đây đó là chụp ảnh màn hình ở một layout nhỏ hơn (tablet chẳng hặn) cũng như chuẩn bị nhiều không gian nhất có thể cho screenshot trong landing page của bạn
+
+<img width="700" src="https://user-images.githubusercontent.com/43769314/71962070-04500100-323c-11ea-8066-7926bb8212c0.png">
+
+Hoặc bạn cũng có thể cân nhắc chỉ chụp screenshot ở những khu vực trung tâm của feature để có thể không cần scale down bức ảnh khi chỉ có một không gian hẹp cho nó
+
+<img width="690" src="https://user-images.githubusercontent.com/43769314/71962186-4c6f2380-323c-11ea-8630-57020878b6e9.png">
+
+Hoặc nếu bạn thực sự cần hình ảnh của toàn bộ app thì hãy tự tạo một version đơn giản cho nó, lược đi những chi tiết không cần thiết, thay những đoạn text bằng những đường kẻ màu đơn giản như dưới đây.
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/71962474-d7e8b480-323c-11ea-931a-d23be6008dc3.png">
+
+#### Don’t scale down icons, either
 
 
 
