@@ -497,6 +497,67 @@ Hoặc nếu bạn thực sự cần hình ảnh của toàn bộ app thì hãy 
 
 #### Don’t scale down icons, either
 
+Tương tự như vậy, việc scale down 1 icon có thể khiến cho nó trở nên hỗn độn khi ta cố gắng "nhét" nhiều chi tiết vào một bức ảnh có kích cỡ nhỏ. Một ví dụ điển hình là **favicon** - các icons được sử dụng ở **page title của browser**
+
+<img width="470" src="https://user-images.githubusercontent.com/43769314/72042818-d8438700-32f2-11ea-8af4-0390c6ffbf3a.png">
+
+Cách tiếp cận tốt hơn đó là **vẽ lại** một phiên bản đơn giản hơn của icon đó với kích thước mà chúng ta mong muốn thay vì phó mặc điều đó cho browser
+
+<img width="570" src="https://user-images.githubusercontent.com/43769314/72042842-eabdc080-32f2-11ea-9d5f-40ee1afa9e5c.png">
+
+### Beware user-uploaded content
+
+Nếu trang web của bạn phụ thuộc vào nội dung (hình ảnh) mà người dùng tải lên, hãy chú ý rằng
+
+> Đừng để chúng ảnh hưởng đến thiết kế của bạn
+
+#### Control the shape and size
+
+Giữ nguyên tỉ lệ chiều dài, rộng của ảnh khi hiển thị có thể **phá vỡ** cấu trúc layout của bạn
+
+<img width="685" src="https://user-images.githubusercontent.com/43769314/72043177-d4fccb00-32f3-11ea-96fc-62910b422a4c.png">
+
+Thay vì để cho người dùng tự ý phá vỡ cấu trúc của bạn, hãy đặt các ảnh được tải lên bởi người dùng vào vị trí trung tâm trung một container cố định và loại bỏ đi những thành phần thừa thãi của bức ảnh đó
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72043433-74ba5900-32f4-11ea-9a18-8664756f1e40.png">
+
+Khá dễ dàng để có được điều này bằng cách thiết lập thuộc tính **background-size** trong CSS với giá trị **cover**
+
+#### Prevent background bleed
+
+Khi ảnh của người dùng có background color trùng với background color của UI, ảnh của người dùng sẽ bị mất đi kích thước vốn có của nó (hiện tượng **bleed**)
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72044344-e72c3880-32f6-11ea-8c61-6c8b195f7282.png">
+
+Thay vì giải quyết vấn đề này bằng cách thêm một border, hãy sử dụng **inner box shadow nhẹ** cho ảnh của người dùng
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72044553-59048200-32f7-11ea-89ed-11c1af114223.png">
+
+Border có thể gây ra xung đột về màu sắc cho ảnh, trong khi hiếm có người dùng nào lại có thể nhận ra được sự xuất hiện của inner box shadow
+
+Một giải pháp khác đó là sử dụng semi-transparent inner border
+
+<img width="665" src="https://user-images.githubusercontent.com/43769314/72044983-77b74880-32f8-11ea-9d88-7a9e2e095c3d.png">
+
+## Finishing Touches
+
+### Supercharge the defaults
+
+Không phải việc thêm những chi tiết mới cho thiết kế cũng là một ý hay, thay vào đó hãy tận dụng tối đa những gì đang có cho thiết kế của bạn
+
+Ví dụ: Với 1 danh sách (bullet list) thay vì sử dụng bullet bạn có thể sử dụng các icon
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72045980-c665e200-32fa-11ea-85db-a7cf31f15164.png">
+
+Checkmark và mũi tên làn những lựa chọn phổ biến cho thiết kế, tuy nhiên với các danh sách có liên quan đến bảo mật, sử dụng các icon móc khoá sẽ là một ý tưởng độc đáo
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72046169-2c526980-32fb-11ea-8389-671a49a6e6ac.png">
+
+Tương tự với những câu quote với mục đích quảng bá - bằng cách tăng font size và thay đổi màu
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72050581-d387ce80-3304-11ea-8bbe-42e0080d954e.png">
+
+
 
 
 
