@@ -557,7 +557,18 @@ Tương tự với những câu quote với mục đích quảng bá - bằng c�
 
 <img width="720" src="https://user-images.githubusercontent.com/43769314/72050581-d387ce80-3304-11ea-8bbe-42e0080d954e.png">
 
+Link cũng là một đối tượng tuyệt vời cho các style độc đáo, ví dụ như có thể:
+- Thay đổi màu, font weight
+- Tạo ra các underline với các styles độc đáo (nhỏ, gọn, màu sắc)
 
-
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72121562-ba336080-339e-11ea-88a2-806ee4b2a9c4.png">
+ 
+ Nếu bạn đang làm việc với form thì việc sử dụng custom checkbox, radio buttons cũng là một phải pháp khá hay để thêm màu sắc cho thiết kế của bạn
+ 
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72129588-25d6f700-33ba-11ea-8792-4a2f49ee663b.png">
+ 
+ Thay vì sử dụng màu mặc định của browser cho trạng thái checked của checkbox hoặc radio button, hãy sử dụng màu nhận diện của bạn, điều này sẽ làm cho thiết kế bát mắt và sáng sủa hơn rất nhiều
+ 
+ ### Add color with accent borders
 
 
