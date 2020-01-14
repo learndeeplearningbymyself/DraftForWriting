@@ -571,4 +571,17 @@ Link cũng là một đối tượng tuyệt vời cho các style độc đáo, 
  
  ### Add color with accent borders
 
+Một trick khá độc đáo đó là thêm accent border với màu sắc nhất định vào UI của bạn để nó thêm phần nhẹ nhàng hơn
+
+Ví dụ như border-top của Card:
+
+<img width="700" src="https://user-images.githubusercontent.com/43769314/72315627-cd179f00-36d6-11ea-8567-4e07340ee9ee.png">
+
+Hoặc border-bottom của active nagivation item:
+
+<img width="685" src="https://user-images.githubusercontent.com/43769314/72315645-e4ef2300-36d6-11ea-91e4-9574777ac6ee.png">
+
+Hoặc side của alert message:
+
+<img width="690" src="https://user-images.githubusercontent.com/43769314/72315672-f6d0c600-36d6-11ea-802d-c01d9da4fa7a.png">
 
