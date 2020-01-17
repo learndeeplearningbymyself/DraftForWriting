@@ -585,3 +585,12 @@ Hoặc side của alert message:
 
 <img width="690" src="https://user-images.githubusercontent.com/43769314/72315672-f6d0c600-36d6-11ea-802d-c01d9da4fa7a.png">
 
+Hoặc là một accent ngắn phía dưới headline:
+
+<img width="675" src="https://user-images.githubusercontent.com/43769314/72575965-95e10200-3911-11ea-9320-f0bb61fe3282.png">
+
+
+
+
+
+
