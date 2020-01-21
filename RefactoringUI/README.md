@@ -589,8 +589,21 @@ Hoặc là một accent ngắn phía dưới headline:
 
 <img width="675" src="https://user-images.githubusercontent.com/43769314/72575965-95e10200-3911-11ea-9320-f0bb61fe3282.png">
 
+Hoặc cũng có thể là trên top layout của bạn
 
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72768959-65b0a080-3c3c-11ea-9430-d32aa76ba12e.png">
 
+Việc thêm một dải màu hình chữ nhật như vậy sẽ khiến cho thiết kế của bạn "phong cách" hơn.
+
+### Decorate your backgrounds
+
+Kể cả khi thiết kế của bạn có tốt về mặt kế thừa, khoảng cách, typography nó cũng có thể trông khá đơn điệu, để phá vỡ đi sự đơn điệu đó mà không chỉnh sửa quá nhiều thiết kế hiện tại, bạn có thể thêm một vài "sự phấn khích" cho background.
+
+#### Change the background color
+
+Cách đơn giản để thêm "sự phấn khích" ở đây chính là thay đổi background color 
+
+<img width="720" src="https://user-images.githubusercontent.com/43769314/72769251-5e3dc700-3c3d-11ea-8e63-9b91dd86d48e.png">
 
 
 
