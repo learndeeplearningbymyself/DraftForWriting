@@ -605,5 +605,46 @@ Cách đơn giản để thêm "sự phấn khích" ở đây chính là thay đ
 
 <img width="720" src="https://user-images.githubusercontent.com/43769314/72769251-5e3dc700-3c3d-11ea-8e63-9b91dd86d48e.png">
 
+Điều này là khá tốt khi cần nhấn mạnh vào một số phần nhất định có trong layout
+
+<img width="675" src="https://user-images.githubusercontent.com/43769314/72858500-6c0a4f80-3d04-11ea-85c8-31c927c83c94.png">
+
+Để trông có nhiều năng lượng hơn, bạn có thể sử dụng một gradient nhẹ, để có kết quả tốt nhất, hãy sử dụng 2 hues không khác nhau quá 30 độ
+
+<img width="680" src="https://user-images.githubusercontent.com/43769314/72858699-04083900-3d05-11ea-9c80-c99dace2c54f.png">
+
+#### Use a repeating pattern
+
+Một cách tiếp cận khác là sử dụng một pattern có tính lặp lại, như ví dụ dưới đây (lấy từ [HeroPattern](http://www.heropatterns.com/)
+
+<img width="675" src="https://user-images.githubusercontent.com/43769314/72858878-82fd7180-3d05-11ea-9a0d-87b7dddfbfd3.png">
+
+Bạn cũng không nhất thiết phải lặp lại pattern ở toàn thể background, việc chỉ sử dụng pattern ở cạnh của background cũng là một giải pháp không tồi.
+
+<img width="695" src="https://user-images.githubusercontent.com/43769314/72859325-b7256200-3d06-11ea-9b04-12364ea21023.png">
+
+> Giữ cho độ tương phản giữa pattern và background ở mức độ thấp để đảm bảo tính dễ đọc của page
+
+#### Add a simple shape or illustration
+
+Ngoài cách "trang trí" background như trên, bạn hoàn toàn có thể sử dụng các graphic (hình hoạ) để tạo điểm nhấn cho background
+
+<img width="679" alt="Screen Shot 2020-01-22 at 11 24 38" src="https://user-images.githubusercontent.com/43769314/72860308-cbb72980-3d09-11ea-937b-fb91d728704b.png">
+
+Hoặc sử dụng một repeatable pattern nhỏ như sau:
+
+<img width="685" src="https://user-images.githubusercontent.com/43769314/72864099-4d14b900-3d16-11ea-9dcb-e4a5810a060b.png">
+
+Hoặc bạn cũng có thể thử một cách phức tạp hơn như tạo ra một world map phiên bản đơn giản
+
+<img width="685" src="https://user-images.githubusercontent.com/43769314/72864159-733a5900-3d16-11ea-880f-eee0feceafe2.png">
+
+Tuy nhiên hãy giữ cho độ tương phản ở mức thấp để không ảnh hưởng đến nội dung của trang.
+
+### Don’t overlook empty states
+
+Nếu nội dung trang phụ thuộc vào người dùng, sẽ có những trường hợp trang sẽ bị trống, thay vì để trống như vậy hãy sử dụng những hình ảnh minh hoạ để thu hút sự chú ý của người dùng cũng như "khuyến khích hành động" nơi người dùng
+
+
 
 
