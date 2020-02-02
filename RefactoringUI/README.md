@@ -645,6 +645,30 @@ Tuy nhiên hãy giữ cho độ tương phản ở mức thấp để không ả
 
 Nếu nội dung trang phụ thuộc vào người dùng, sẽ có những trường hợp trang sẽ bị trống, thay vì để trống như vậy hãy sử dụng những hình ảnh minh hoạ để thu hút sự chú ý của người dùng cũng như "khuyến khích hành động" nơi người dùng
 
+<img width="515" src="https://user-images.githubusercontent.com/15076665/73608927-df1c9b80-460b-11ea-947c-74ad73862d89.png">
+
+<img width="530" src="https://user-images.githubusercontent.com/15076665/73608938-ffe4f100-460b-11ea-8e7c-d3b708cc361e.png">
+
+Nếu bạn đang phát triển các UI phụ như tabs, filter thì hãy ẩn nó đi trong trường hợp chưa có bất kì dữ liệu nào cả
+
+<img width="590" src="https://user-images.githubusercontent.com/15076665/73609286-7f27f400-460f-11ea-95d0-5f299d597cdd.png">
+
+Đừng sắp đặt mọi thứ một cách nhàm chán, empty states là tương tác đầu tiên của user với sản phẩm hoặc feature mới vậy nên hãy coi đó là cơ hội để mọi thứ trở nên thú vị hơn.
+
+### Use fewer borders
+
+Border là một công cụ phổ biến để phân tách các items với nhau tuy nhiên border sẽ khiến cho người dùng tập trung nó vào thay vì nội dung của item, đồng thời tạo cho UI cảm giác bị phân mảnh
+
+<img width="625" src="https://user-images.githubusercontent.com/15076665/73609491-8fd96980-4611-11ea-9e92-f618f45081d5.png">
+
+#### Use a box shadow
+
+Box-shadow là một cách xử lí tinh tế nhưng vẫn đảm bảo được sự phân cách giữa các items
+
+<img width="450" src="https://user-images.githubusercontent.com/15076665/73609523-cfa05100-4611-11ea-8354-8fa5c69ab453.png">
+
+Cách làm này khá ổn khi màu của item có box-shadow khác với background-color
+
 
 
 
