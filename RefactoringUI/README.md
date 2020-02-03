@@ -669,6 +669,87 @@ Box-shadow là một cách xử lí tinh tế nhưng vẫn đảm bảo được
 
 Cách làm này khá ổn khi màu của item có box-shadow khác với background-color
 
+#### Use two different background colors
 
+Làm cho các phần tử ở cạnh nhau có background color khác nhau đôi chút là một cách thường được dùng để phân biệt các phần tử với nhau.
 
+<img width="470" src="https://user-images.githubusercontent.com/15076665/73656483-8f090c00-46d3-11ea-8a6e-837e60f969f5.png">
 
+Với phương pháp này bạn hoàn toàn có thể bỏ đi border.
+
+#### Add extra spacing
+
+Một cách khác để tăng sự phân biệt giữa các phần tử đó là thêm khoảng cách giữa chúng
+
+<img width="450" src="https://user-images.githubusercontent.com/15076665/73656625-e313f080-46d3-11ea-93d3-497c1595784d.png">
+
+Đây là một cách tuyệt với để phân biệt các groups elements với nhau mà không cần tới UI mới.
+
+### Think outside the box
+
+Hầu như chúng ta đều có những "định kiến" nhất định đối với các item về việc "item này thì phải theo design kiểu này", và chúng ta luôn tin rằng điều đó là đúng. Lấy ví dụ về dropdown:
+
+- Thông thường nó sẽ là: danh sách các links xếp chồng nhau trên một nền với box-shadow và sẽ được "neo" khi xuất hiện
+
+<img width="610" src="https://user-images.githubusercontent.com/15076665/73657369-7f8ac280-46d5-11ea-9348-bc5caaecf1d6.png">
+
+- Nhưng ai "bắt buộc" chúng ta phải làm như vậy, dropdown có thể "multi columns", cũng như được trang trí bằng text color hoặc icon minh hoạ, ... Hãy khiến cho nó trở nên "sống động" hơn.
+
+<img width="590" src="https://user-images.githubusercontent.com/15076665/73657518-c8db1200-46d5-11ea-9691-a4f5392b6a09.png">
+
+Đừng chỉ dừng lại ở dropdown, hãy áp dụng "triết lý" này cho các elements khác, ví dụ như "table" chẳng hạn. Chúng ta thường "nghĩ" table là tập hợp các cột và các số liệu rắc rối 
+
+<img width="600" src="https://user-images.githubusercontent.com/15076665/73657654-0f307100-46d6-11ea-83c3-2dab8c0ec985.png">
+
+Nhưng thực sự thì table không nhất thiết phải làm việc theo cách này, nếu column không cần sắp xếp thì việc kết hợp các columns liên quan tới nhau là một ý tưởng thú vị cho tính kế thừa
+
+<img width="600" src="https://user-images.githubusercontent.com/15076665/73657814-69c9cd00-46d6-11ea-97b0-02253a8cf13c.png">
+
+Nội dung của table không nhất thiết chỉ là plain text, hãy thêm ảnh hoặc màu sắc nếu chúng tạo nên hiệu ứng tốt cho table
+
+<img width="595" src="https://user-images.githubusercontent.com/15076665/73658247-5b2fe580-46d7-11ea-88e4-35b51df7c955.png">
+
+Còn radio buttons, đơn thuần là một danh sách nhàm chán bao gồm các label và các vòng tròn đánh dấu ở bên cạnh
+
+<img width="590" src="https://user-images.githubusercontent.com/15076665/73658405-9c27fa00-46d7-11ea-8b87-c2d9a567e3a6.png">
+
+Nếu radio buttons là thành phần quan trọng trong UI của bạn, hãy sử dụng các selectable cards để thay thế
+
+<img width="595" src="https://user-images.githubusercontent.com/15076665/73658545-db564b00-46d7-11ea-86fd-53b15e939483.png">
+
+> Đừng để niềm tin nội tâm kéo UI của bạn chậm lại, sự chặt chẽ trong thiết kế là vô cùng quan trọng nhưng đôi khi sự tự do cũng giúp cho UI của bạn đạt được tới một level cao hơn
+
+## Leveling Up
+
+### Leveling up
+
+Dưới đây là các cách tốt nhất để bạn trau dồi thêm kiến thức và các công cụ khác cho kĩ năng design của mình
+
+#### Look for decisions you wouldn’t have made
+
+Khi bạn bắt gặp một thiết kế đẹp và thấy thích thú với nó hãy tự hỏi rằng
+
+> Designer của thiết kế này đã thực hiện điều gì mà mình có thể sẽ không bao giờ làm sau này ?
+
+Ví dụ như:
+- Thêm background color cho date-picker
+
+<img width="595" src="https://user-images.githubusercontent.com/15076665/73659064-d219ae00-46d8-11ea-91f0-4522b30288b7.png">
+
+- Hoặc đặt button bên trong text input thay vì bên ngoài
+
+<img width="595" src="https://user-images.githubusercontent.com/15076665/73659098-e362ba80-46d8-11ea-8f1e-018ae3620e85.png">
+
+- Hoặc sử dụng 2 màu chữ cho headline
+
+<img width="590" src="https://user-images.githubusercontent.com/15076665/73659126-f07fa980-46d8-11ea-965e-0f6437c4a7e2.png">
+
+Để ý đến những yếu tố độc đáo như vậy cũng là cách tự mình tìm ra ý tưởng mới cho thiết kế của mình
+
+#### Rebuild your favorite interfaces
+
+Cách tốt nhất để chú ý tới các chi tiết của thiết kế để khiến nó "bóng bẩy" hơn đó chính là **xây dựng lại thiết kế đó từ đầu**
+
+Khi nhận ra sự khác biệt của thiết kế so với ban đầu bạn sẽ khám phá ra các tricks như "giảm line height cho heading" hoặc "thêm letter-spacing cho uppercase" hoặc "kết hợp nhiều box-shadows"
+
+<img width="580" src="https://user-images.githubusercontent.com/15076665/73660185-07270000-46db-11ea-9e6c-b25a1e40842d.png">
