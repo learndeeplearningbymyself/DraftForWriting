@@ -75,11 +75,20 @@ Vậy chúng ta nên comment như thế nào. Các "comment tốt" sẽ là côn
 
 Hãy thêm các comments để ghi lại cách nghĩ (insights) mà bạn đưa vào trong code
 
-Ví dụ:
+Ví dụ-1:
 ```javascript
 // Surprisingly, a binary tree was 40% faster than a hash table for this data.
 // The cost of computing a hash was more than the left/right comparisons.
 ```
+
+Comment này cho người đọc biết rằng, không cần phải lãng phí thời gian cho việc tối ưu hoá hiệu năng của code nữa.
+
+Ví dụ-2:
+```javascript
+// This heuristic might miss a few words. That's OK; solving this 100% is hard.
+```
+
+Nếu không có comment này, dev có thể sẽ tốn thời gian cho việc fix bug nếu test case không pass.
 
 
 
