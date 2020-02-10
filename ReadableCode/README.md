@@ -90,8 +90,12 @@ Ví dụ-2:
 
 Nếu không có comment này, dev có thể sẽ tốn thời gian cho việc fix bug nếu test case không pass.
 
+```javascript
+// This class is getting messy. Maybe we should create a 'ResourceNode' subclass to
+// help organize things.
+```
 
-
+Đoạn comment trên không chỉ cho thấy code hiện tại đang khá "tồi" mà còn chỉ cho người đọc kế tiếp về cách sửa, khiến cho người đọc không bị "hoảng" và không dám "động vào" đoạn code đó.
 
 
 
