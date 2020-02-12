@@ -97,5 +97,53 @@ Nếu không có comment này, dev có thể sẽ tốn thời gian cho việc f
 
 Đoạn comment trên không chỉ cho thấy code hiện tại đang khá "tồi" mà còn chỉ cho người đọc kế tiếp về cách sửa, khiến cho người đọc không bị "hoảng" và không dám "động vào" đoạn code đó.
 
+#### Comment the Flaws in Your Code
+
+Không đoạn code nào là không có lỗ hổng nếu xét về tính dài hạn, vậy nên đừng xấu hổ nếu comment rằng:
+- Cần cải thiện đoạn code này trong tương lai
+- Giải thuật hiện tại chưa tốt
+- ...
+
+Những comments như vậy không những giúp cho code của bạn có thể sẽ được cải thiện trong tương lai mà còn giúp người đọc có một cái nhìn cụ thể hơn về chất lương của code
+
+Sẽ có các quy ước khác nhau giữa dev về việc tạo ra các "markers" kiểu này. Ví dụ như
+
+- TODO: việc cần làm trong tương lai
+- FIX-ME: cho biết có lỗi ở đoạn code hiện tại
+- XXX: Dầu hiệu cho thấy có thể có lỗi nghiêm trọng
+- HACK: Thừa nhận về giải pháp tồi cho vấn đề hiện tại
+
+#### Comment on Your Constants
+
+Sau mỗi constant đều là một "câu chuyện" về mục đích cũng như ý nghĩa của nó. Ví dụ như sau:
+
+```python
+NUM_THREADS = 8;
+```
+
+Có lẽ người viết code sẽ nghĩ rằng, không cần comment cho constant này làm gì vì bản thân tên gọi của nó đã nói lên tất cả. Thế nhưng những người đọc code lại thích comment hơn:
+
+```python
+NUM_THREADS = 8 # as long as it's >= 2 * num_processors, that's good enough.
+```
+
+Việc comment sẽ giúp người đọc code có thể biết được cách điều chỉnh giá trị của hằng số sao cho phù hợp. Đôi khi các giá trị hằng số là ước lượng
+
+```C
+// Impose a reasonable limit - no human can read that much anyway.
+   const int MAX_RSS_SUBSCRIPTIONS = 1000;
+```
+
+Hoặc là những giá trị "highly tuned" - các giá trị này không nên bị chỉnh sửa
+
+```C
+image_quality = 0.72; // users thought 0.72 gave the best size/quality tradeoff
+```
+
+Với hằng số dạng `SECONDS_PER_DAY` thì không cần comment vì bản thân tên của hằng số cũng đã nói lên ý nghĩa của nó.
+
+#### Put Yourself in the Reader’s Shoes
+
+Kĩ thuật sử dụng trong cuốn sách này để cấu thành nên nội dung chính đó là "Đặt mình vào vị trí của người đọc code" để từ đó biết được họ cần những thông tin gì để có thể đưa ra comment phù hợp nhất
 
 
