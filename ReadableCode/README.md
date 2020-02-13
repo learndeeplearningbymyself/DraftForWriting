@@ -146,4 +146,49 @@ Với hằng số dạng `SECONDS_PER_DAY` thì không cần comment vì bản t
 
 Kĩ thuật sử dụng trong cuốn sách này để cấu thành nên nội dung chính đó là "Đặt mình vào vị trí của người đọc code" để từ đó biết được họ cần những thông tin gì để có thể đưa ra comment phù hợp nhất
 
+Khi một ai đó đọc code của bạn có thể họ sẽ nghĩ "Huh, đây là gì?, đoạn code này có ý nghĩa gì?". Nhiệm vụ của bạn đó là comment những phần đó. Ví dụ với hàm Clear() như sau: 
+
+```C++
+struct Recorder {
+  vector<float> data;
+  ...
+  void Clear() {
+   vector<float>().swap(data); // Huh? Why not just data.clear()?
+  }
+};
+```
+Với các dev C++ họ sẽ đặt ra câu hỏi "Chỉ cần data.clear() là đủ rồi mà ?", nhưng trên thực tế, người viết code muốn vector phải từ bỏ đi bộ nhớ của nó (force-way). Dòng cuối của của hàm nên được comment như thế này:
+
+```C++
+// Force vector to relinquish its memory (look up "STL swap trick")
+vector<float>().swap(data);
+```
+
+#### Advertising Likely Pitfalls
+
+Khi viết doc, bạn nên đặt ra các câu hỏi như:
+- Có gì thú vị ở đoạn code này ?
+- Nó có thể bị sử dụng sai như thế nào ?
+
+Về cơ bản, bạn muốn "nghĩ xa hơn" và dự đoán vấn đề mà người đọc code sẽ gặp phải trong tương lai
+
+```java
+void SendEmail(string to, string subject, string body);
+```
+Với hàm gửi mail như trên, những người viết web app nếu không biết có thể gọi nó khi xử lí HTTP request, nhưng do hàm này cần kết nối với mail server bên ngoài nên sẽ tốn một khoảng thời gian nhất định, nếu mail server bị sập thì sẽ dẫn đến xử lí HTTP request bị "treo"
+
+Để tránh những sự cố như trên, bạn cần phải comment như sau:
+
+```java
+// Calls an external service to deliver email.  (Times out after 1 minute.)
+void SendEmail(string to, string subject, string body);
+```
+
+Một ví dụ khác, với hàm **FixBrokenHTML** dưới đây, có chức năng thêm các thẻ HTML thiếu cho đầu vào. Hàm sẽ chạy tốt nếu đầu vào không "quá sâu", nhưng với các đầu vào "sâu" và có nhiều lỗi thì thời gian chạy có thể lên đến **hàng phút**. Không nên để người dùng tự "khám phá" ra điều này, thay vào đó hãy comment để người dùng có thể sử dụng một cách hợp lí nhất
+
+```python
+// Runtime is O(number_tags * average_tag_depth), so watch out for badly nested inputs.
+def FixBrokenHtml(html): ...
+```
+
 
