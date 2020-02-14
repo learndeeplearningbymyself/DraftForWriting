@@ -191,4 +191,51 @@ Một ví dụ khác, với hàm **FixBrokenHTML** dưới đây, có chức nă
 def FixBrokenHtml(html): ...
 ```
 
+#### “Big Picture” Comments
+
+Điều khó khăn với thành viên mới của team đó chính là việc hiểu được "bức tranh tổng quan" về hệ thống - cách các class tương tác, data flows, .... Người thiết kế ra hệ thống thường quên việc viết docs về "big picture" này vì họ đã quá quen thuộc với hệ thống.
+
+Giả dụ bạn được giao nhiệm vụ training cho một thành viên mới của dự án, bạn sẽ hướng dẫn anh ta về bussiness logic, các class chính, ... Tưởng chừng điều này không đem lại quá nhiều hiệu quả nhưng nó có ích hơn việc để thành viên mới tự mình "bơi" trong đống source code "khổng lồ" của dự án
+
+**Đây chính là thông tin cần cung cấp trong high-levels comment**
+
+Ví dụ về file-level comment:
+
+```javascript
+// This file contains helper functions that provide a more convenient interface to our
+// file system. It handles file permissions and other nitty-gritty details.
+```
+
+Đừng choáng ngợp về việc lựa chọn, sử dụng các từ ngữ tốt cho comment vì suy cho cùng "có còn hơn không"
+
+#### Summary Comments
+
+Ngay kể cả trong function, ta cũng nên có các comments mang tính chất tổng kết cho từng đoạn code 
+
+```python
+# Find all the items that customers purchased for themselves.
+    for customer_id in all_customers:
+        for sale in all_sales[customer_id].sales:
+            if sale.recipient == customer_id:
+```
+
+Nếu không có comment, mọi thứ sẽ trở nên khó hiểu với người đọc (tại sao lại cần lặp qua biến all_customers). Điều này đặc biệt tốt với các hàm dài hơn
+
+```python
+def GenerateUserReport():
+  # Acquire a lock for this user
+  ...
+  # Read user's info from the database
+  ...
+  # Write info to a file
+  ...
+  # Release the lock for this user
+```
+
+Những comments này có chức năng như các gạch đầu dòng tổng kết để người đọc dễ theo dõi hơn, cũng như nắm được ý chính trước khi đọc code. Tuy nhiên với các hàm dài như vậy, ta nên tách thành các hàm nhỏ hơn vì:
+
+> Code tốt vẫn hơn comment tốt
+
+#### Final Thoughts—Getting Over Writer’s Block
+
 
