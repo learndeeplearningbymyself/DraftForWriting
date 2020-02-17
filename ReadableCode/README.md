@@ -238,4 +238,84 @@ Những comments này có chức năng như các gạch đầu dòng tổng kế
 
 #### Final Thoughts—Getting Over Writer’s Block
 
+Đa phần các coder đều ngại viết comment vì họ cho rằng phải "tốn rất nhiều công sức" để viết ra những dòng comments tốt, nhưng trong những tình huống bắt buộc chỉ có một cách duy nhất là **bắt tay vào viết comment**. Vậy các coders nên làm thế nào, rất **đơn giản** chỉ cần
+
+> Viết ra những gì mà bạn đang nghĩ trong đầu
+
+là đủ. Lấy ví dụ, bạn đang viết một hàm và nghĩ trong đầu rằng "Ôi trời, việc này sẽ khá khó viết nếu list bị lặp", thì hãy comment như sau:
+
+```javascript
+// Ôi trời, việc này sẽ khá khó viết nếu list bị lặp", thì hãy comment như sau:
+```
+
+Có thể câu từ vẫn còn mơ hồ nhưng "có còn hơn không". Tinh chỉnh lại một chút đối với từng cụm, từng từ và thay thế chúng bằng những cụm, từ cụ thể hơn:
+- "Ôi trời": "Chú ý: đây là điều cần xem xét"
+- "việc này": "đoạn code xử lí đầu vào"
+
+Và comment mới sẽ là:
+
+```javascript
+// Chú ý: đây là điều cần xem xét, đoạn code xử lí đầu vào sẽ khá khó viết nếu list bị lặp
+```
+
+Về cơ bản chúng ta có thể thấy quá trình viết comment gồm 3 bước sau
+1. Viết nháp những gì có trong đầu
+2. Xem xét lại comment, tìm những chỗ cần cải thiện
+3. Cải thiện, viết lại comment
+
+Càng comment nhiều thì kết quả của bước 1 sẽ tốt lên dần dần. Việc viết comment ngay từ đầu có thể khiến bạn khó chịu nhưng nó sẽ tránh tình trạng chúng ta phải viết cả đống comments vào lúc cuối
+
+#### Tổng kết
+
+Việc viết comment là để giúp người đọc code hiểu được suy nghĩ của người viết code
+
+Không nên comment khi:
+- Đó là một sự thật hiển nhiên mà chỉ cần nhìn code ngay lập tức có thể hiểu được
+- "Crutch comment" - comment chữa code "thối", thay vì comment ===> hãy sửa code
+
+Nên comment:
+- Giải thích tư tưởng của code (tại sao lại giải quyết theo hướng này chứ không phải cách kia)
+- Sử dụng các MARKER đánh dấu: **TODO**, **XXX**
+- Giải thích tại sao constants lại có giá trị đó
+
+Đặt mình vào vị trí của người đọc code:
+- Dự đoán xem phần nào mà người đọc code có thể khó hiểu, tiến hành comment cho phần đó
+- Comment những xử lí có thể gây bất ngờ cho người đọc
+- Sử dụng "big picture", comment ở level file/class để người đọc hiểu được cách chúng kết hợp với nhau 
+- Comment tổng kết block code để người đọc không bỏ lỡ các chi tiết quan trọng
+
+## CHƯƠNG 6: Making Comments Precise and Compact
+
+Chương trước trình bày về việc nên **comment cái gì**, chương này nói về việc nên **comment như thế nào**
+
+Key idea:
+> Đảm bảo tỉ lệ thông tin-không gian
+
+Cần đảm bảo tỉ lệ trên là vì đọc comment cũng sẽ tốn thời gian của người đọc, vậy nên comment phải tóm lược, đầy đủ nhất có thể
+
+### Keep Comments Compact
+
+Xét ví dụ code C++ dưới đây:
+
+```C++
+// The int is the CategoryType.
+// The first float in the inner pair is the 'score',
+// the second is the 'weight'.
+typedef hash_map<int, pair<float, float> > ScoreMap;
+```
+
+Thay vì cần những 3 dòng như trên, ta có thể comment ngắn gọn tron 1 dòng như sau
+
+```C++
+// CategoryType -> (score, weight)
+typedef hash_map<int, pair<float, float> > ScoreMap;
+```
+
+### Avoid Ambiguous Pronouns
+
+
+
+
+
+
 
