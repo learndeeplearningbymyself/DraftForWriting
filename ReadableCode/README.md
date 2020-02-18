@@ -313,9 +313,63 @@ typedef hash_map<int, pair<float, float> > ScoreMap;
 
 ### Avoid Ambiguous Pronouns
 
+Với comment bằng tiếng anh thì các từ như "this", "it" thường có ý nghĩa khá mơ hồ, dễ gây hiểu nhầm cho người đọc. Ví dụ như:
 
+```javascript
+// Insert the data into the cache, but check if it's too big first.
+```
 
+Từ "it" ở đây có thể ám chỉ hoặc là "data" hoặc là "cache", người đọc chỉ có thể biết được nếu đọc code, vậy thì comment ở đây là hoàn toàn vô nghĩa.
 
+Cách sửa an toàn nhất đó là thay từ "it" bằng 1 từ cụ thể, giả dụ ở đây là "the data", khi đó ta có comment như sau
+
+```javascript
+// Insert the data into the cache, but check if the data is too big first.
+```
+
+Đây là cách đơn giản nhất, ngoài ra bạn cũng có thể "tái cấu trúc" lại comment để khiến "it" có ý nghĩa hơn
+
+```javascript
+// If the data is small enough, insert it into the cache.
+```
+
+#### Polish Sloppy Sentences
+
+Viết comment tóm lược luôn đi đôi với việc khiến nó trở nên ngắn gọn hơn. Ví dụ với một web crawler:
+
+```python
+ # Depending on whether we've already crawled this URL before, give it a different priority.
+```
+
+Nhìn có vẻ ổn nhưng khi so sánh với comment dưới đây:
+
+```python
+# Give higher priority to URLs we've never crawled before.
+```
+
+Comment sau ngắn gọn, đầy đủ và còn cung cấp thêm thông tin cho trường hợp có mức "priority" cao hơn
+
+#### Describe Function Behavior Precisely
+
+Giả sử bạn đang viết hàm đếm số dòng của 1 file:
+
+```C
+// Return the number of lines in this file.
+int CountLines(string filename) { ... }
+```
+
+Từ "line" ở đây mang ý nghĩa khá mơ hồ, có nhiều cách để định nghĩa một line. Dưới đây là một vài trường hợp đặc biệt
+- "" (empty file) -> 0 line hay 1 line
+- "hello\n" -> 1 line hay 2 line
+
+Cách đơn giản nhất đó là đếm số kí tự newline '\n' (tương tự như cách câu lệnh `wc` của Unix thực hiện). Đây sẽ là cách comment tốt hơn
+
+```C
+// Count how many newline bytes ('\n') are in the file.
+int CountLines(string filename) { ... }
+```
+
+Comment này ngắn hơn phiên bản cũ nhưng lại đầy đủ thông tin hơn, nó nói với người đọc rằng (hàm có thể trả về 0 cũng như bỏ qua kí tự \r)
 
 
 
