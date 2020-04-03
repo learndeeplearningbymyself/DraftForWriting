@@ -91,3 +91,60 @@ Về cơ bản cách này giúp giảm bớt đi 1 field password cho form đăn
 - Người dùng sẽ phải chuyển qua lại giữa ứng dụng mail và ứng dụng của bạn
 
 ## PASSPHRASES
+
+Người dùng thường nhập vào các password dễ nhớ và ngắn nhất có thể, nhưng điều đó lại tiềm ẩn nhiều rủi ro về bảo mật. Vậy nên các trang web hiện nay thường yêu cầu người dùng nhập các password
+
+> Min lenght = 8, có chứa kí tự hoa, chữ số, kí tự đặc biệt v..v..
+
+Nhưng đối với người dùng thì điều đó thật phiền phức và khó nhớ, chưa kể vẫn có khả năng tiềm ẩn các nguy cơ về bảo mật khác.
+
+Sử dụng **passphrase** là một giải pháp khá ổn cho 2 vấn đề trên, passphrase là một dạng câu hỏi liên quan đến thông tin cá nhân người dùng nhằm mục đích xác thực người dùng. Ví dụ như:
+- Mô tả thú cưng của bạn ?
+- ...
+
+Rất đơn giản với người dùng nhưng cũng đảm bảo độ an toàn bảo mật nhất định ("thường thì" các câu trả lời phải có ít nhất 16 kí tự)
+
+Tuy nhiên cách làm này không quá phổ biến và có thể khiến người dùng nghi ngờ về tính bảo mật của nó do người dùng đã quá quen với password-authen.
+
+Vậy nên hãy thay đổi phương thức authen chỉ khi bạn đã nghiên cứu kĩ về người dùng và chuẩn bị kĩ lưỡng nếu bạn không muốn gặp phải một vấn đề khác.
+
+## Field Styling
+
+> Style cho form tuỳ vào tính chất sản phẩm của bạn
+
+## LABEL POSITION
+
+Đa phần chúng ta thường đặt label **bên cạnh** hoặc **phía trên** control/ input
+
+Nhưng việc đặt **phía trên** sẽ có nhiều điểm tích cực hơn. Ví dụ như:
+- Tránh bị vỡ layout nếu view-port có kích cỡ nhỏ
+- Tránh bị vỡ layout nếu label chiếm nhiều dòng
+- Tránh tình trạng label biến mất khi người dùng zoom in màn hình
+
+## LOOK, SIZE, AND SPACE
+
+Mọi thành phần của form nên được biểu thị sao cho đúng ý nghĩa của nó
+- TextField nên giống như TextField
+
+Theo như nhận định trên thì việc có placeholder không hẳn là một ý hay vì nó sẽ phá vỡ đi ý nghĩa "hãy điền vào chỗ trống" của TextField
+
+TextField nên được bo viền 4 phía, nếu chỉ bo viền dưới bottom, người dùng có thể nhầm rằng đó là "Separate Line"
+
+Ngoài ra những gì thuộc cùng một nhóm nên được bố trí gần nhau nhất có thể (label và text field)
+
+Cuối cùng, khu vực tap cho label và text field cần đủ lớn, vậy nên chọn cỡ font tối thiểu là 16px, không gian tương tác nhỏ nhất nên chiếm 44pixels
+
+## FOCUS STYLES
+
+Là các bo viền xuất hiện khi chọn text box - để chứng tỏ rằng người dùng đang focus vào element, tuy nhiên đôi khi chúng khá mờ để nhận ra cũng như có màu sắc không được bát mắt
+
+Không nên bỏ đi style này vì nó sẽ làm ảnh hưởng đến trải nghiệm của người dùng, thay vào đó hãy làm đậm hơn bo viền của text box khi nó được focus
+
+```css
+input:focus {
+  outline: 4px solid #ffbf47;
+}
+```
+
+## The Email Field
+
