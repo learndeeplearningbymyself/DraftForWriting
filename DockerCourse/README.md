@@ -65,3 +65,14 @@ Every process that we create in the Linux environment has three communication ch
 
 -i: attach our terminal's stuff to **CMD_LINE STDIN**
 -t: show up result in pretty format
+
+**Build our own docker-image**
+- **Docker Client (CLI)** will send your **dockerfile** to **Docker Server**, **Docker Server** will read it (line by line), after that publish your image
+
+<img src="https://user-images.githubusercontent.com/43769314/78526995-bcc71a00-7816-11ea-88aa-6385b5e74262.png" width="720" />
+
+With docker build command:
+
+> docker build .
+
+[.] symbol is the context (includes folders and files that you want to import into your image)
