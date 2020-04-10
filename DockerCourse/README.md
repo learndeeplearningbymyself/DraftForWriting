@@ -24,7 +24,7 @@ FS: File system, Startup command will be executed immediately after container is
 
 > docker run <image> <command - override default Startup command of container>
 
-Container life cycle
+### Container life cycle
 
 > docker run = docker create + docker start
 
@@ -66,7 +66,8 @@ Every process that we create in the Linux environment has three communication ch
 -i: attach our terminal's stuff to **CMD_LINE STDIN**
 -t: show up result in pretty format
 
-**Build our own docker-image**
+### Build our own docker-image
+
 - **Docker Client (CLI)** will send your **dockerfile** to **Docker Server**, **Docker Server** will read it (line by line), after that publish your image
 
 <img src="https://user-images.githubusercontent.com/43769314/78526995-bcc71a00-7816-11ea-88aa-6385b5e74262.png" width="720" />
@@ -74,5 +75,66 @@ Every process that we create in the Linux environment has three communication ch
 With docker build command:
 
 > docker build .
+> docker build -f dockerfile_name . // -f: specify dockerfile
 
 [.] symbol is the context (includes folders and files that you want to import into your image)
+
+The build process in detail
+
+1. Pulling base image
+2. If we have **RUN** instruction in our Dockerfile, a **temporary container** is going to be created
+3. The command of **RUN** will be executed as **temporary container**'s main process
+4. After command stop, **temporary container** will be removed but before that happens, all FS snapshot of **temporary container** will be copied and be stored at **temporary image**
+5. With **CMD**, we will look at previous created **temporary image**, create a very temporary container out of this and the command in **CMD** will be a primary process of new container. After that, remove temp container and create finally image
+
+> Successfully built IMAGE_ID
+
+**Using cache**
+
+Docker build uses cache to build an image, but if we **change instructions's order**in Dockerfile, **cache is not going to be used**.
+
+**Tagging an image**
+
+tag convention: [DockerID]/[Repo/Project_Name]:[Version]
+
+**Create　image from container**
+
+With the following command
+
+> docker commit -c "CMD"
+
+**COPY** instruction
+
+> COPY PATH_IN_YOUR_MACHINE/ PATH_IN_CONTAINER/
+
+**PORT mapping**
+
+Our docker container can by default make requests on its own behalf to the outside world
+
+Docker run with port mapping
+
+> docker run -p [LOCAL_HOST_PORT]:[CONTAINER_PORT] <image_name>
+
+**WORKDIR instructions**
+
+> WORKDIR /path/
+
+Any following commands will be executed relative to this path in the container
+
+**/usr/app** folder is the best place to put your application into it.
+
+### Docker Compose
+
+The containers that are created by **docker-compose** are automatically have the same networking
+
+> docker run <image_name> === docker-compose up
+
+> docker build . + docker run <image_name> === docker-compose up --build
+
+> docker-compose up -d // detach mode
+
+> docker-compose down
+
+<img src="https://user-images.githubusercontent.com/43769314/78973546-1dbe5d00-7b4b-11ea-84be-41b3f05ecd58.png" width="720" />
+
+> restart: value // in docker-compose.yml file
