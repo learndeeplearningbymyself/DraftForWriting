@@ -138,3 +138,11 @@ The containers that are created by **docker-compose** are automatically have the
 <img src="https://user-images.githubusercontent.com/43769314/78973546-1dbe5d00-7b4b-11ea-84be-41b3f05ecd58.png" width="720" />
 
 > restart: value // in docker-compose.yml file
+
+### Docker volume
+
+With docker volume, instead passing **Files System Snapshot** to container (the things that be locked and not going to be updated), we will use **volume** (same meaning with **reference**)
+
+> docker run -v machine_folder:container_folder
+
+
