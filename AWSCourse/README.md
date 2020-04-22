@@ -52,6 +52,72 @@ We leave more of the management of the architect and infrastructure to AWS and w
 
 ### Lambda@Edge
 
+<img src="https://user-images.githubusercontent.com/43769314/79935048-e88d0580-848e-11ea-933c-7ce10b7da920.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79935149-2722c000-848f-11ea-9fa8-6f75541f55c9.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79935240-5fc29980-848f-11ea-909b-913815332dde.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79935311-94ceec00-848f-11ea-9c62-f4fb8d0742bc.png" width="720">
+
+## DynamoDB
+
+### Overview
+
+<img src="https://user-images.githubusercontent.com/43769314/79938411-7e2c9300-8497-11ea-8da4-08b68796c171.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79950838-a2499d80-84b2-11ea-846e-0ea20839f82b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79951398-927e8900-84b3-11ea-8c88-8269775903ac.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79952426-5ba97280-84b5-11ea-8a08-c2748bd4faec.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79952808-f1dd9880-84b5-11ea-98f8-8122fffdd532.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79953149-66183c00-84b6-11ea-99ee-9a0cc7281d75.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79953307-98c23480-84b6-11ea-867a-09d67b722fff.png" width="720">
+
+### DynamoDB - Provisioned Throughput
+
+<img src="https://user-images.githubusercontent.com/43769314/79957506-a084d780-84bc-11ea-8874-d745716719f1.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79957930-46d0dd00-84bd-11ea-88d9-87a89d327498.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79958457-e7270180-84bd-11ea-9d23-879f27403aab.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79958727-3ff69a00-84be-11ea-91a5-cc5f44583bdf.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79959152-bdbaa580-84be-11ea-8b50-1e69950ce566.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79959389-0d996c80-84bf-11ea-85a5-4aca7f7db737.png" width="720">
+
+### Basic APIs
+
+<img src="https://user-images.githubusercontent.com/43769314/79960672-a5e42100-84c0-11ea-8e6b-8f4b20490ade.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79960858-e479db80-84c0-11ea-99bb-970e3a897651.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79961250-6407aa80-84c1-11ea-9765-1b5d9512782b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79961455-b9dc5280-84c1-11ea-870b-d0e0bfe8c628.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79961707-10499100-84c2-11ea-981e-e08ceeb3780e.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79962078-936ae700-84c2-11ea-9a19-535e559ec2e9.png" width="720">
+
+### DynamoDB GSI + LSI
+
+We can use LSI + user_id to get and sort the results directly (local because it "local" to the partition key)
+
+<img src="https://user-images.githubusercontent.com/43769314/79964178-49cfcb80-84c5-11ea-86cc-c250db3e4140.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79964428-adf28f80-84c5-11ea-9330-cbd747324f5f.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79964628-f14cfe00-84c5-11ea-8223-bd1d91f70363.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/79964812-32451280-84c6-11ea-8e43-2063a399b27b.png" width="720">
+
 ## API-Gateway
 
 We can define for each root of API Gateway which lambda function should be called
