@@ -1,5 +1,21 @@
 Summarize AWS Certified Developer - Associate
 
+## AWS Fundamental
+
+### AWS Regions and AZs
+
+<img src="https://user-images.githubusercontent.com/43769314/80077071-f7a3ae80-8587-11ea-833f-dd43c9f68f81.png" width="720">
+
+### IAM
+
+<img src="https://user-images.githubusercontent.com/43769314/80079283-093a8580-858b-11ea-9ada-cfd3b059e152.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80080022-fc6a6180-858b-11ea-8a13-d00a4be19a2c.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80080242-510ddc80-858c-11ea-96ad-880356d72021.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80081825-6be15080-858e-11ea-9bc6-4c948bdb615d.png" width="720">
+
 ## Lambda
 
 ### Serverless
@@ -117,6 +133,38 @@ We can use LSI + user_id to get and sort the results directly (local because it 
 <img src="https://user-images.githubusercontent.com/43769314/79964628-f14cfe00-84c5-11ea-8223-bd1d91f70363.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/79964812-32451280-84c6-11ea-8e43-2063a399b27b.png" width="720">
+
+### DynamoDB Concurrency
+
+<img src="https://user-images.githubusercontent.com/43769314/80049573-40d70c80-854e-11ea-935d-fc0eba0af7e4.png" width="720">
+
+### DynamoDB DAX
+
+<img src="https://user-images.githubusercontent.com/43769314/80056675-b697a400-855f-11ea-945f-7845e5861327.png" width="720">
+
+### DynamoDB Streams
+
+<img src="https://user-images.githubusercontent.com/43769314/80057295-25c1c800-8561-11ea-97b7-3c73552ea953.png" width="720">
+
+### DynamoDB TTL
+
+<img src="https://user-images.githubusercontent.com/43769314/80068237-39c5f380-857a-11ea-9570-ccc732395930.png" width="720">
+
+### DynamoDB CLI
+
+<img src="https://user-images.githubusercontent.com/43769314/80069006-907ffd00-857b-11ea-8023-1b74aa25c230.png" width="720">
+
+### DynamoDB Transactions
+
+"all or nothing" means if get error, transactions will be canceled, if don't get any errors => success
+
+<img src="https://user-images.githubusercontent.com/43769314/80071588-dccd3c00-857f-11ea-8228-ddb5f83e489d.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80072106-bbb91b00-8580-11ea-83a9-2c171b894904.png" width="720">
+
+### DynamoDB - Security & Other Features
+
+<img src="https://user-images.githubusercontent.com/43769314/80072400-28ccb080-8581-11ea-9541-37b4423bf916.png" width="720">
 
 ## API-Gateway
 
