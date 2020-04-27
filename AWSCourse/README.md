@@ -16,6 +16,78 @@ Summarize AWS Certified Developer - Associate
 
 <img src="https://user-images.githubusercontent.com/43769314/80081825-6be15080-858e-11ea-9bc6-4c948bdb615d.png" width="720">
 
+### EC2
+
+<img src="https://user-images.githubusercontent.com/43769314/80325734-51022b00-8871-11ea-9431-7889a295ce4f.png" width="720">
+
+**0.0.0.0/0**: means every IPs
+**Key pair** give you access, log in to EC2 instance
+**ec2-user** is basically the linux user into the Amazon linux machine
+
+**Permissions 0644**, "**.pem"  are too open => your keys maybe leak
+
+==> $chmod 0400 **.pem (0400 means "Allows the owner to read")
+
+### Security Group
+
+<img src="https://user-images.githubusercontent.com/43769314/80338172-b0befd00-8896-11ea-9d95-8739be21767c.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80338473-5a05f300-8897-11ea-9780-b5905cacf5fa.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80338583-a0f3e880-8897-11ea-811d-772235a4a9aa.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80338705-fa5c1780-8897-11ea-9d7f-57edabcbc1b6.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80339459-a5210580-8899-11ea-9ea5-22051c8f7db2.png" width="720">
+
+### Private, Public, Elastic IP
+
+<img src="https://user-images.githubusercontent.com/43769314/80339807-62136200-889a-11ea-9427-6b3209073d38.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80339871-87a06b80-889a-11ea-9c73-c344ca2cb45c.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80339978-b9193700-889a-11ea-8ddb-bbe3c4c19a1c.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80340677-0a75f600-889c-11ea-8a52-73655ff5a4b9.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80342870-e5838200-889f-11ea-9eef-1a01f9012c8e.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80345543-3ac19280-88a4-11ea-9084-2bfc70715348.png" width="720">
+
+### EC2 Launch Modes
+
+<img src="https://user-images.githubusercontent.com/43769314/80350538-d73b6300-88ab-11ea-8c4d-6930e328ccae.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80350644-0225b700-88ac-11ea-9f7a-535f3674ca98.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80351066-a9a2e980-88ac-11ea-82d7-c46ead3e9bf3.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80351251-fd153780-88ac-11ea-92c3-3e089498e578.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80353998-1ddf8c00-88b1-11ea-80fe-1f45290a0d97.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80354570-e02f3300-88b1-11ea-9144-3939770efac0.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80354664-0228b580-88b2-11ea-807e-6930ada6a1b3.png" width="720">
+
+### EC2 - Good things to know and the checklist
+
+<img src="https://user-images.githubusercontent.com/43769314/80355033-824f1b00-88b2-11ea-92c3-bf07fc5d2da2.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80355450-17eaaa80-88b3-11ea-9928-bbe5ac1dfe5a.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80355687-5aac8280-88b3-11ea-9081-28da369e9ddd.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80356000-c989db80-88b3-11ea-9615-3bf0274f9ffb.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80356161-05bd3c00-88b4-11ea-8359-07d449ce1ebb.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80356299-3ac98e80-88b4-11ea-8f15-4039064a9dfa.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80356467-795f4900-88b4-11ea-87e8-347128cde0a9.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80356624-ad3a6e80-88b4-11ea-8b8a-9ba570dfe80d.png" width="720">
+
 ## Lambda
 
 ### Serverless
