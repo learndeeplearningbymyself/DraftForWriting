@@ -88,6 +88,54 @@ Summarize AWS Certified Developer - Associate
 
 <img src="https://user-images.githubusercontent.com/43769314/80356624-ad3a6e80-88b4-11ea-8b8a-9ba570dfe80d.png" width="720">
 
+## Load Balancer, Auto Scaling, EBS
+
+### Load Balancer
+
+<img src="https://user-images.githubusercontent.com/43769314/80445265-c42d9f00-894e-11ea-8785-6dd636583ee7.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80445420-2c7c8080-894f-11ea-972c-5e44a143dc61.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80445579-9eed6080-894f-11ea-9e07-8fce01c27357.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80445667-d0662c00-894f-11ea-9b92-4191c81f67a1.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80452097-75890080-8960-11ea-89d6-a17070261f5f.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80452540-73737180-8961-11ea-9b7d-8d3e06acd734.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80452860-1a580d80-8962-11ea-9df1-0d53f864ac45.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80453130-9fdbbd80-8962-11ea-98e3-85d197261771.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80453865-0c0af100-8964-11ea-9137-bfc76c4dc245.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80453953-30ff6400-8964-11ea-95a6-1181ed704c6f.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80454036-58563100-8964-11ea-94cf-1b7ece6beb26.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80454168-994e4580-8964-11ea-80f6-b44a4f270dcd.png" width="720">
+
+### Auto Scaling
+
+<img src="https://user-images.githubusercontent.com/43769314/80464825-4f219000-8975-11ea-831c-45e92b90b024.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80465844-aecc6b00-8976-11ea-934a-08e76807dab1.png" width="720">
+
+> Load balancer and Auto Scaling are always work hand-in-hand
+
+<img src="https://user-images.githubusercontent.com/43769314/80466329-5fd30580-8977-11ea-8545-52253fdfb5c8.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80467303-98271380-8978-11ea-8652-470d2ecd29fd.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80467480-cf95c000-8978-11ea-92e3-4401eedfb468.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80467669-1edbf080-8979-11ea-96b7-055eca6dc6bf.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80467930-8134f100-8979-11ea-8f7c-6057e56ebd73.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80468213-de30a700-8979-11ea-8b84-d1471de704c0.png" width="720">
+
 ## Lambda
 
 ### Serverless
