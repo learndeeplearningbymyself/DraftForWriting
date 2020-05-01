@@ -136,6 +136,30 @@ Summarize AWS Certified Developer - Associate
 
 <img src="https://user-images.githubusercontent.com/43769314/80468213-de30a700-8979-11ea-8b84-d1471de704c0.png" width="720">
 
+### EBS Volumes
+
+<img src="https://user-images.githubusercontent.com/43769314/80772816-e3b50980-8b92-11ea-8953-006540530c91.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80772975-75247b80-8b93-11ea-92e7-f7eaa03b3990.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80773089-c896c980-8b93-11ea-9040-031ab292dba6.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80773210-2aefca00-8b94-11ea-8375-781b5ab199c6.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80773260-52469700-8b94-11ea-979a-01931332e61e.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80773314-8326cc00-8b94-11ea-8c3f-7aa9f6a03bef.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80773422-d6008380-8b94-11ea-848f-d5bb2c92268c.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80773920-58d60e00-8b96-11ea-98a8-0f95de337a76.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/80773971-88851600-8b96-11ea-8650-3a39d392f06a.png" width="720">
+
+### Route 53
+
+<img src="https://user-images.githubusercontent.com/43769314/80785437-386c7a80-8bbb-11ea-95fb-87834dc794a4.png" width="720">
+
 ## Lambda
 
 ### Serverless
