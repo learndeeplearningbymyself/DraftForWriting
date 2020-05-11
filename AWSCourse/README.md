@@ -160,6 +160,22 @@ Summarize AWS Certified Developer - Associate
 
 <img src="https://user-images.githubusercontent.com/43769314/80785437-386c7a80-8bbb-11ea-95fb-87834dc794a4.png" width="720">
 
+<img src="https://user-images.githubusercontent.com/43769314/81536058-dde6d180-93a5-11ea-8b2f-6a117bb3866b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81536417-7aa96f00-93a6-11ea-9eb0-8827acc27dbe.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81536451-87c65e00-93a6-11ea-8438-bb7980255612.png" width="720">
+
+### RDS
+
+<img src="https://user-images.githubusercontent.com/43769314/81537599-69f9f880-93a8-11ea-8303-6ac7b638c2c3.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81537724-9ada2d80-93a8-11ea-8f69-b52845193232.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81544852-00331c00-93b3-11ea-8e5a-9c7833e4207b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81545792-60768d80-93b4-11ea-9a0a-eb63d6b8d3b8.png" width="720">
+
 ## Lambda
 
 ### Serverless
@@ -353,3 +369,5 @@ We can define for each root of API Gateway which lambda function should be calle
 <img src="https://user-images.githubusercontent.com/43769314/79732217-553cbe80-832e-11ea-804c-2ac142d50eaf.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/79732531-c7150800-832e-11ea-929d-a7daf2147af8.png" width="720">
+
+### AWS ElasticBeanStalk
