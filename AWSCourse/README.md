@@ -176,6 +176,78 @@ Summarize AWS Certified Developer - Associate
 
 <img src="https://user-images.githubusercontent.com/43769314/81545792-60768d80-93b4-11ea-9a0a-eb63d6b8d3b8.png" width="720">
 
+<img src="https://user-images.githubusercontent.com/43769314/81767009-59659180-9512-11ea-8bc7-f0f5d5d7c73d.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81767106-916cd480-9512-11ea-94bf-9862761b4f6b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81767263-ea3c6d00-9512-11ea-8015-5b75948524c3.png" width="720">
+
+Difference between replica (for load balancing) and standby (Multi AZ) (for back-up or disaster recovery)
+
+<img src="https://user-images.githubusercontent.com/43769314/81776359-a1dc7980-9529-11ea-89ce-9c8956f83c27.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81776616-17484a00-952a-11ea-89d7-59ff297b34b4.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81776752-5a0a2200-952a-11ea-961b-562210ff5faf.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81776885-a6edf880-952a-11ea-84dc-f5897434700a.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81777040-ffbd9100-952a-11ea-9aa4-3595115afff7.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81777273-76f32500-952b-11ea-945b-61ec74ad5c05.png" width="720">
+
+### Amazon Aurora
+
+<img src="https://user-images.githubusercontent.com/43769314/81885201-c93c5080-95d4-11ea-9d87-a606266adf04.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81885384-394ad680-95d5-11ea-8868-646100749beb.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81885911-56cc7000-95d6-11ea-81b7-e032df2a66f2.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81885980-83808780-95d6-11ea-891c-0689970702b5.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81886056-b4f95300-95d6-11ea-8165-615be71a18fd.png" width="720">
+
+Aurora scale base on demand
+
+<img src="https://user-images.githubusercontent.com/43769314/81888320-13750000-95dc-11ea-8350-0c23c6b12dca.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81889767-5a182980-95df-11ea-8c3e-aea10cdf3628.png" width="720">
+
+### AWS ElastiCache Overview
+
+<img src="https://user-images.githubusercontent.com/43769314/81890741-a7959600-95e1-11ea-9c9d-699d24e0253a.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81907347-8ee9a800-9602-11ea-9f78-4fb0484e3ddf.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81907501-d53f0700-9602-11ea-83a7-c28d13c70448.png" width="720">
+
+Auto Failover means: if one downs, you can failover (use) to another one.
+
+<img src="https://user-images.githubusercontent.com/43769314/81907831-56969980-9603-11ea-90f9-baebc742587e.png" width="720">
+
+Redis AUTH Token need for application to connect to Redis
+
+<img src="https://user-images.githubusercontent.com/43769314/81909579-c27a0180-9605-11ea-9e3b-7fe948732ba7.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81909886-32888780-9606-11ea-957a-5eb35e055cc0.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81910794-5e583d00-9607-11ea-9a5a-c29b810de80f.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81911276-0d951400-9608-11ea-8fe9-601ea9f27380.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81911385-31585a00-9608-11ea-9bc3-fe002eaf1f90.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81911813-bfccdb80-9608-11ea-9b9a-1cffda025be3.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81912053-08849480-9609-11ea-8582-93831a2128cc.png" width="720">
+
+## Route 53
+
+<img src="https://user-images.githubusercontent.com/43769314/81915028-00c6ef00-960d-11ea-8f7e-1f7ad4590465.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/81915430-86e33580-960d-11ea-92f8-517ed0e6f1f3.png" width="720">
+
 ## Lambda
 
 ### Serverless
