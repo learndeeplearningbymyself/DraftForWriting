@@ -166,6 +166,40 @@ Summarize AWS Certified Developer - Associate
 
 <img src="https://user-images.githubusercontent.com/43769314/81536451-87c65e00-93a6-11ea-8438-bb7980255612.png" width="720">
 
+Web browser must wait until the IP that be sent back from Route53 exipred to get the new one
+
+<img src="https://user-images.githubusercontent.com/43769314/82000997-00723680-9695-11ea-9a7e-35aa4fd8e19d.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82007546-77173000-96a5-11ea-80f0-c8663ecf192a.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82008060-af6b3e00-96a6-11ea-9582-734cbe9f2eab.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82008608-235a1600-96a8-11ea-9dc1-361c6f4e4573.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82016045-1b57a180-96bb-11ea-83dd-4ff1aca351ab.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82016601-5908fa00-96bc-11ea-80fe-da674b1db93e.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82018967-48a74e00-96c1-11ea-98f1-cb4b0206a4c9.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82027792-be1a1b00-96cf-11ea-914b-4eaa4af78da5.png" width="720">
+
+Multi Value: if once Route is "unhealthy", request will be redirected to the "healthy" once
+
+### VPC
+
+<img src="https://user-images.githubusercontent.com/43769314/82030079-e8210c80-96d2-11ea-9f68-8eb9df9a81c3.png" width="720">
+
+By Default, we have one "public subnet" per AZ
+
+<img src="https://user-images.githubusercontent.com/43769314/82030262-2c141180-96d3-11ea-9a11-66239e2bc430.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82030660-b52b4880-96d3-11ea-9079-127deae09f88.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82031347-b9a43100-96d4-11ea-9707-e6cb477ff884.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82031703-3c2cf080-96d5-11ea-9bab-c2900e21af47.png" width="720">
+
 ### RDS
 
 <img src="https://user-images.githubusercontent.com/43769314/81537599-69f9f880-93a8-11ea-8303-6ac7b638c2c3.png" width="720">
