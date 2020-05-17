@@ -188,6 +188,8 @@ Multi Value: if once Route is "unhealthy", request will be redirected to the "he
 
 ### VPC
 
+> We will have a default VPC for each launching EC2 instance
+
 <img src="https://user-images.githubusercontent.com/43769314/82030079-e8210c80-96d2-11ea-9f68-8eb9df9a81c3.png" width="720">
 
 By Default, we have one "public subnet" per AZ
@@ -199,6 +201,108 @@ By Default, we have one "public subnet" per AZ
 <img src="https://user-images.githubusercontent.com/43769314/82031347-b9a43100-96d4-11ea-9707-e6cb477ff884.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/82031703-3c2cf080-96d5-11ea-9bab-c2900e21af47.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82113321-1d3f6480-9790-11ea-829e-e240bb72b30c.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82113367-77402a00-9790-11ea-8e0a-db6a001da500.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82113411-d2721c80-9790-11ea-837a-0081bd4b1efa.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82113520-955a5a00-9791-11ea-8ab9-2200960c2b84.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82113639-8cb65380-9792-11ea-8456-deca4393264e.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82113683-d56e0c80-9792-11ea-9a2c-0892325b8c4e.png" width="720">
+
+### CloudFront
+
+<img src="https://user-images.githubusercontent.com/15076665/82114314-06e8d700-9797-11ea-95e5-f59982e095d9.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82114353-4e6f6300-9797-11ea-89d0-af7d56993fab.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82114395-97271c00-9797-11ea-9e72-34b92fedfdfe.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82114449-cfc6f580-9797-11ea-87ef-ce9b679dd8cb.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82114585-85924400-9798-11ea-9897-a24f6af6e0d5.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82114612-b83c3c80-9798-11ea-83d1-0c70a278ceb6.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82114642-ed488f00-9798-11ea-9b0e-1c7205344872.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82115784-dfe2d300-979f-11ea-9a21-109070656cab.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82115799-fab54780-979f-11ea-8f06-a7880625a7e5.png" width="720">
+
+Using HTTPs to ensure that everything will be secured
+
+In first 3 hours: Cloudfront Domain will re-direct to origin URL (Ex: S3)
+
+<img src="https://user-images.githubusercontent.com/15076665/82115893-a52d6a80-97a0-11ea-963f-dd47df0f4a53.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82116157-90ea6d00-97a2-11ea-90f0-d8bb9846d14a.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82116189-c727ec80-97a2-11ea-9c53-9f49accf172a.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82116230-2f76ce00-97a3-11ea-98c9-6078743bfa95.png" width="720">
+
+### ECS
+
+<img src="https://user-images.githubusercontent.com/15076665/82119859-c9974000-97bc-11ea-9faf-b6057bc847b4.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82120921-50035000-97c4-11ea-852d-5cf4c0a2e5ba.png" width="720">
+
+Service Type "REPLICA" in ECS service means: we will run many tasks as possible, ""DAEMON" => 1 task. Service will launch our already defined task
+
+<img src="https://user-images.githubusercontent.com/15076665/82134079-82e22e00-982e-11ea-9f5f-eea6f087c3fe.png" width="720">
+
+### ECR
+
+<img src="https://user-images.githubusercontent.com/15076665/82136789-16762780-984c-11ea-8f20-bb7f03bf54d5.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82138153-35c78180-9859-11ea-8a4a-1132dfa44d0f.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82138557-504f2a00-985c-11ea-8ac4-19509cf9b6d0.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82138702-67424c00-985d-11ea-9331-03830f152b0c.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82138745-b8ead680-985d-11ea-942c-ad9cc4929400.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82138789-197a1380-985e-11ea-921e-173e9f0b1b77.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82138821-51815680-985e-11ea-8cd9-d71f78b976b1.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82138847-88576c80-985e-11ea-9e9f-8b94db888a20.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82138896-d79d9d00-985e-11ea-8d98-178ff5f83ca4.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82139654-75e03180-9864-11ea-895a-1dc7065ef1e4.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82139679-aaec8400-9864-11ea-9eb7-10cad6a7f234.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82139744-16365600-9865-11ea-88a7-4e0f2fea13df.png" width="720">
+
+"Target capacity %" in Capacity Provider means if ~% "busy" EC2 instances reach, the new EC2 instance will be created
+
+<img src="https://user-images.githubusercontent.com/15076665/82140055-de7cdd80-9867-11ea-8300-784330ef8b37.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82140075-1ab03e00-9868-11ea-84e6-ccb60f409112.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82140096-46332880-9868-11ea-94cd-252737996053.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82140118-6cf15f00-9868-11ea-98ff-19d797a63c1a.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82140159-a033ee00-9868-11ea-8810-002650995742.png" width="720">
+
+### ElasticBeanStalk
+
+<img src="https://user-images.githubusercontent.com/15076665/82140724-c73fef00-986b-11ea-860e-dcf3d80a2a9b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82140754-fb1b1480-986b-11ea-8024-79403a390c05.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82140831-8bf1f000-986c-11ea-9f60-59faae370a9b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/82140856-c9ef1400-986c-11ea-90cb-594df65cfa67.png" width="720">
 
 ### RDS
 
@@ -475,5 +579,3 @@ We can define for each root of API Gateway which lambda function should be calle
 <img src="https://user-images.githubusercontent.com/43769314/79732217-553cbe80-832e-11ea-804c-2ac142d50eaf.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/79732531-c7150800-832e-11ea-929d-a7daf2147af8.png" width="720">
-
-### AWS ElasticBeanStalk
