@@ -304,6 +304,22 @@ Service Type "REPLICA" in ECS service means: we will run many tasks as possible,
 
 <img src="https://user-images.githubusercontent.com/15076665/82140856-c9ef1400-986c-11ea-90cb-594df65cfa67.png" width="720">
 
+<img src="https://user-images.githubusercontent.com/43769314/82278270-cb335480-99c4-11ea-81f5-faed23c8647f.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82280668-5cf19080-99ca-11ea-9f31-ed284275d634.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82280754-92967980-99ca-11ea-8b86-fe6257f30fa1.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82280909-f5881080-99ca-11ea-85d3-66b19b697679.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82281066-5dd6f200-99cb-11ea-9f7a-ae15e02e1c1e.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82281179-ab535f00-99cb-11ea-8b6f-f0cfe9d6bc83.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82281491-6c71d900-99cc-11ea-883f-775d610d7f06.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82299901-0f3c4e80-99f1-11ea-8727-12c1d682502a.png" width="720">
+
 ### RDS
 
 <img src="https://user-images.githubusercontent.com/43769314/81537599-69f9f880-93a8-11ea-8303-6ac7b638c2c3.png" width="720">
