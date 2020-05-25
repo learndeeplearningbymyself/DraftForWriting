@@ -214,6 +214,49 @@ By Default, we have one "public subnet" per AZ
 
 <img src="https://user-images.githubusercontent.com/15076665/82113683-d56e0c80-9792-11ea-9a2c-0892325b8c4e.png" width="720">
 
+<img src="https://user-images.githubusercontent.com/43769314/82774943-2fe92600-9e81-11ea-84da-1c16b6025c38.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82775011-632bb500-9e81-11ea-86a0-ea5acfa387cf.png" width="720">
+
+EC2 Security Group is state-ful
+
+Network ACL: Like a firewall, state-less, you can set up your own allow or deny rules, blocked IP address here
+
+<img src="https://user-images.githubusercontent.com/43769314/82776240-3e394100-9e85-11ea-8f55-3ba6520e3362.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82781955-27e7b100-9e96-11ea-9c1c-ca3ae9fbc2d1.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82782053-60878a80-9e96-11ea-9b4a-b98a7115c1fd.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82782157-9dec1800-9e96-11ea-97ed-fa06cc582a6b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82782386-2a96d600-9e97-11ea-8383-c75f51a194f9.png" width="720">
+
+- Think of a VPC as a logical datacenter in AWS
+- Consists of Virtual Private Gateway, Route Tables, Network, Access Control Lists, Subnets, and Security Groups
+- 1 Subnet = 1 Availability Zone
+- 1 internet gateway attach to 1 VPC
+- All created Subnet will not be public by default
+- 1 Subnet - 1 Route table
+
+<img src="https://user-images.githubusercontent.com/43769314/82785163-fe7e5380-9e9c-11ea-835f-15a9bab3d48e.png" width="720">
+
+ICMP in SG (Security Group): We want to ping EC2 instance in current SG from our another SG
+
+NAT instance is just an EC2 instance, NAT gateway allow your private subnet access to the outside network - Have to disable source/ destination check for NAT gateway
+
+"blackhole" in Route table means: the instance doesn't exist
+
+<img src="https://user-images.githubusercontent.com/43769314/82791496-d7c61a00-9ea8-11ea-95ae-60bb10507af1.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82791919-88ccb480-9ea9-11ea-8ccc-4e488789d07b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82792069-c5001500-9ea9-11ea-95aa-b8fd36eebd93.png" width="720">
+
+Created Network ACL denies everything by default
+
+Have to put DENY rule(s) before ALLOW rule(s) by "#Rule order"
+
 ### CloudFront
 
 <img src="https://user-images.githubusercontent.com/15076665/82114314-06e8d700-9797-11ea-95e5-f59982e095d9.png" width="720">
