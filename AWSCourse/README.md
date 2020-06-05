@@ -682,3 +682,31 @@ We can define for each root of API Gateway which lambda function should be calle
 <img src="https://user-images.githubusercontent.com/43769314/79732217-553cbe80-832e-11ea-804c-2ac142d50eaf.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/79732531-c7150800-832e-11ea-929d-a7daf2147af8.png" width="720">
+
+### AWS Monitoring
+
+<img src="https://user-images.githubusercontent.com/43769314/83825855-778b6f80-a715-11ea-8651-9ac3acaddb8e.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83826000-c3d6af80-a715-11ea-80fb-456d8d329068.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83826088-04362d80-a716-11ea-9a10-506d52d27a2b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83826203-48c1c900-a716-11ea-8e59-59013fcce675.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83831066-94c63b00-a721-11ea-8855-4ebc6acc35ec.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83832115-e079e400-a723-11ea-823c-6cc32b219fae.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83833257-7c0c5400-a726-11ea-8fb4-37f7235a623d.pngs" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83834250-d0183800-a728-11ea-8e4d-da46c990c8d2.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83834350-12da1000-a729-11ea-889e-53ca673d0e11.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83834454-546abb00-a729-11ea-8083-bd9ffb35c260.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83842693-7a4e8a80-a73e-11ea-8068-d5c728f10bae.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83843783-b4209080-a740-11ea-9b14-19b4343ec17e.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/83843881-e500c580-a740-11ea-8265-7b27a565a425.png" width="720">
