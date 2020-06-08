@@ -695,6 +695,11 @@ We can define for each root of API Gateway which lambda function should be calle
 
 <img src="https://user-images.githubusercontent.com/43769314/83831066-94c63b00-a721-11ea-8855-4ebc6acc35ec.png" width="720">
 
+- Alarm states:
+1. **OK**: Alarm is not doing anything
+2. **INSUFFICIENT_DATA**: Don't send enough data to Alarm, Metric misses some data points
+3. **ALARM**: When our alarm's threshold be passed
+
 <img src="https://user-images.githubusercontent.com/43769314/83832115-e079e400-a723-11ea-823c-6cc32b219fae.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/83833257-7c0c5400-a726-11ea-8fb4-37f7235a623d.pngs" width="720">
