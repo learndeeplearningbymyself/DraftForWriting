@@ -116,6 +116,8 @@ Summarize AWS Certified Developer - Associate
 
 <img src="https://user-images.githubusercontent.com/43769314/80454168-994e4580-8964-11ea-80f6-b44a4f270dcd.png" width="720">
 
+At least two (public) subnets must be specified when creating new Load Balancer
+
 ### Auto Scaling
 
 <img src="https://user-images.githubusercontent.com/43769314/80464825-4f219000-8975-11ea-831c-45e92b90b024.png" width="720">
@@ -257,9 +259,27 @@ Created Network ACL denies everything by default
 
 Have to put DENY rule(s) before ALLOW rule(s) by "#Rule order"
 
+ICMP (Ping)
+
 <img src="https://user-images.githubusercontent.com/15076665/82811899-ca228b80-9ecc-11ea-8aa5-028a28b00daa.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/15076665/82812118-3d2c0200-9ecd-11ea-90b3-c02084a0e6b3.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82850772-9f6e1c80-9f38-11ea-946d-50ccab5c8651.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82850827-cc223400-9f38-11ea-83d4-16042e077f00.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82851109-afd2c700-9f39-11ea-974b-62dc64e7a83b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82851163-e4df1980-9f39-11ea-8fa8-f29e4923db51.png" width="720">
+
+Bastion is a way of SSH into your private instances
+
+<img src="https://user-images.githubusercontent.com/43769314/82857006-abfb7080-9f4a-11ea-80e8-d748fee2e0ec.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82857990-8cb21280-9f4d-11ea-8516-5404b5374ef8.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/43769314/82858000-976ca780-9f4d-11ea-941e-e8b76346a1a4.png" width="720">
 
 ### CloudFront
 
@@ -299,7 +319,7 @@ In first 3 hours: Cloudfront Domain will re-direct to origin URL (Ex: S3)
 
 <img src="https://user-images.githubusercontent.com/15076665/82120921-50035000-97c4-11ea-852d-5cf4c0a2e5ba.png" width="720">
 
-Service Type "REPLICA" in ECS service means: we will run many tasks as possible, ""DAEMON" => 1 task. Service will launch our already defined task
+Service Type "REPLICA" in ECS service means: we will run many tasks as possible, ""DAEMON" => 1 task (for monitoring). Service will launch our already defined task
 
 <img src="https://user-images.githubusercontent.com/15076665/82134079-82e22e00-982e-11ea-9f5f-eea6f087c3fe.png" width="720">
 
