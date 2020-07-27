@@ -88,7 +88,7 @@ Ví dụ
 
 ### Chapter 2: Story about twice value
 
-> Các hệ thống phần mềm (Software system) đều chia sẻ 2 giá trị với stack holder: HÀNH ĐỘNG và CẤU TRÚC
+> Các hệ thống phần mềm (Software system) đều chia sẻ 2 giá trị với stakeholders: HÀNH ĐỘNG và CẤU TRÚC
 
 Các dev thường chỉ tập trung vào 1 giá trị duy nhất (cũng là giá trị không quan trọng)
 
@@ -99,3 +99,36 @@ Các dev thường chỉ tập trung vào 1 giá trị duy nhất (cũng là gi�
 #### Architecture
 
 Bản chất "Soft" của phần mềm "Software" đó chính là ĐƠN GIẢN HOÁ CÁC HÀNH ĐỘNG CỦA MÁY TÍNH
+
+Việc thay đổi một tính năng của phần mềm cần xem xét dựa trên "scope" và "shape" của sự thay đổi đó
+
+VD:
+1. Việc thay đổi một tính năng ở một hệ thống nhỏ luôn dễ dàng hơn so với một hệ thống lớn
+2. Chi phí vận hành, dev một ứng dụng sẽ tăng theo thời gian nó tồn tại
+
+Đương nhiên vấn đề sẽ là kiến trúc của hệ thống - liệu với kiến trúc này nó có dễ dàng thêm tính năng mới hay không, và kiến trúc này thiên về "shape" nào
+
+#### The greater value
+
+> Điều gì là quan trọng hơn giữa TÍNH NĂNG và KIẾN TRÚC, VẬN HÀNH HỆ THỐNG hay THAY ĐỔI DỄ DÀNG
+
+Cả dev cũng như business manager đều chọn việc VẬN HÀNH HỆ THỐNG ====> Đây là một SAI LẦM. Dưới đây là các lí do
+
+- Hệ thống không thế thay đổi khi yêu cầu thay đổi ==> vô dụng
+- Hệ thống không chạy ? Không sao, chỉ cần dễ dàng thay đổi, nó sẽ có khả năng chạy được ==> có ích
+
+Thực tế là hệ thống nào cũng có thể thay đổi được, nhưng có những hệ thống mà chi phí để thay đổi là quá lớn, dẫn đến việc dev không thể thay đổi theo yêu cầu của business manager dù rằng thay đổi là TỐT CHO TƯƠNG LAI, nhưng việc duy trì vận hành hệ thống hiện tại mới là quan trọng nhất
+
+#### Ma trận EISENHOWER
+
+Là ma trận tạo nên bởi 2 yếu tố: QUAN TRỌNG và KHẨN CẤP
+
+<img src="https://user-images.githubusercontent.com/15076665/88543866-8b878980-d053-11ea-86cb-691afbb877e2.png" width="720">
+
+(Việc QUAN TRỌNG sẽ KHÔNG THỂ trở thành việc KHẨN CẤP)
+
+Theo chiều kim đồng hồ sẽ là thứ tự ưu tiên của 4 phần tử trong ma trận trên
+
+Trong phần mềm:
+1. Behaviour là KHẨN CẤP
+2. Architecture là QUAN TRỌNG
