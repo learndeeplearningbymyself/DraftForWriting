@@ -85,3 +85,17 @@ Ví dụ
 *Biểu đồ 1-6*
 
 Ở biểu đồ trên việc áp dụng TDD giúp cho công việc được tiến hành nhanh hơn là khi không áp dụng TDD
+
+### Chapter 2: Story about twice value
+
+> Các hệ thống phần mềm (Software system) đều chia sẻ 2 giá trị với stack holder: HÀNH ĐỘNG và CẤU TRÚC
+
+Các dev thường chỉ tập trung vào 1 giá trị duy nhất (cũng là giá trị không quan trọng)
+
+#### HÀNH ĐỘNG - Behaviour
+
+Đa phần các dev đều nghĩ công việc của mình là VIẾT CODE để PASS các yêu cầu có trong bản thiết kế và DEBUG nếu có lỗi =====> SUY NGHĨ SAI LẦM
+
+#### Architecture
+
+Bản chất "Soft" của phần mềm "Software" đó chính là ĐƠN GIẢN HOÁ CÁC HÀNH ĐỘNG CỦA MÁY TÍNH
