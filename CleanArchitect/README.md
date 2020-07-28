@@ -132,3 +132,11 @@ Theo chiều kim đồng hồ sẽ là thứ tự ưu tiên của 4 phần tử 
 Trong phần mềm:
 1. Behaviour là KHẨN CẤP
 2. Architecture là QUAN TRỌNG
+
+#### Fight for the architecture
+
+Nhiệm vụ của dev chính là ĐẤU TRANH để các thành viên khác hiểu được tầm quan trọng của "Software architecture"
+
+Nghĩa của từ ARCHITECT có thể hiểu như việc ta tạo ra một kiến trúc (ARCHITECTURE) để từ đó dễ dàng mở rộng, thêm mới cũng như thay đổi các tính năng
+
+> Hãy nhớ rằng nếu bỏ qua software architecture thì chi phí code sẽ ngày càng tăng và khó thay đổi hệ thống hoặc một phần hệ thống
