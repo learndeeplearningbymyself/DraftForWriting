@@ -39,3 +39,9 @@ Có 3 vấn đề chúng ta cần quan tâm ở đây
 - Tính năng
 
 ### Chương 4: Lập trình hướng đối tượng
+
+Bản chất của thuật ngữ hướng đối tượng (object oriented) nghĩa là bao hàm "function" và "data"
+
+#### Encapsulation
+
+
