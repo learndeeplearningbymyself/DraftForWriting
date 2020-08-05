@@ -125,7 +125,52 @@ Thay vào đó các ngôn ngữ OO hiện đại thêm vào đó các từ khoá
 #### Extends
 
 ```C++
-TODO: insert CODE HERE
+// namedPoint.h
+
+struct NamedPoint;
+struct NamedPoint* makeNamedPoint(double x, double y, char* name); void setName(struct NamedPoint* np, char* name);
+char* getName(struct NamedPoint* np);
+
+// namedPoint.c
+
+#include "namedPoint.h"
+#include <stdlib.h>
+
+struct NamedPoint {
+  double x,y;
+  char* name;
+};
+
+struct NamedPoint* makeNamedPoint(double x, double y, char* name) {
+  struct NamedPoint* p = malloc(sizeof(struct NamedPoint));
+  p->x = x;
+  p->y = y;
+  p->name = name;
+  return p;
+}
+
+void setName(struct NamedPoint* np, char* name) {
+  np->name = name;
+}
+
+char* getName(struct NamedPoint* np) {
+  return np->name;
+}
+
+// main.c
+
+#include "point.h"
+#include "namedPoint.h"
+#include <stdio.h>
+int main(int ac, char** av) {
+  struct NamedPoint* origin = makeNamedPoint(0.0, 0.0, "origin");
+  struct NamedPoint* upperRight = makeNamedPoint
+    (1.0, 1.0, "upperRight");
+  printf("distance=%f\n",
+    distance(
+      (struct Point*) origin,
+      (struct Point*) upperRight));
+}
 ```
 
 Ở ví dụ trên NamedPoint có thể coi như một tập rộng hơn của Point và có thể sử dụng tương tự như Point (thực ra NamedPoint ở đây là một cách giả mạo Point)
