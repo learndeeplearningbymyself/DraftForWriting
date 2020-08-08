@@ -87,3 +87,27 @@ Trong ví dụ phía trên, mọi thứ trông có vẻ rất tốt. Nhưng tron
 
 - Refactor shape của dữ liệu (VD: `{user: {name: 'Joe West'}}` => `{user: {firstName: 'Joe', lastName: 'West'}}`)
 - Over-forwarding props (truyền quá nhiều props không cần thiết) do việc di chuyển component cần truyền "một vài" props mà component không thực sự cần đến
+- Under-forwarding props và lạm dụng `defaultProps` nên bạn có thể không nhận ra việc thiếu props (cũng một phần do việc di chuyển component gây ra)
+- Đổi tên props kiểu "nửa vời" (VD: `<Toggle on={on} />` render `<Switch toggleIsOn={on} />`) khiến việc theo dõi props sẽ "hack não" hơn.
+
+Và còn khá nhiều tình huống khác khiến cho việc sử dụng prop drilling gây ra những vấn đề khiến bạn đau đầu, đặc biệt là trong quá trình refactoring code.
+
+## Làm cách nào chúng ta có thể tránh được các vấn đề với prop drilling ?
+
+Một trong những điều khiến prop drilling gây ra những vấn đề như trên chính là việc "chia nhỏ" `render` method thành nhiều components một cách không cần thiết. Bạn sẽ thấy bất ngờ về sự đơn giản của một hàm `render` "lớn" so với việc bạn cố gắng "inline" các dòng code của mình nhiều nhất có thể.
+
+Vậy nên, không có bất kì lí do nào khiến cho bạn phải "xé lẻ" `render` method của mình thành các components nhỏ hơn quá sớm cả, hãy chờ cho tới khi bạn nhận thấy có thể tái sử dụng lại nhiều lần các đoạn code thuộc `render` method. Khi đó bạn không nhất thiết phải truyền props quá nhiều lần.
+
+> Có một sự thật thú vị rằng, không hề có kĩ thuật nào "ép" bạn không được viết toàn bộ ứng dụng của mình chỉ trong một React component duy nhất cả. Nó có thể quản lí state của toàn bộ ứng dụng của bạn kèm theo một render method "khổng lồ"... Mặc dù tôi không cổ xuý cho cách làm này nhưng... Hãy thử nghĩ về nó mà xem...
+
+*Note: Tôi cũng có viết một bài blog về chủ đề ["Khi nào nên chia một component thành các components con"](https://kentcdodds.com/blog/when-to-break-up-a-component-into-multiple-components) để bạn có thể tham khảo thêm.*
+
+Một cách khác bạn có thể làm giảm đi các tác động tiêu cực của prop drilling đó là tránh việc sử dụng `defaultProps` cho bất kì component nào cần props. Sử dụng `defaultProps` sẽ làm các lỗi nghiêm trọng khó phát hiện hơn cũng như âm thầm huỷ hoại hệ thống của bạn.
+
+Nếu một phần ứng dụng của bạn cần đến states, hãy giữ chúng ở component cha gần nhất thay vì đặt states ở các level cao hơn (layer cao hơn) trong ứng dụng. Bạn có thể xem thêm về "state management" từ bài blog của tôi: [Application State Management](https://kentcdodds.com/blog/application-state-management-with-react)
+
+Sử dụng [React's Context API](https://kentcdodds.com/blog/how-to-use-react-context-effectively) cho các thành phần thực sự nằm ở các layer thấp trong react component tree. Chúng không hẳn đã cần thiết ở *mọi nơi* trong ứng dụng (bạn có thể render ra một provider ở bất kì đâu trong ứng dụng). Điều này có thể giúp bạn tránh ít nhiều các vấn đề thường gặp với prop drilling. Cũng có một điều đáng lưu ý là context có thể đưa chúng ta trở lại với thời kì của global variables (các biến toàn cục). Sự khác biệt ở đây đó chính là cách mà API được thiết kế, nó khiến cho việc tìm source của context trở nên tương đối dễ dàng
+
+## Tổng kết
+
+Prop drilling có những ưu, nhược điểm nhất định. Tham khảo những ví dụ đã đề cập ở trên có thể giúp cho ứng dụng của bạn trở nên dễ maintain hơn. Chúc may mắn
