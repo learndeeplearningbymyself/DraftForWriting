@@ -92,6 +92,9 @@ Summarize AWS Certified Developer - Associate
 
 ### Load Balancer
 
+- **X-Forward-For** header: client public IP address (IPv4)
+- 504 error means: Gateway has timed out --> Application layer or Database layer can have some problems
+
 <img src="https://user-images.githubusercontent.com/43769314/80445265-c42d9f00-894e-11ea-8785-6dd636583ee7.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/80445420-2c7c8080-894f-11ea-972c-5e44a143dc61.png" width="720">
