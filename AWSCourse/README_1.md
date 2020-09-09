@@ -16,6 +16,10 @@ Summarize AWS Certified Developer - Associate
 
 <img src="https://user-images.githubusercontent.com/43769314/80081825-6be15080-858e-11ea-9bc6-4c948bdb615d.png" width="720">
 
+> Roles are more secure than storing your access key and secret access key on individual EC2 instance
+
+> Roles are universal, you can use it in any region
+
 ### EC2
 
 <img src="https://user-images.githubusercontent.com/43769314/80325734-51022b00-8871-11ea-9431-7889a295ce4f.png" width="720">
@@ -39,6 +43,24 @@ Summarize AWS Certified Developer - Associate
 <img src="https://user-images.githubusercontent.com/43769314/80338705-fa5c1780-8897-11ea-9d7f-57edabcbc1b6.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/80339459-a5210580-8899-11ea-9ea5-22051c8f7db2.png" width="720">
+
+### EC2 Placement Groups
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92477020-d7188000-f21a-11ea-8237-dd51790f28ce.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92477286-5017d780-f21b-11ea-9a30-61a950913fb6.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92477433-92411900-f21b-11ea-8ac0-7b6bf30c067f.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92477563-c74d6b80-f21b-11ea-8860-ac4c6c89b319.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92542221-2c887780-f283-11ea-8ced-be421e0b3946.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92542378-9012a500-f283-11ea-91a5-fa00716a90c6.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92542728-863d7180-f284-11ea-9686-6d06cac0c463.png">
+
+> Spread placement groups have a specific limitation that you can only have a maximum of 7 running instances per Availability Zone
 
 ### Private, Public, Elastic IP
 
@@ -173,6 +195,26 @@ At least two (public) subnets must be specified when creating new Load Balancer
 <img src="https://user-images.githubusercontent.com/43769314/80773920-58d60e00-8b96-11ea-98a8-0f95de337a76.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/80773971-88851600-8b96-11ea-8650-3a39d392f06a.png" width="720">
+
+> The default delete-on-termination behaviour depends on whether the volume is a root volume, or an additional volume. By default, the DeleteOnTermination attribute for root volumes is set to 'true.'
+
+> For an instance that is already running, the DeleteOnTermination attribute must be changed using the CLI.
+
+### AMI
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92440989-5b054480-f1e8-11ea-9d11-5d90c48912bd.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92441529-58efb580-f1e9-11ea-9f4a-26ca53c36a0e.png">
+
+With EBS volume, if something has gone wrong, you can stop instance and start it again at another hypervisor
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92443884-18923680-f1ed-11ea-833a-608be7b1ea1c.png">
+
+### Encrypted root device volumes & Snapshot
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92449790-87738d80-f1f5-11ea-81a6-b7725dbe4386.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92449929-b689ff00-f1f5-11ea-9d45-2c859d4f81f9.png">
 
 ### Route 53
 
@@ -428,3 +470,17 @@ Service Type "REPLICA" in ECS service means: we will run many tasks as possible,
 <img src="https://user-images.githubusercontent.com/43769314/82410008-f17ef000-9aa9-11ea-8627-3bfa9e1c7bbd.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/43769314/82411920-a36beb80-9aad-11ea-83bc-eef054719ba2.png" width="720">
+
+### Cloudwatch 101
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92450549-88f18580-f1f6-11ea-83c1-b16c1282d837.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92450852-e554a500-f1f6-11ea-8894-9990c511b58a.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92450857-e685d200-f1f6-11ea-8a69-3ed36c92f5f8.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92451033-28af1380-f1f7-11ea-9c0f-b12327950ea8.png">
+
+<img width="720" alt="Screen Shot 2020-09-08 at 17 46 00" src="https://user-images.githubusercontent.com/15076665/92454163-2fd82080-f1fb-11ea-9102-7d8d86a05b65.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92454375-6ada5400-f1fb-11ea-910e-70a879ac3871.png">
