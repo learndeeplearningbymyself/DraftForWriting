@@ -88,3 +88,93 @@ Read replica is available for the following databases:
 <img width="720" src="https://user-images.githubusercontent.com/15076665/92700153-72c7fe80-f389-11ea-81d3-0638dbab2b5e.png">
 
 <img width="720" src="https://user-images.githubusercontent.com/15076665/92700683-0ef20580-f38a-11ea-8477-9bc849bc77d0.png">
+
+### Redshift
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92986602-26023600-f4f7-11ea-9f74-88dfeaf658b6.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92986663-84c7af80-f4f7-11ea-9ed9-a2ba7b4465ac.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989116-98c9dc00-f50c-11ea-9620-b571dbe5f4e2.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989191-548b0b80-f50d-11ea-885f-56d2259fed4f.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989214-8ac88b00-f50d-11ea-91ac-11ec5ded5709.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989238-c8c5af00-f50d-11ea-8759-12c10be122cf.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989265-1a6e3980-f50e-11ea-895a-6a17893a96de.png">
+
+### Aurora
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989327-7933b300-f50e-11ea-88a7-09b6fbe118d6.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989347-b5ffaa00-f50e-11ea-95d6-a50bf125c702.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989393-0aa32500-f50f-11ea-8947-e17905e1d545.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989442-6c638f00-f50f-11ea-9ad1-acfe02e6bd3b.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989481-a896ef80-f50f-11ea-8d30-1a97568b10a3.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989711-30312e00-f511-11ea-8d0f-098ff9837244.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989750-71294280-f511-11ea-9bd4-1c1385845fa8.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989775-aa61b280-f511-11ea-8f2d-5f9f9899b05d.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92989786-bc435580-f511-11ea-8c24-85b2643649c1.png">
+
+> Create Aurora Replica from MySQL: create Reader, Writer replica
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/92990473-c8321600-f517-11ea-93f4-8c17836c0875.png">
+
+### ElasticCache
+
+<img src="https://user-images.githubusercontent.com/15076665/92990508-04657680-f518-11ea-86a9-d28577fb0e9b.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92990527-28c15300-f518-11ea-9e4b-92ca78eedba0.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92990574-7a69dd80-f518-11ea-976f-ff4307287689.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92990591-940b2500-f518-11ea-96c7-087bb580cad9.png" width="720">
+
+### AWS DMS (Database migration service)
+
+<img src="https://user-images.githubusercontent.com/15076665/92990606-bb61f200-f518-11ea-8e8b-ae38081d75a0.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92990889-d3d30c00-f51a-11ea-94b1-e5bf638b4b18.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92990927-067d0480-f51b-11ea-819c-4e5d32064beb.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92990960-45ab5580-f51b-11ea-94de-c93ab726be37.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92991042-bce0e980-f51b-11ea-820a-df6d5201798a.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92991120-514b4c00-f51c-11ea-8a50-307784912e50.png" width="720">
+
+### Caching stategies on AWS
+
+<img src="https://user-images.githubusercontent.com/15076665/92991134-822b8100-f51c-11ea-8549-7fc582a46cc9.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92991171-d59dcf00-f51c-11ea-806b-c9e1b9a1636d.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92991190-1269c600-f51d-11ea-8859-7aea4e110361.png" width="720">
+
+### EMR overview
+
+<img src="https://user-images.githubusercontent.com/15076665/92991388-717c0a80-f51e-11ea-80bc-03d2d8866c1e.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92991407-983a4100-f51e-11ea-89f1-cf0fe5dfd337.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92991466-e2232700-f51e-11ea-8257-db0149943434.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92991486-0aab2100-f51f-11ea-85ff-e251c50ebace.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92991518-4ba33580-f51f-11ea-82ce-8d143644f3b1.png" width="720">
+
+Logs are stored at Master node, if you lose Master node all logs will be losed too. And this is the solution:
+
+<img src="https://user-images.githubusercontent.com/15076665/92991552-9de45680-f51f-11ea-92c8-b27138baac31.png" width="720">
+
+<img src="https://user-images.githubusercontent.com/15076665/92991590-f61b5880-f51f-11ea-9c51-71e19a6fb0ee.png" width="720">
