@@ -272,3 +272,38 @@ The difference between A and CNAME records is:
 <img src="https://user-images.githubusercontent.com/15076665/93009615-16015980-f5be-11ea-80f6-6712f1a37ab4.png" width="720">
 
 <img src="https://user-images.githubusercontent.com/15076665/93009632-43e69e00-f5be-11ea-85f7-ea8dc4cc40ec.png" width="720">
+
+## VPC
+
+### Global accelerator
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93206155-ee63ea00-f793-11ea-8f6b-8312d31df978.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93206415-54e90800-f794-11ea-965f-02ff5498259e.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93206618-a6919280-f794-11ea-8f47-decb03cb1123.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93206717-d2147d00-f794-11ea-8cff-ba6cc987e42d.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93206957-2fa8c980-f795-11ea-8da7-b9afaac196f7.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93207112-6f6fb100-f795-11ea-9103-2df5f9720fc5.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93207215-9b8b3200-f795-11ea-90b1-bf07d3c80197.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93207451-f3299d80-f795-11ea-9a27-e5b00c8619b1.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93207623-31bf5800-f796-11ea-9484-36d5dafa1fa5.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93209283-dcd11100-f798-11ea-8080-6149821025a3.png">
+
+### VPC Endpoint
+
+Two types:
+- Interface Endpoints
+- Gateway Endpoints: support S3 and DynamoDB
+
+Go to outside via VPC endpoint not by NAT Gateway
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93209777-8adcbb00-f799-11ea-8f86-7a020b68e24d.png">
+
