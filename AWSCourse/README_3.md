@@ -307,3 +307,57 @@ Go to outside via VPC endpoint not by NAT Gateway
 
 <img width="720" src="https://user-images.githubusercontent.com/15076665/93209777-8adcbb00-f799-11ea-8f86-7a020b68e24d.png">
 
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93282404-4f79d500-f809-11ea-84e9-475b6df83f88.png">
+
+### AWS Privatelink
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93285503-f19cbb80-f80f-11ea-9574-9f38bf0b55f6.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93285675-65d75f00-f810-11ea-9c83-7f7ee4434b7f.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93285811-b51d8f80-f810-11ea-81fd-a59b1ab82a20.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93285898-e9914b80-f810-11ea-9160-6bbf86546eb3.png">
+
+### AWS Transit gateway
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93286194-9b307c80-f811-11ea-959a-ddc96e8482f3.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93286258-cb781b00-f811-11ea-8986-3bdbc097ca3d.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93286344-024e3100-f812-11ea-97be-311493a98c88.png">
+
+### AWS Network cost
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93286604-9b7d4780-f812-11ea-9542-baa418b8c865.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93286705-c5366e80-f812-11ea-98c7-e241bece9669.png">
+
+### Exam tips
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93289855-5fe67b80-f81a-11ea-9e07-92ccbb88c040.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93289982-a63bda80-f81a-11ea-87ee-5f672ed2b643.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93290074-e0a57780-f81a-11ea-9c87-79bbb07660b0.png">
+
+> NAT gateway does not behind the Security group, it exists on it own
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93290205-2b26f400-f81b-11ea-89fb-17bd97d4dbb8.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93290578-02532e80-f81c-11ea-8b41-1cbbb655e0e9.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93290670-33336380-f81c-11ea-98d8-50ae9ee96677.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93290750-6118a800-f81c-11ea-99c3-87a9e600bc80.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93290843-9c1adb80-f81c-11ea-9451-a0acb7cf6937.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93290951-d6847880-f81c-11ea-83c3-fa07e31f98a1.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93291017-fcaa1880-f81c-11ea-930b-c3b281106b68.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93291065-1fd4c800-f81d-11ea-9029-c091aa5e880f.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93291130-3f6bf080-f81d-11ea-9607-8bdb71d58937.png">
+
