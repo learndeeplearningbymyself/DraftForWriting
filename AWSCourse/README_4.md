@@ -161,3 +161,39 @@ We also can use CloudFront. Similar to ALB the "bad traffic" will be terminated 
 <img width="720" src="https://user-images.githubusercontent.com/15076665/93432741-e70e1f00-f900-11ea-8260-807525937b82.png">
 
 Can use KMS with <= 4KB file. With the files those have size larger than 4KB, use Data Encrpytion Key (DEK)
+
+### CloudHSM
+
+HSM - Hardware security model
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93661084-f7083900-fa8f-11ea-8879-5fefe03d9ced.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93661116-39317a80-fa90-11ea-923f-9f144ab302b7.png">
+
+### Parameter store
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93661204-ec9a6f00-fa90-11ea-8347-83aa8b874fee.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93661429-b0680e00-fa92-11ea-9e2b-6601f665227f.png">
+
+### AWS Lambda
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93662084-29b62f80-fa98-11ea-9322-599e226e6361.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93662119-8285c800-fa98-11ea-8c0e-dc1e072f3013.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93662152-caa4ea80-fa98-11ea-9fee-5def00cfa8c6.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93662171-063fb480-fa99-11ea-88a4-c279fee39ef7.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93662204-57e83f00-fa99-11ea-97b6-3fb7baa0bda4.png">
+
+> RDS is not serverless
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93662489-6df6ff00-fa9b-11ea-9010-f0fa262d813d.png">
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93662512-a4cd1500-fa9b-11ea-994e-af4965f0909d.png">
+
+### Serverless Application Model (SAM)
+
+<img width="720" src="https://user-images.githubusercontent.com/15076665/93691811-99263080-fb25-11ea-91f7-0bd7798b0a72.png">
